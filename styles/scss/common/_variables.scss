@@ -40,18 +40,18 @@ $color-success:               #88bb33 !default;
 $color-error:                 #dd3333 !default;
 
 $color-text-light:            #fefefe !default;
-$color-text-dark:             #5a5a5a !default;
+$color-text-dark:             #333333 !default;
 
 $color-link-light:            #fafafa !default;
-$color-link-dark:             #5a5a5a !default;
+$color-link-dark:             #333333 !default;
 
 $color-discount:              $color-accent-2 !default;
 
 $color-document-bg:           $color-base-1 !default;
 $color-body-bg:               $color-base-1 !default;
-$color-header-bg:             $color-base-2 !default;
+$color-header-bg:             $color-base-1 !default;
 $color-footer-bg:             $color-base-2 !default;
-$color-navbar-bg:             $color-base-2 !default;
+$color-navbar-bg:             $color-base-1 !default;
 $color-path-bg:               $color-base-2 !default;
 $color-drawer-bg:             $color-base-2 !default;
 $color-boxed-bg:              #fafafa !default;
@@ -59,15 +59,15 @@ $color-boxed-bg:              #fafafa !default;
 $color-banner-bg:             $white-75 !default;
 $color-loader-bg:             $white-50 !default;
 $color-notification-bg:       #ffeecc !default;
-$color-button-bg:             #f5f5f5 !default;
+$color-button-bg:             #fafafa !default;
 $color-image-bg:              #ffffff !default;
-$color-input-bg:              #fefefe !default;
+$color-input-bg:              #ffffff !default;
 
-$color-body-border:           #dadada !default;
-$color-navbar-border:         #dadada !default;
-$color-footer-border:         #dadada !default;
-$color-drawer-border:         #dadada !default;
-$color-image-border:          #dadada !default;
+$color-body-border:           #eeeeee !default;
+$color-navbar-border:         #eeeeee !default;
+$color-footer-border:         #eeeeee !default;
+$color-drawer-border:         #eeeeee !default;
+$color-image-border:          #eeeeee !default;
 
 //------------------------------------------------------------------------------
 // Raster Icons
