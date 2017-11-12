@@ -3,11 +3,9 @@
 //------------------------------------------------------------------------------
 
 .NavigationBar {
-	@include box-shadow(0 1px 3px $black-10);
 	background-color: $color-navbar-bg;
-	border: 1px solid $color-navbar-border;
+	border-bottom: 1px solid $color-navbar-border;
 	border-width: 1px 0;
-	font-size: $font-size-large;
 	position: relative;
 	z-index: 100;
 }
@@ -28,6 +26,12 @@
 
 .NavigationBarToggle-Right {
 	margin-right: -15px;
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+	.NavigationBar {
+		@include box-shadow(0 1px 30px $black-10);
+	}
 }
 
 //------------------------------------------------------------------------------
@@ -152,7 +156,7 @@
 .DropNavigation a {
 	@include truncate;
 	display: block;
-	padding: 15px;
+	padding: 12px 15px;
 	text-decoration: none;
 	transition-duration: $transition-fast;
 }
@@ -203,6 +207,54 @@
 .DropNavigation-Right ul ul {
 	left: auto;
 	right: 0;
+}
+
+//------------------------------------------------------------------------------
+// Simple Drop Navigation
+//------------------------------------------------------------------------------
+
+.SimpleDropNavigation {
+	@extend .DropNavigation;
+}
+
+.NavigationLabel {
+	display: inline-block;
+	& + ul {
+		float: right;
+	}
+}
+
+.SimpleDropNavigation a,
+.NavigationLabel {
+	padding: 4px;
+}
+
+.SimpleDropNavigation ul {
+	list-style: none;
+	background-color: $color-body-bg;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+.SimpleDropNavigation li ul {
+	border: 1px solid $color-navbar-border;
+	margin: 0 -15px;
+	max-width: 300px;
+	min-width: 40px;
+}
+
+.SimpleDropNavigation li li a {
+	box-shadow: 0 1px 0 $color-navbar-border;
+	padding: 12px 15px;
+}
+
+.SimpleDropNavigation li li:last-child a {
+	box-shadow: none;
+}
+
+.SimpleDropNavigation .HasSubCategories > a {
+	@include icon-after($fa-var-angle-down);
 }
 
 //------------------------------------------------------------------------------

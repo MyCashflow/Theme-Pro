@@ -20,19 +20,61 @@
 		<div class="SiteWrapper">
 			<div class="Site">
 				<div class="SiteHeader">
+					<div class="InfoHeader Hide-Tablet">
+						<div class="Container">
+							<div class="Flex Flex-NoMargin">
+								{LanguageNavigation(
+									before: '
+										<div class="SimpleDropNavigation">
+											<ul class="NavigationList LanguageNavigation">
+												<li class="HasSubCategories">
+													<a href="" class="NoLink">{CurrentLanguage}</a>',
+									after: '
+												</li>
+											</ul>
+										</div>'
+								)}
+								{CurrencyNavigation(
+									before: '
+										<div class="FlexItem">
+											<div class="SimpleDropNavigation">
+												<span class="NavigationLabel">{%Currency}:</span>
+												<ul class="NavigationList CurrencyNavigation">
+													<li class="HasSubCategories">
+														<a href="" class="NoLink">{Currency}</a>',
+									after: '
+													</li>
+												</ul>
+											</div>
+										</div>'
+								)}
+								<div class="FlexItem FlexSpacer"></div>
+								<div class="FlexItem">
+									{CustomerNavigation(
+										register: 'true',
+										before: '
+											<div class="FlexItem">
+												<div class="SimpleDropNavigation MainNavigation-Right">
+													<ul class="CustomerNavigation NavigationList">
+														<li class="HasSubCategories">
+															<a href="/account/">{%MyAccount}</a>',
+										after: '
+														</li>
+													</ul>
+												</div>
+											</div>'
+									)}
+								</div>
+							</div>
+						</div>
+					</div>
 					<div class="BrandHeader Hide-Tablet">
 						<div class="Container">
 							<div class="Flex Flex-NoMargin">
 								<div class="FlexItem">
 									{Logo(width: '480', height: '240')}
 								</div>
-								<div class="FlexItem FlexSpacer"></div>
-								<div class="FlexItem">
-									<div class="InlineNavigation">
-										{CustomerNavigation}
-									</div>
-								</div>
-								<div class="FlexItem">
+								<div class="FlexItem FlexSpacer">
 									{Search(
 										before: '
 											<div id="LiveSearch">',
@@ -53,6 +95,8 @@
 												</div>
 											</div>'
 									)}
+								</div>
+								<div class="FlexItem">
 									<a href="/cart/" class="Button Button-Primary" data-drawer-toggle="cart">
 										<span class="fa fa-shopping-cart"></span>
 										{%ShoppingCart}
@@ -65,6 +109,7 @@
 						<div class="Container">
 							<div class="Hide-Tablet">
 								<div class="Flex Flex-NoMargin">
+									<div class="FlexItem FlexSpacer"></div>
 									{Categories(
 										show: 'all',
 										before: '
@@ -77,7 +122,7 @@
 									{Campaigns(
 										before: '
 											<div class="FlexItem">
-												<div class="MainNavigation MainNavigation-Left">
+												<div class="MainNavigation MainNavigation-Right">
 													<ul>
 														<li class="HasSubCategories">
 															<a>{%Campaigns}</a>',
@@ -88,32 +133,6 @@
 											</div>'
 									)}
 									<div class="FlexItem FlexSpacer"></div>
-									{CurrencyNavigation(
-										before: '
-											<div class="FlexItem">
-												<div class="MainNavigation MainNavigation-Right">
-													<ul>
-														<li class="HasSubCategories">
-															<a>{Currency}</a>',
-										after: '
-														</li>
-													</ul>
-												</div>
-											</div>'
-									)}
-									{LanguageNavigation(
-										before: '
-											<div class="FlexItem">
-												<div class="MainNavigation MainNavigation-Right">
-													<ul>
-														<li class="HasSubCategories">
-															<a>{CurrentLanguage}</a>',
-										after: '
-														</li>
-													</ul>
-												</div>
-											</div>'
-									)}
 								</div>
 							</div>
 							<div class="Hide-Desktop">

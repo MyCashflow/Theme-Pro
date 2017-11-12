@@ -370,12 +370,29 @@ form [type='submit'] {
 	display: none;
 }
 
+#SearchForm #SearchInput,
+#SearchForm #SearchButton  {
+	border: 0;
+	border-radius: 0;
+}
+
 #SearchForm #SearchInput {
-	width: calc(100% - 50px);
+	width: 100%;
+	border-bottom: 1px solid $color-navbar-border;
+}
+
+#SearchForm:hover #SearchInput,
+#SearchForm:hover #SearchButton {
+	border-color: $color-text-dark;
+	color: $color-text-dark !important;
 }
 
 #SearchForm #SearchButton {
 	@include icon-replace($fa-var-search);
+	background-color: $color-navbar-bg;
+	color: $black-25 !important;
+	position: absolute;
+	right: 0;
 	width: 50px;
 }
 
