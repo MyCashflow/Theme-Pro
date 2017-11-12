@@ -6,7 +6,6 @@
 	@include link-colors($color-header-bg);
 	background-color: $color-header-bg;
 	color: text-contrast($color-header-bg);
-	
 	a {
 		text-decoration: none;
 	}
