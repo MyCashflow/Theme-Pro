@@ -39,39 +39,39 @@
 	margin: -($grid-list-gutter / 2);
 }
 
-.GridList > .ListItem {
+.GridList .ListItem {
 	float: left;
 	padding: ($grid-list-gutter / 2);
 	position: relative;
-	width: 20%;
+	width: 33.33%;
 }
 
-.GridList-Wide > .ListItem {
-	width: 16.66%;
-}
-
-.GridList-Narrow > .ListItem {
+.GridList-Wide .ListItem {
 	width: 25%;
 }
 
+.GridList-Narrow .ListItem {
+	width: 50%;
+}
+
 @media screen and (max-width: $breakpoint-desktop) {
-	.GridList > .ListItem {
-		width: 25%;
+	.GridList .ListItem {
+		width: 33.33%;
 	}
 }
 
 @media screen and (max-width: $breakpoint-mobile-wide) {
-	.GridList > .ListItem {
+	.GridList .ListItem {
 		width: 33.33%;
 	}
 }
 
 @media screen and (max-width: $breakpoint-mobile) {
-	.GridList > .ListItem {
+	.GridList .ListItem {
 		width: 50%;
 	}
 
-	.GridList-Wide > .ListItem {
+	.GridList-Wide .ListItem {
 		width: 50%;
 	}
 }

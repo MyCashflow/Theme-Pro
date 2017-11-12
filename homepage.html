@@ -3,7 +3,7 @@
 	<div class="Container">
 		{Banners(
 			name: 'frontpage',
-			before: '<div class="Banners Banners-Wide" data-slider="banners-wide">',
+			before: '<div class="Banners Banners-Wide" data-flickity="banner">',
 			after: '</div>',
 			helper: '{{
 				<div class="Banner Banner-Wide" {BannerImageURL(width: '1920', before: 'style="background-image: url(', after: ')"')}>
@@ -29,6 +29,20 @@
 		<div class="Grid">
 			<div class="Col-12-12">
 				{Notifications(group: 'account')}
+				{LastViewedProducts(
+					limit: '18',
+					type: 'normal',
+					before: '
+						<div class="ContentSection">
+							<h2 class="ContentTitle ContentTitle-Fancy">{%ProductsConsidered}</h2>
+							<div class="List ProductList">
+								<div class="GridList GridList-Wide" data-flickity="list">',
+					after: '
+								</div>
+							</div>
+						</div>',
+					helper: 'helpers/list-product'
+				)}
 				<div class="ContentSection">
 					<h1 class="ContentTitle">{PageTitle}</h1>
 					{CategoryImage(
@@ -39,28 +53,14 @@
 					{CategoryDescription}
 					<div class="fb-like" data-send="true" data-width="480" data-size="large" data-show-faces="true" data-font="arial" data-href="{FacebookPageURL(or: '{ShopUrl}{CanonicalUrl}')}"></div>
 				</div>
-				{LastViewedProducts(
-					limit: '18',
+				{HotPicks(
+					limit: '8',
 					type: 'normal',
 					before: '
 						<div class="ContentSection">
-							<h2 class="ContentTitle">{%ProductsConsidered}</h2>
+							<h2 class="ContentTitle ContentTitle-Fancy">{%RecommendedProducts}</h2>
 							<div class="List ProductList">
-								<div class="GridList GridList-Wide" data-slider="grid-list-wide">',
-					after: '
-								</div>
-							</div>
-						</div>',
-					helper: 'helpers/list-product'
-				)}
-				{NewProducts(
-					limit: '18',
-					type: 'normal',
-					before: '
-						<div class="ContentSection">
-							<h2 class="ContentTitle">{%NewProducts}</h2>
-							<div class="List ProductList">
-								<div class="GridList GridList-Wide" data-slider="grid-list-wide">',
+								<div class="GridList GridList-Wide" data-flickity="list">',
 					after: '
 								</div>
 							</div>
@@ -72,9 +72,9 @@
 					type: 'normal',
 					before: '
 						<div class="ContentSection">
-							<h2 class="ContentTitle">{%BestsellingProducts}</h2>
+							<h2 class="ContentTitle ContentTitle-Fancy">{%BestsellingProducts}</h2>
 							<div class="List ProductList">
-								<div class="GridList GridList-Wide" data-slider="grid-list-wide">',
+								<div class="GridList GridList-Wide" data-flickity="list">',
 					after: '
 								</div>
 							</div>

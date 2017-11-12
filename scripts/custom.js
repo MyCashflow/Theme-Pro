@@ -202,7 +202,7 @@ $(document).ready(function () {
 			slidesToShow: 1
 		},
 		'grid-list': {
-			slidesToShow: 5,
+			slidesToShow: 3,
 			responsive: [
 				{ breakpoint: MCF.Theme.breakpoints['desktop'] + 1, settings: { slidesToShow: 4 } },
 				{ breakpoint: MCF.Theme.breakpoints['mobile-wide'] + 1, settings: { slidesToShow: 3 } },
@@ -210,20 +210,34 @@ $(document).ready(function () {
 			]
 		},
 		'grid-list-narrow': {
-			slidesToShow: 4,
+			slidesToShow: 2,
 			responsive: [
 				{ breakpoint: MCF.Theme.breakpoints['mobile-wide'] + 1, settings: { slidesToShow: 3 } },
 				{ breakpoint: MCF.Theme.breakpoints['mobile'] + 1, settings: { slidesToShow: 2 } }
 			]
 		},
 		'grid-list-wide': {
-			slidesToShow: 6,
+			slidesToShow: 4,
 			responsive: [
 				{ breakpoint: MCF.Theme.breakpoints['desktop'] + 1, settings: { slidesToShow: 4 } },
 				{ breakpoint: MCF.Theme.breakpoints['mobile-wide'] + 1, settings: { slidesToShow: 3 } },
 				{ breakpoint: MCF.Theme.breakpoints['mobile'] + 1, settings: { slidesToShow: 2 } }
 			]
 		}
+	});
+	
+	$('[data-flickity="banner"]').flickity({
+		cellAlign: 'left',
+		contain: true,
+		pageDots: false,
+		wrapAround: true
+	});
+	
+	$('[data-flickity="list"]').flickity({
+		freeScroll: true,
+		cellAlign: 'left',
+		contain: true,
+		pageDots: false,
 	});
 
 	$(document).on('click', '[href="/terms/"]', function () {

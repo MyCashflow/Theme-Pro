@@ -38,3 +38,40 @@
 .slick-slide img {
 	display: inline-block;
 }
+
+//------------------------------------------------------------------------------
+// Flickity
+//------------------------------------------------------------------------------
+
+.flickity-prev-next-button.previous { left: -50px; }
+.flickity-prev-next-button.next { right: -50px; }
+/* right to left */
+.flickity-rtl .flickity-prev-next-button.previous {
+  left: auto;
+  right: -50px;
+}
+.flickity-rtl .flickity-prev-next-button.next {
+  right: auto;
+  left: -50px;
+}
+
+/* big buttons, no circle */
+.flickity-prev-next-button {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+}
+.flickity-prev-next-button:hover {
+  background: transparent;
+}
+/* arrow color */
+.flickity-prev-next-button .arrow {
+  fill: $color-text-dark;
+}
+.flickity-prev-next-button.no-svg {
+  color: $color-text-dark;
+}
+/* hide disabled button */
+.flickity-prev-next-button:disabled {
+  display: none;
+}
