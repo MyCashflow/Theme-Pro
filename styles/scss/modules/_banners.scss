@@ -74,6 +74,7 @@
 //------------------------------------------------------------------------------
 
 .Banners-Wide {
+	@extend %default-margin;
 	border: 1px solid $color-body-border;
 	border-radius: 0;
 	border-width: 0 0 1px;

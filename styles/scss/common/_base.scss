@@ -3,7 +3,7 @@
 //------------------------------------------------------------------------------
 
 %default-margin {
-	margin: 0 0 20px;
+	margin: 0 0 24px;
 }
 
 %clearfix {
@@ -158,7 +158,7 @@ table th,
 table td {
 	background-color: $color-boxed-bg;
 	border-bottom: 1px solid $color-body-border;
-	padding: 10px 15px;
+	padding: 12px 15px;
 	vertical-align: top;
 }
 
@@ -181,5 +181,5 @@ hr {
 	border: 0;
 	display: block;
 	height: 1px;
-	margin: 40px 0;
+	margin: 48px 0;
 }
