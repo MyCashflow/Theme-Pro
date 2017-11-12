@@ -37,6 +37,11 @@ strong {
 	}
 }
 
+%fancyheading {
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
 h1, .H1 {
 	@extend %headings;
 	font-size: 32px;
@@ -52,20 +57,20 @@ h2, .H2 {
 h3, .H3 {
 	@extend %headings;
 	font-size: 18px;
-	line-height: 25px;
+	line-height: 24px;
 }
 
 h4, .H4 {
 	@extend %headings;
 	font-size: 16px;
-	line-height: 25px;
+	line-height: 24px;
 }
 
 h5, .H5,
 h6, .H6 {
 	@extend %headings;
 	font-size: 14px;
-	line-height: 25px;
+	line-height: 24px;
 }
 
 //------------------------------------------------------------------------------
