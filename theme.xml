@@ -2,7 +2,7 @@
 <Theme>
 	<ImageSizes>
 		<Mini width="80" height="80" />
-		<List width="180" height="180" />
+		<List width="260" height="260" />
 		<Normal width="600" height="600" />
 		<Big width="1200" height="1200" />
 	</ImageSizes>
