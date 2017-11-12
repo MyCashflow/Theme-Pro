@@ -51,24 +51,36 @@
 	text-align: center;
 }
 
+h1.ContentTitle {
+	@extend %fancyheading;
+	font-weight: lighter;
+}
+
 .ContentTitle-Fancy {
+	@include flexbox;
+	@extend %fancyheading;
 	font-size: $font-size;
 	text-align: center;
-	text-transform: uppercase;
-	letter-spacing: 1px;
+	
+	flex-direction: row;
+	justify-content: center;
 }
 
-.ContentTitle-Fancy ::before,
-.ContentTitle-Fancy ::after {
+.ContentTitle-Fancy::before,
+.ContentTitle-Fancy::after {
 	@include flex(1);
-	content: '';
+	background-color: $color-body-border;
+	content: '\a0';
+	flex-grow: 1;
+	height: 1px;
+	margin: 0 15px;
+	position: relative;
+	top: 24px;
 }
-
 
 .ContentSection + .ContentSection {
-	border-top: 1px solid $color-body-border;
-	margin-top: 48px;
-	padding-top: 48px;
+	margin-top: 24px;
+	padding-top: 24px;
 }
 
 //------------------------------------------------------------------------------
