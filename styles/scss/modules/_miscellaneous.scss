@@ -48,7 +48,22 @@
 
 .ContentTitle {
 	line-height: 48px;
+	text-align: center;
 }
+
+.ContentTitle-Fancy {
+	font-size: $font-size;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.ContentTitle-Fancy ::before,
+.ContentTitle-Fancy ::after {
+	@include flex(1);
+	content: '';
+}
+
 
 .ContentSection + .ContentSection {
 	border-top: 1px solid $color-body-border;
