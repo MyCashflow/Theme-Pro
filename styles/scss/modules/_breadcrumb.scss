@@ -13,7 +13,7 @@
 }
 
 .Breadcrumb ul li:before {
-	@include icon($fa-var-angle-right);
+	content: '/';
 	margin: 0 10px;
 }
 
@@ -31,6 +31,10 @@
 
 .Path {
 	padding-top: 20px;
+}
+
+.Path a {
+	text-decoration: none;
 }
 
 .Path .Breadcrumb {
