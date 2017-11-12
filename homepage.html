@@ -27,7 +27,7 @@
 <div class="SiteContent">
 	<div class="Container">
 		<div class="Grid">
-			<div class="Col-9-12 Col-Tablet-12-12">
+			<div class="Col-12-12">
 				{Notifications(group: 'account')}
 				<div class="ContentSection">
 					<h1 class="ContentTitle">{PageTitle}</h1>
@@ -46,7 +46,7 @@
 						<div class="ContentSection">
 							<h2 class="ContentTitle">{%ProductsConsidered}</h2>
 							<div class="List ProductList">
-								<div class="GridList" data-slider="grid-list">',
+								<div class="GridList GridList-Wide" data-slider="grid-list-wide">',
 					after: '
 								</div>
 							</div>
@@ -60,7 +60,7 @@
 						<div class="ContentSection">
 							<h2 class="ContentTitle">{%NewProducts}</h2>
 							<div class="List ProductList">
-								<div class="GridList" data-slider="grid-list">',
+								<div class="GridList GridList-Wide" data-slider="grid-list-wide">',
 					after: '
 								</div>
 							</div>
@@ -74,16 +74,13 @@
 						<div class="ContentSection">
 							<h2 class="ContentTitle">{%BestsellingProducts}</h2>
 							<div class="List ProductList">
-								<div class="GridList" data-slider="grid-list">',
+								<div class="GridList GridList-Wide" data-slider="grid-list-wide">',
 					after: '
 								</div>
 							</div>
 						</div>',
 					helper: 'helpers/list-product'
 				)}
-			</div>
-			<div class="Col-3-12 Col-Tablet-12-12">
-				{Helper(file: 'helpers/sidebar')}
 			</div>
 		</div>
 	</div>
