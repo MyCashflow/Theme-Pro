@@ -1,31 +1,31 @@
 {Helper(file: 'helpers/header')}
-{Banners(
-	name: 'frontpage',
-	before: '<div class="Banners Banners-Wide" data-slider="banners-wide">',
-	after: '</div>',
-	helper: '{{
-		<div class="Banner Banner-Wide" {BannerImageURL(width: '1920', before: 'style="background-image: url(', after: ')"')}>
-			{BannerUrl(
-				before: '<a class="CoverLink" href="',
-				after: '" {BannerLinkData}></a>'
-			)}
-			{BannerText(
-				before: '
-					<div class="Container">
-						<div class="BannerContentWrap">
-							<div class="BannerContent">
-								<div class="BannerText">',
-				after: '
-								</div>
-							</div>
-						</div>
-					</div>'
-			)}
-		</div>
-	}}'
-)}
 <div class="SiteContent">
 	<div class="Container">
+		{Banners(
+			name: 'frontpage',
+			before: '<div class="Banners Banners-Wide" data-slider="banners-wide">',
+			after: '</div>',
+			helper: '{{
+				<div class="Banner Banner-Wide" {BannerImageURL(width: '1920', before: 'style="background-image: url(', after: ')"')}>
+					{BannerUrl(
+						before: '<a class="CoverLink" href="',
+						after: '" {BannerLinkData}></a>'
+					)}
+					{BannerText(
+						before: '
+							<div class="Container">
+								<div class="BannerContentWrap">
+									<div class="BannerContent">
+										<div class="BannerText">',
+						after: '
+										</div>
+									</div>
+								</div>
+							</div>'
+					)}
+				</div>
+			}}'
+		)}
 		<div class="Grid">
 			<div class="Col-12-12">
 				{Notifications(group: 'account')}
