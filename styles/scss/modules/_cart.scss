@@ -4,7 +4,7 @@
 
 .FullCartSection {
 	border-bottom: 1px solid $color-body-border;
-	padding: 20px 0;
+	padding: 24px 0;
 }
 
 .FullCartHeader {
@@ -31,7 +31,7 @@
 .FullCartCol {
 	border-bottom: 1px solid $color-body-border;
 	display: table-cell;
-	padding: 20px $grid-list-gutter;
+	padding: 24px $grid-list-gutter;
 	vertical-align: middle;
 	white-space: nowrap;
 }
@@ -100,7 +100,7 @@
 	.FullCartCol {
 		border-bottom: 0;
 		display: block;
-		margin-bottom: 20px;
+		margin-bottom: 24px;
 		padding: 0;
 		text-align: center;
 		white-space: normal;
