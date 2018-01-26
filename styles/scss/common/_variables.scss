@@ -80,7 +80,8 @@ $icon-select-light:           '../images/angle-down-light.png' !default;
 // Grid System
 //------------------------------------------------------------------------------
 
-$container-max-width:         1140px !default;
+$container-max-width:         1200px !default;
+$site-max-width:              1400px !default;
 
 $grid-gutter:                 30px !default;
 $grid-list-gutter:            20px !default;
@@ -90,11 +91,13 @@ $breakpoint-tablet:           1024px !default;
 $breakpoint-mobile-wide:      800px !default;
 $breakpoint-mobile:           600px !default;
 
+$list-item-ratio:             100% !default;
+
 //------------------------------------------------------------------------------
 // Border Radiuses
 //------------------------------------------------------------------------------
 
-$border-radius:               2px !default;
+$border-radius:               3px !default;
 $border-radius-medium:        4px !default;
 $border-radius-large:         6px !default;
 
