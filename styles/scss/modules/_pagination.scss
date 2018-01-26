@@ -1,4 +1,92 @@
 //------------------------------------------------------------------------------
+// Pagination Bar
+//------------------------------------------------------------------------------
+
+.PaginationBar {
+	@include breakfree;
+	background-color: $color-body-bg;
+	border: 1px solid $color-body-border;
+	border-width: 1px 0;
+	margin-bottom: 48px;
+	margin-top: 24px;
+}
+
+.PaginationBar-Bottom {
+	@include flexbox;
+	border: 0;
+}
+
+.PaginationBar *:hover {
+	border-bottom-color: $color-accent-2;
+} 
+
+.PaginationBar label,
+.PaginationBar p  {
+	@include truncate;
+	color: mix($color-text-light, $color-text-dark, 50%);
+	font-size: $font-size-small;
+	font-weight: normal;
+	vertical-align: middle;
+}
+
+.PaginationBar select,
+.PaginationBar input {
+	border-color: $color-body-border;
+	border-radius: 0;
+	margin-top: -1px;
+	margin-bottom: -1px !important;
+}
+
+.PaginationBar .PaginationForm {
+	margin: 0;
+}
+
+.PaginationBar .FlexItem:last-child select {
+	margin-right: -1px;
+}
+
+.PaginationBar .Pagination {
+	display: block;
+	margin-bottom: -1px;
+	margin-top: -1px;
+}
+
+.PaginationBar .Pagination ul {
+	display: block;
+}
+@media screen and (max-width: $breakpoint-tablet) {
+	.PaginationBar .PaginationStatus {
+		display: none;
+	}
+}
+
+@media screen and (max-width: $breakpoint-mobile-wide) {
+	.PaginationBar {
+		border: 0;
+		box-shadow: none;
+	}
+	
+	.PaginationBar .Flex .FlexItem {
+		@include flexbox;
+	}
+	
+	.PaginationBar label {
+		border: 1px solid $color-body-border;
+		height: 38px;
+		margin-right: -1px;
+		min-width: 50%;
+		padding: 6px 12px;
+	}
+	
+	.PaginationBar .Pagination,
+	.PaginationBar select,
+	.PaginationBar input {
+		margin-top: 0;
+		margin-bottom: 0 !important;
+	}
+}
+
+//------------------------------------------------------------------------------
 // Pagination
 //------------------------------------------------------------------------------
 
@@ -10,6 +98,7 @@
 .Pagination a {
 	display: block;
 	padding: 6px 12px;
+	text-decoration: none;
 }
 
 .Pagination ul {
@@ -41,6 +130,7 @@
 .Pagination .CurrentPage,
 .Pagination .DisabledPageLink,
 .Pagination .PagesBetween {
+	color: mix($color-text-light, $color-text-dark, 50%);
 	padding: 6px 12px;
 }
 
