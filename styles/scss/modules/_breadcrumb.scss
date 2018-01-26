@@ -13,7 +13,7 @@
 }
 
 .Breadcrumb ul li:before {
-	content: '/';
+	@include icon($fa-var-angle-right);
 	margin: 0 10px;
 }
 
@@ -30,6 +30,7 @@
 //------------------------------------------------------------------------------
 
 .Path {
+	font-size: $font-size-small;
 	padding-top: 24px;
 	text-align: center;
 }
@@ -38,6 +39,40 @@
 	text-decoration: none;
 }
 
+.Path .Current > a {
+	color: mix($color-text-light, $color-text-dark, 50%);
+}
+
 .Path .Breadcrumb {
 	margin-bottom: 0;
+}
+
+.Path .BackLink,
+.Path .Breadcrumb {
+	display: inline;
+}
+
+.Path .BackLink {
+	border: 1px solid $color-body-border;
+	border-radius: $border-radius;
+	margin-right: 15px;
+	padding: 6px 10px;
+}
+
+.Path .BackLink:before {
+	@include icon($fa-var-angle-left);
+	margin-right: 10px;
+}
+
+ a.BackLink[href='/'] {
+	display: none !important;
+}
+
+@media screen and (max-width: $breakpoint-mobile-wide) {
+	.Breadcrumb {
+		display: block;
+	}
+	.Path .BackLink {
+		display: none;
+	}
 }
