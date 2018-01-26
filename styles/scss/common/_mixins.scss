@@ -262,6 +262,17 @@
 }
 
 //------------------------------------------------------------------------------
+// List Item Image Height
+//------------------------------------------------------------------------------
+
+@mixin item-count($count: 4, $breakpoint: $container-max-width) {
+	.ProductImage img {
+		max-height: ($breakpoint / $count) - $grid-list-gutter;
+		max-height: calc((100vw / #{$count}) - (#{$grid-list-gutter} + #{$grid-gutter}) - 1vw);
+	}
+}
+
+//------------------------------------------------------------------------------
 // Transform
 //------------------------------------------------------------------------------
 
@@ -291,4 +302,14 @@
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+}
+
+//------------------------------------------------------------------------------
+// Vertical Alignement
+//------------------------------------------------------------------------------
+
+@mixin valign($position: relative) {
+	@include transform(translateY(-50%));
+	position: $position;
+	top: 50%;
 }
