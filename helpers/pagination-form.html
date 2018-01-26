@@ -1,13 +1,31 @@
 {PaginationFormParameters(
-	before: '<form class="PaginationForm" action="{CurrentURL}" data-auto-submit>',
+	before: '
+		<div class="ContentSection PaginationBar">
+			<div class="Container">
+				<form class="PaginationForm" action="{CurrentURL}" data-auto-submit>',
 	after: '
-			<div class="Flex Flex-NoMargin Flex-Collapse">
-				<div class="FlexItem">
-					{PaginationSort}
-				</div>
-				<div class="FlexItem">
-					{PaginationLimit}
-				</div>
+					<div class="Flex Flex-NoMargin Flex-Collapse">
+						{PaginationPages(
+							items: '3',
+							before: '
+								<div class="FlexItem">
+									<div class="Pagination">',
+							after: '
+									</div>
+								</div>'
+						)}
+						<div class="FlexItem">
+							{PaginationStatus}
+						</div>
+						<div class="FlexItem FlexSpacer"></div>
+						<div class="FlexItem">
+							{PaginationSort}
+						</div>
+						<div class="FlexItem">
+							{PaginationLimit}
+						</div>
+					</div>
+				</form>
 			</div>
-		</form>'
+		</div>'
 )}
