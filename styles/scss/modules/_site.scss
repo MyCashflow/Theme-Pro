@@ -17,10 +17,13 @@
 }
 
 .SiteContent {
-	padding: 24px 0 48px;
+	padding: 48px 0 72px;
+}
+
+.Banners-Wide + .SiteContent {
+	padding-top: 24px;
 }
 
 .SiteFooter {
-	border-top: 1px solid $color-footer-border;
 	color: text-contrast($color-footer-bg);
 }
