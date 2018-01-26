@@ -5,6 +5,7 @@
 body {
 	color: text-contrast($color-body-bg);
 	font: #{$font-size}/#{$line-height} $font-body;
+	font-weight: 300;
 }
 
 button, input, select, textarea {
@@ -38,6 +39,7 @@ strong {
 }
 
 %fancyheading {
+	font-weight: 600;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 }
