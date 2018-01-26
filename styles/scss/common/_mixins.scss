@@ -42,6 +42,34 @@
 }
 
 //------------------------------------------------------------------------------
+// Break Free From Parent Container
+//------------------------------------------------------------------------------
+
+@mixin breakfree($position: relative) {
+	@include transform(translateX(-50%));
+	width: 100vw;
+	position: $position;
+	left: 50%;
+}
+
+//------------------------------------------------------------------------------
+// Child Count
+//------------------------------------------------------------------------------
+
+@mixin has-nth($expression, $element: '*') {
+	&:nth-last-child(#{$expression}):first-child,
+	&:nth-last-child(#{$expression}):first-child ~ #{$element} {
+		@content;
+	}
+}
+
+@mixin at-least($quantity, $element: '*') {
+	@include has-nth('n + #{$quantity}', $element) {
+		@content;
+	}
+}
+
+//------------------------------------------------------------------------------
 // Clearfix
 //------------------------------------------------------------------------------
 
