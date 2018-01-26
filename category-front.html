@@ -1,4 +1,5 @@
 {Helper(file: 'helpers/header')}
+{Helper(file: 'helpers/path')}
 <div class="SiteContent">
 	<div class="Container">
 		{Helper(file: 'helpers/category-header')}
@@ -7,21 +8,33 @@
 				<div class="ContentSection">
 					<h1 class="ContentTitle">{PageTitle}</h1>
 					{CategoryImage(
-						width: '1024',
+						width: '1140',
 						before: '<div class="Banner Banner-Body">',
 						after: '</div>'
 					)}
 					{CategoryDescription}
-					<div class="Flex Flex-Collapse">
-						{Helper(
-							file: 'helpers/pagination-form',
-							before: '
-								<div class="FlexSpacer"></div>
-								<div class="FlexItem">',
-							after: '</div>'
-						)}
-					</div>
+				</div>
+				{SubCategories(
+					before: '
+						<div class="ContentSection SubNavigationBar Hide-Tablet">
+							<div class="Container">
+								<div class="Flex Flex-NoMargin">
+									<div class="FlexItem FlexSpacer">
+										<div class="SubNavigation">',
+					after: '
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>'
+				)}
+				{Helper(file: 'helpers/pagination-form')}
+				<div class="ContentSection">
 					{CategoryProducts(
+						sort: 'sales_asc|released_desc|price_asc|price_desc|name_asc',
+						subcategories: 'true',
+						pagination: 'true',
+						limit: '40|100',
 						type: 'normal',
 						before: '
 							<div class="List ProductList">
@@ -33,28 +46,32 @@
 						helper: 'helpers/list-product'
 					)}
 				</div>
-				{CategoryNewProducts(
-					limit: '15',
+				{CategoryHotPicks(
+					subcategories: 'true',
+					limit: '14',
 					type: 'normal',
+					classes: 'ListProduct-Compact',
 					before: '
 						<div class="ContentSection">
-							<h2 class="ContentTitle ContentTitle-Fancy">{%NewProducts}</h2>
+							<h2 class="ContentTitle ContentTitle-Fancy">{%RecommendedProducts}</h2>
 							<div class="List ProductList">
-								<div class="GridList GridList-Wide" data-flickity="list">',
+								<div class="GridList GridList-Small" data-flickity="list">',
 					after: '
 								</div>
 							</div>
 						</div>',
 					helper: 'helpers/list-product'
 				)}
-				{CategoryHotPicks(
-					limit: '15',
+				{CategoryNewProducts(
+					subcategories: 'true',
+					limit: '14',
 					type: 'normal',
+					classes: 'ListProduct-Compact',
 					before: '
 						<div class="ContentSection">
-							<h2 class="ContentTitle ContentTitle-Fancy">{%BestsellingProducts}</h2>
+							<h2 class="ContentTitle ContentTitle-Fancy">{%NewProducts}</h2>
 							<div class="List ProductList">
-								<div class="GridList GridList-Wide" data-flickity="list">',
+								<div class="GridList GridList-Small" data-flickity="list">',
 					after: '
 								</div>
 							</div>

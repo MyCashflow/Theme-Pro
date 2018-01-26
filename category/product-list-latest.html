@@ -1,5 +1,5 @@
 {Helper(file: 'helpers/header')}
-{Helper(file: 'helpers/path')}
+<!-- {Helper(file: 'helpers/path')} -->
 <div class="SiteContent">
 	<div class="Container">
 		{Helper(file: 'helpers/category-header')}
@@ -14,24 +14,11 @@
 					)}
 					{CategoryDescription}
 				</div>
-				{SubCategories(
-					before: '
-						<div class="ContentSection SubNavigationBar Hide-Tablet">
-							<div class="Container">
-								<div class="Flex Flex-NoMargin">
-									<div class="FlexItem FlexSpacer">
-										<div class="SubNavigation">',
-					after: '
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>'
-				)}
 				{Helper(file: 'helpers/pagination-form')}
 				<div class="ContentSection">
-					{Products(
-						pagination: 'false',
+					{NewProducts(
+						pagination: 'true',
+						timelimit: '-6 months',
 						limit: '40|100',
 						type: 'normal',
 						before: '

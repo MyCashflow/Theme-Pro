@@ -2,16 +2,15 @@
 <div class="SiteContent">
 	<div class="Container">
 		<div class="Grid">
-			<div class="Col-3-12 Col-Tablet-12-12">
-				<h3>{%AboutUs}</h3>
+			<div class="Col-9-12 Col-Tablet-12-12">
+				<h1>{PageTitle}</h1>
+				{Content}
+			</div>
+			<div class="Col-3-12 Col-Tablet-12-12 SideNavigation-Right">
 				{InfoNavigation(
 					before: '<div class="SideNavigation">',
 					after: '</div>'
 				)}
-			</div>
-			<div class="Col-9-12 Col-Tablet-12-12">
-				<h2>{PageTitle}</h2>
-				{Content}
 			</div>
 		</div>
 	</div>

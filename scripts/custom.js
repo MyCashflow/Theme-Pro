@@ -65,7 +65,8 @@ $(document).ready(function () {
 
 		updateMiniCarts: function () {
 			var $miniCarts = $('.MiniCart');
-			if (!$miniCarts.length) {
+			var $cartTotals = $('.CartTotal');
+			if (!$miniCarts.length && !$cartTotals.length) {
 				return;
 			}
 			$miniCarts.each(function () {
@@ -75,6 +76,14 @@ $(document).ready(function () {
 					MCF.Loaders.show($cart);
 				}
 			});
+			$.get('/interface/CartSubTotal')
+				.then(function (html) {
+					$cartTotals.each(function () {
+						var $total = $(this);
+						$total.children(':not(.Loader)').remove();
+						$total.html(html);
+					});
+				});
 			return $.get('/interface/Helper?file=helpers/mini-cart')
 				.then(function (html) {
 					$miniCarts.each(function () {
@@ -166,6 +175,7 @@ $(document).ready(function () {
 	});
 
 	MCF.Images.init({
+		zoomOn: 'click',
 		transitionEffect: false,
 		textClickZoomHint: MCF.Locales.get('expandImage'),
 		textHoverZoomHint: MCF.Locales.get('expandImage'),
@@ -175,57 +185,6 @@ $(document).ready(function () {
 		textBtnNext: MCF.Locales.get('next')
 	});
 
-	MCF.Sliders.init({
-		'default': {
-			adaptiveHeight: false,
-			arrows: true,
-			dots: false,
-			easing: 'swing',
-			swipeToSlide: true,
-			prevArrow:
-				'<button class="Button slick-prev">' +
-					'<span class="fa fa-angle-left"></span>' +
-				'</button>',
-			nextArrow:
-				'<button class="Button slick-next">' +
-					'<span class="fa fa-angle-right"></span>' +
-				'</button>'
-		},
-		'banners-wide': {
-			autoplay: true,
-			autoplaySpeed: 5000,
-			slidesToShow: 1
-		},
-		'banners-side': {
-			autoplay: true,
-			autoplaySpeed: 5000,
-			slidesToShow: 1
-		},
-		'grid-list': {
-			slidesToShow: 3,
-			responsive: [
-				{ breakpoint: MCF.Theme.breakpoints['desktop'] + 1, settings: { slidesToShow: 4 } },
-				{ breakpoint: MCF.Theme.breakpoints['mobile-wide'] + 1, settings: { slidesToShow: 3 } },
-				{ breakpoint: MCF.Theme.breakpoints['mobile'] + 1, settings: { slidesToShow: 2 } }
-			]
-		},
-		'grid-list-narrow': {
-			slidesToShow: 2,
-			responsive: [
-				{ breakpoint: MCF.Theme.breakpoints['mobile-wide'] + 1, settings: { slidesToShow: 3 } },
-				{ breakpoint: MCF.Theme.breakpoints['mobile'] + 1, settings: { slidesToShow: 2 } }
-			]
-		},
-		'grid-list-wide': {
-			slidesToShow: 4,
-			responsive: [
-				{ breakpoint: MCF.Theme.breakpoints['desktop'] + 1, settings: { slidesToShow: 4 } },
-				{ breakpoint: MCF.Theme.breakpoints['mobile-wide'] + 1, settings: { slidesToShow: 3 } },
-				{ breakpoint: MCF.Theme.breakpoints['mobile'] + 1, settings: { slidesToShow: 2 } }
-			]
-		}
-	});
-	
 	$('[data-flickity="banner"]').flickity({
 		cellAlign: 'left',
 		contain: true,
@@ -234,10 +193,39 @@ $(document).ready(function () {
 	});
 	
 	$('[data-flickity="list"]').flickity({
-		freeScroll: true,
 		cellAlign: 'left',
 		contain: true,
+		groupCells: '80%',
 		pageDots: false,
+	});
+	
+	//--------------------------------------------------------------------------
+	// Search
+	//--------------------------------------------------------------------------
+
+	var searchInput = $('#SearchInput'),
+			searchBg = $('.LiveSearchBackground');
+			
+	searchInput.attr("placeholder", MCF.Locales.get('search'));
+
+	searchInput.focus(function () {
+		searchBg.addClass('Visible');
+	});
+	
+	searchInput.blur(function () {
+		searchBg.removeClass('Visible');
+	});
+
+	function closeSearch() {
+		searchInput.blur();
+		searchBg.removeClass('Visible');
+	}
+
+	// Close Search with esc key
+	$(document).keydown(function (e) {
+		if (e.keyCode == 27) {
+				closeSearch();
+		}
 	});
 
 	$(document).on('click', '[href="/terms/"]', function () {
@@ -272,5 +260,19 @@ $(document).ready(function () {
 		stickTo: '.SiteBody',
 		top: 80,
 		bottomEnd: 80
+	});
+	
+	var $target = $('.Breadcrumb').children();
+	while ($target.length) {
+		$target = $target.children();
+	}
+	$target.end().closest("ul li").addClass('Current');
+	
+	$('#SubscribeEmail').focus(function () {
+		$('#NewsletterCaptchaBadge').fadeIn();
+	});
+	
+	$('#SubscribeEmail').blur(function () {
+		$('#NewsletterCaptchaBadge').fadeOut();
 	});
 });

@@ -16,7 +16,8 @@
 			updatingCart: 'Updating cart...',
 			updatingCheckout: 'Updating checkout...',
 			next: 'Next',
-			previous: 'Previous'
+			previous: 'Previous',
+			search: 'Search'
 		},
 
 		fi: {
@@ -28,7 +29,8 @@
 			updatingCart: 'Ostoskoria päivitetään...',
 			updatingCheckout: 'Kassaa päivitetään...',
 			next: 'Seuraava',
-			previous: 'Edellinen'
+			previous: 'Edellinen',
+			search: 'Haku'
 		},
 
 		get: function (key) {

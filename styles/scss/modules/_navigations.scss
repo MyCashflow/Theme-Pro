@@ -3,9 +3,9 @@
 //------------------------------------------------------------------------------
 
 .NavigationBar {
+	@include box-shadow(0 3px 4px rgba(0,0,0,.025));
 	background-color: $color-navbar-bg;
 	border-bottom: 1px solid $color-navbar-border;
-	border-width: 1px 0;
 	position: relative;
 	z-index: 100;
 }
@@ -14,10 +14,23 @@
 	max-height: 40px;
 }
 
+.NavigationBar .CartTotal {
+	font-size: $font-size;
+	font-weight: 600;
+}
+
+.NavigationBar [data-drawer-toggle="menu"] {
+	border-left: 1px solid $color-body-border;
+	padding-left: 20px;
+	padding-right: 15px;
+}
+
 .NavigationBarToggle {
+	@include truncate;
 	display: inline-block;
 	font-size: 24px;
 	padding: 15px 10px;
+	vertical-align: middle;
 }
 
 .NavigationBarToggle-Left {
@@ -26,12 +39,6 @@
 
 .NavigationBarToggle-Right {
 	margin-right: -15px;
-}
-
-@media screen and (max-width: $breakpoint-tablet) {
-	.NavigationBar {
-		@include box-shadow(0 1px 30px $black-10);
-	}
 }
 
 //------------------------------------------------------------------------------
@@ -109,6 +116,47 @@
 }
 
 //------------------------------------------------------------------------------
+// Version Navigation
+//------------------------------------------------------------------------------
+
+.VersionNavigation + .FlexItem {
+	margin-left: -15px;
+}
+
+.VersionNavigation > * {
+	display: inline-block;
+}
+
+.VersionNavigation .InlineNavigation li {
+	display: inline-block;
+}
+
+.InlineNavigation .LanguageNavigation a {
+	@include truncate;
+	border-right: 1px solid $color-body-border;
+	display: inline-block;
+	max-width: 160px;
+	padding: 4px 15px;
+	vertical-align: middle;
+}
+
+.InlineNavigation .LanguageNavigation a:hover {
+	overflow: visible;
+	:after {
+		
+	}
+}
+
+.InlineNavigation .LanguageNavigation > li.Current > a {
+	font-weight: normal;
+}
+
+.InlineNavigation .LanguageNavigation li {
+	display: inline-block;
+	margin: 0 -2px 0 -1px;
+}
+
+//------------------------------------------------------------------------------
 // Simple Navigation
 //------------------------------------------------------------------------------
 
@@ -118,7 +166,6 @@
 
 .SimpleNavigation a {
 	@include truncate;
-	@include icon-before($fa-var-angle-right);
 	display: block;
 	text-decoration: none;
 }
@@ -231,13 +278,13 @@
 
 .SimpleDropNavigation ul {
 	list-style: none;
-	background-color: $color-body-bg;
 	margin: 0;
 	padding: 0;
 	position: relative;
 }
 
 .SimpleDropNavigation li ul {
+	background-color: $color-body-bg;
 	border: 1px solid $color-navbar-border;
 	margin: 0 -15px;
 	max-width: 300px;
@@ -317,7 +364,12 @@
 }
 
 .MainNavigation li ul {
+	background-color: $color-body-bg;
 	border: 1px solid $color-body-border;
+}
+
+.MainNavigation > ul > li > a {
+	font-weight: normal;
 }
 
 .MainNavigation li li a {
@@ -330,8 +382,17 @@
 	border-width: 0;
 }
 
+.MainNavigation > ul > li.Current > a {
+	box-shadow: inset 0 -2px;
+}
+
 .MainNavigation .Current > a {
 	color: $color-accent-2;
+}
+
+.MainNavigation .NavHighlight > a {
+	color: $color-accent-2;
+	font-weight: 600;
 }
 
 .MainNavigation .HasSubCategories > a {
@@ -343,20 +404,50 @@
 }
 
 //------------------------------------------------------------------------------
+// Sub Navigation
+//------------------------------------------------------------------------------
+
+.SubNavigationBar {
+	@include box-shadow(inset 0 -3px 8px rgba(0,0,0,.025));
+	@include breakfree;
+	border-bottom: 1px solid $color-navbar-border;
+	text-align: center;
+	z-index: 1;
+}
+
+.SubNavigation {
+	@extend .MainNavigation;
+}
+
+.SubNavigation ul li {
+	text-align: initial;
+}
+
+.SubNavigationBar + .ContentSection {
+	margin-top: 48px;
+}
+
+.SubNavigationBar + .PaginationBar {
+	margin-top: -1px;
+}
+
+//------------------------------------------------------------------------------
 // Side Navigation
 //------------------------------------------------------------------------------
 
 .SideNavigation {
 	@extend %default-margin;
-	border: 1px solid $color-body-border;
-	border-radius: $border-radius;
+}
+
+.SideNavigation-Left {
+	border-right: 1px solid $color-body-border;
+}
+
+.SideNavigation-Right {
+	border-left: 1px solid $color-body-border;
 }
 
 .SideNavigation a {
-	@include icon-before($fa-var-angle-right);
-	@include truncate;
-	background-color: $color-boxed-bg;
-	border-top: 1px solid $color-body-border;
 	display: block;
 	padding: 10px 15px;
 	position: relative;
@@ -425,7 +516,6 @@
 }
 
 .DrawerNavigation .NavigationExpander {
-	border-left: 1px solid $color-drawer-border;
 	cursor: pointer;
 	line-height: 45px;
 	margin-left: 0;
@@ -450,4 +540,42 @@
 
 .DrawerNavigation .Open > ul {
 	display: block;
+}
+
+//------------------------------------------------------------------------------
+// DraweNavigation Styles
+//------------------------------------------------------------------------------
+
+.Drawer .DrawerNavigation > ul > li > a {
+	font-weight: normal;
+}
+
+.Drawer .DrawerNavigation ul ul a {
+	background-color: lighten($color-drawer-bg, 5%);
+}
+
+.Drawer .DrawerNavigation .NavHighlight > a {
+	color: $color-accent-2;
+	font-weight: bold;
+}
+
+.DrawerNavigation a[href='/account/'] {
+	@include icon-before($fa-var-lock);
+}
+
+.DrawerNavigation a[href='/account/logout/'] {
+	@include icon-before($fa-var-sign-out);
+}
+
+.DrawerNavigation a[href='/orderstatus/'] {
+	@include icon-before($fa-var-truck);
+}
+
+.DrawerNavigation a[href='/account/'],
+.DrawerNavigation a[href='/account/logout/'],
+.DrawerNavigation a[href='/orderstatus/'] {
+	&:before {
+		min-width: 20px;
+		text-align: center;
+	}
 }

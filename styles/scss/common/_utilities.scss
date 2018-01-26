@@ -2,6 +2,10 @@
 // Display Helpers
 //------------------------------------------------------------------------------
 
+.Hide {
+	display: none;
+}
+
 @media screen and (min-width: #{$breakpoint-tablet + 1}) {
 	.Hide-Desktop {
 		display: none;

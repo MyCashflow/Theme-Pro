@@ -3,25 +3,62 @@
 //------------------------------------------------------------------------------
 
 .Footer {
-	padding: 48px 0;
+	padding: 48px 0 96px 0;
+}
+
+.Footer h2 {
+	@extend %fancyheading;
+	font-size: $font-size;
 }
 
 .FooterCopy .Copyright {
+	color: $black-50;
+	font-size: $font-size-small;
 	padding: 24px 0;
+	
+	a {
+		color: inherit;
+	}
 }
 
 //------------------------------------------------------------------------------
 // Newsletter Subscribe Form
 //------------------------------------------------------------------------------
 
+.NewsletterSubscribe {
+	background-color: $color-body-bg;
+	border: 1px solid $color-accent-2;
+	border-radius: $border-radius;
+	color: $color-accent-2;
+	max-width: 440px;
+	padding: 12px 15px;
+}
+
+.NewsletterSubscribe > h2 {
+	text-align: center;
+}
+
 .Footer #NewsletterSubscribeForm label {
 	display: none;
 }
 
 .Footer #NewsletterSubscribeForm input {
+	border-color: $color-accent-2;
+	margin-right: -1px;
 	width: 65%;
 }
 
 .Footer #NewsletterSubscribeForm button {
 	width: 35%;
+}
+
+.Footer #NewsletterCaptchaBadge {
+	display: none;
+	position: absolute;
+}
+
+@media screen and (min-width: $breakpoint-tablet + 1) {
+	.NewsletterSubscribe {
+		margin-top: -13px;
+	}
 }

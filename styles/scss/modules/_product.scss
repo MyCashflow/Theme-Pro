@@ -13,11 +13,6 @@
 	transition-duration: $transition-fast;
 }
 
-.ProductImage:hover {
-	@include box-shadow(0 1px 6px $color-accent-2);
-	border-color: $color-accent-2;
-}
-
 .ProductDiscountPrice {
 	color: $color-discount;
 }
@@ -27,22 +22,69 @@
 }
 
 //------------------------------------------------------------------------------
+// Product Card
+//------------------------------------------------------------------------------
+
+.ProductSection {
+	border: 4px double $color-body-border;
+	border-radius: $border-radius;
+	padding: 20px;
+}
+
+.ProductSection .BuyForm input,
+.ProductSection .BuyForm select,
+.ProductSection table {
+	width: 100%;
+}
+
+.ProductSection table {
+	border: 0;
+}
+
+.ProductCardPrices span {
+	@extend h3;
+	font-weight: bold;
+}
+
+.ProductCardPrices .Badge.ProductDiscountPercent {
+	display: inline-block;
+	position: initial;
+	margin: 0 0 0 10px;
+	transform: rotate(3deg);
+}
+
+@media screen and (min-width: $breakpoint-tablet + 1) {
+	.ProductBuyColumn {
+		border-left: 1px solid $color-body-border;
+		padding: 20px 0 20px 20px;
+	}
+}
+
+//------------------------------------------------------------------------------
 // List Product
 //------------------------------------------------------------------------------
 
 .ListProduct {
 	position: relative;
+	padding-bottom: 48px;
+}
+
+.flickity-enabled .ListProduct {
+	padding-bottom: 24px;
 }
 
 .ListProduct .ProductImage {
-	height: 160px;
-	line-height: 138px;
 	vertical-align: middle;
 }
 
+.ListProduct:not(.ListProduct-Compact) .ProductImage:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 4px 4px rgba(0,0,0,.05);
+}
+
 .ListProduct .ProductName {
-	@include truncate;
 	display: block;
+	font-weight: normal;
 	margin: 0;
 }
 
@@ -51,7 +93,74 @@
 }
 
 .ListProduct .ProductPrices {
+	font-weight: bold;
+	margin: 0;
+}
+
+//------------------------------------------------------------------------------
+// List Product ProductInformation
+//------------------------------------------------------------------------------
+
+@media screen and (min-width: $breakpoint-desktop + 1) {
+	.ProductInformation {
+		@include flexbox;
+		@include align-items(flex-start);
+		margin: 0 12px;
+	}
+
+	.ProductInformation > .ProductName {
+		@include flex(1);
+		margin-right: 10px;
+	}
+
+	.ProductInformation > .ProductPrices {
+		text-align: right;
+	}
+}
+
+//------------------------------------------------------------------------------
+// Compact ListProduct 
+//------------------------------------------------------------------------------
+
+.ListProduct-Compact {
+	background-color: $color-body-bg;
+	border: 1px solid $color-image-border;
+	border-radius: $border-radius;
+	font-size: $font-size-small;
+	padding-bottom: 24px;
+	text-align: center;
+	transition-duration: $transition-fast;
+}
+
+.ListProduct-Compact:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 2px 4px rgba(0,0,0,.05);
+}
+
+.ListProduct-Compact .ProductImage {
+	border: 0;
+	padding: 6px;
+}
+
+.flickity-enabled .ListProduct-Compact {
+	margin-bottom: 4px;
+	margin-top: 4px;
+}
+
+.ListProduct-Compact .ProductInformation {
+	display: block;
+	margin: 0 12px;
+}
+
+.ListProduct-Compact .ProductInformation > .ProductName {
 	@include truncate;
+	font-size: inherit;
+	margin-right: 0;
+}
+
+.ListProduct-Compact .ProductInformation > .ProductPrices {
+	font-size: inherit;
+	text-align: center;
 }
 
 //------------------------------------------------------------------------------
@@ -60,10 +169,11 @@
 
 #CurrentProductImage {
 	@extend %default-margin;
+	border: 0;
 	border-radius: $border-radius;
 	display: block;
 	height: auto;
-	padding: 10px;
+	padding: 0;
 	text-align: center;
 }
 
@@ -105,8 +215,7 @@
 }
 
 #ProductThumbnails .mz-thumb-selected {
-	@include box-shadow(0 1px 6px $color-accent-2);
-	border-color: $color-accent-2;
+	border-color: darken($color-image-border, 5%);
 }
 
 @media screen and (max-width: $breakpoint-tablet) {
@@ -119,4 +228,44 @@
 	#ProductThumbnails li {
 		width: 25%;
 	}
+}
+
+//------------------------------------------------------------------------------
+// Product Categories
+//------------------------------------------------------------------------------
+
+.ProductCategories {
+	color: mix($color-text-light, $color-text-dark, 50%);
+	font-size: $font-size-small;
+	margin: 0;
+	text-align: center;
+}
+
+h1 + .ProductCategories,
+.ContentTitle + .ProductCategories {
+	margin-top: -12px;
+}
+
+.ProductCategories a {
+	border-bottom: 1px solid;
+	padding: 0 2px;
+	text-decoration: none;
+}
+
+.ProductCategories ul {
+	list-style: none;
+	margin: 0;
+}
+
+.ProductCategories ul + ul {
+	margin-left: -3px;
+}
+
+.ProductCategories > * {
+	display: inline-block;
+}
+
+.ProductCategories li {
+	display: inline-block;
+	margin: 0 5px 5px 0;
 }

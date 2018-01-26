@@ -25,6 +25,20 @@
 }
 
 //------------------------------------------------------------------------------
+// Search Background
+//------------------------------------------------------------------------------
+
+#LiveSearch.Initiated {
+	position: relative;
+	z-index: 102;
+}
+
+.LiveSearchBackground {
+	@extend .DrawerOverlay;
+	z-index: 101;
+}
+
+//------------------------------------------------------------------------------
 // Live Search Results
 //------------------------------------------------------------------------------
 
@@ -48,20 +62,26 @@
 	margin: 0;
 }
 
-.LiveSearchResults a {
+.LiveSearchResults ul a {
 	display: block;
 	padding: 5px 15px;
 }
 
-.LiveSearchResults a:hover,
-.LiveSearchResults .Active > a {
+.LiveSearchResults ul a:hover,
+.LiveSearchResults ul .Active > a {
 	background-color: mix(#fff, $color-accent-2, 95%);
 	display: block;
 	padding: 5px 15px;
 }
 
+.LiveSearchActions .Button {
+	display: block;
+	margin: 20px auto 10px auto;
+	max-width: 70%;
+}
+
 @media screen and (max-width: $breakpoint-mobile-wide) {
-	.LiveSearchResults .SearchFilter {
+	.LiveResults .SearchFilter {
 		display: block;
 		margin: 0;
 	}

@@ -4,13 +4,45 @@
 	before: '
 		<div class="LiveSearchSeparator"></div>
 		<h3 class="LiveSearchTitle">{%SearchProductsTitle} &ldquo;{SearchKeyword}&rdquo;</h3>
-		<ul class="SearchResults">',
-	after: '</ul>',
+		<div class="SearchResults">',
 	helper: '{{
-		<li>
-			<a href="{ProductUrl}" {ProductLinkData}>{ProductName}</a>
-		</li>
-	}}'
+			<div class="Product MiniCartProduct {ProductClass}">
+				{ProductImage(
+					imagesize: 'mini',
+					link: 'false',
+					before: '<a class="ProductImage" href="{ProductURL}" {ProductLinkData}>',
+					after: '</a>'
+				)}
+				{ProductName(
+					before: '<a class="ProductName" href="{ProductURL}" {ProductLinkData}>',
+					after: '</a>'
+				)}
+				<div class="ProductPrices">
+					{ProductComparePrice(
+						currencysymbol: 'true',
+						before: '
+							{ProductPrice(
+								currencysymbol: 'true',
+								before: '<span class="ProductDiscountPrice">',
+								after: '</span>'
+							)}
+							<span class="ProductComparePrice">',
+						after: '</span>',
+						or: '
+							{ProductPrice(
+								currencysymbol: 'true',
+								before: '<span class="ProductCurrentPrice">',
+								after: '</span>'
+							)}'
+					)}
+				</div>
+			</div>
+	}}',
+	after: '
+		</ul>
+		<div class="LiveSearchActions">
+			<a href="{SearchUrl}" class="Button Button-Primary">{%SearchFiltersLabel}</a>
+		</div>',
 )}
 {SearchPopularTerms(
 	limit: '5',

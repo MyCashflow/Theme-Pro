@@ -1,4 +1,4 @@
-<div class="Drawer" data-drawer="menu" data-drawer-side="left">
+<div class="Drawer" data-drawer="menu" data-drawer-side="right">
 	<div class="DrawerSection">
 		<div class="CompactForm">
 			{Search(id: 'MobileSearch')}
@@ -8,6 +8,17 @@
 		show: 'all',
 		before: '<div class="DrawerNavigation">',
 		after: '</div>'
+	)}
+	{Campaigns(
+		before: '
+			<div class="DrawerNavigation">
+				<ul>
+					<li class="HasSubCategories NavHighlight">
+						<a class="NoLink">{%Campaigns}</a>',
+		after: '
+					</li>
+				</ul>
+			</div>'
 	)}
 	{CurrencyNavigation(
 		before: '

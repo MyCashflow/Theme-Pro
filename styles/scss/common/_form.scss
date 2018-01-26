@@ -4,11 +4,11 @@
 
 input, select, textarea {
 	background-color: $color-input-bg;
-	border: 1px solid $color-body-border;
+	border: 1px solid darken($color-button-bg, 15%);
 	border-radius: $border-radius;
 	color: text-contrast($color-input-bg);
 	display: inline-block;
-	height: 38px;
+	min-height: 38px;
 	max-width: 100%;
 	padding: 6px 12px;
 	transition-duration: $transition-slow;
@@ -38,7 +38,7 @@ select {
 	background-size: 12px 12px;
 	color: text-contrast($color-input-bg);
 	cursor: pointer;
-	height: 38px;
+	min-height: 38px;
 	padding-right: 35px;
 }
 
@@ -84,10 +84,11 @@ label {
 .Button {
 	background: $color-button-bg;
 	border: 1px solid darken($color-button-bg, 15%);
-	border-radius: $border-radius;
+	border-radius: $border-radius-medium;
 	color: text-contrast($color-button-bg) !important;
 	cursor: pointer;
 	display: inline-block;
+	font-weight: normal;
 	padding: 6px 12px;
 	text-align: center;
 	text-decoration: none;
@@ -107,13 +108,12 @@ label {
 }
 
 .Button-Primary {
-	background-color: $color-accent-1;
-	border-color: darken($color-accent-1, 10%);
-	color: text-contrast($color-accent-1) !important;
+	border-color: $color-accent-1;
+	color: $color-accent-1 !important;
 }
 
 .Button-Primary:hover {
-	background-color: lighten($color-accent-1, 2.5%);
+	background-color: $color-accent-1;
 	color: text-contrast($color-accent-1) !important;
 }
 
@@ -142,6 +142,10 @@ form button {
 
 form [type='submit'] {
 	@extend .Button-Primary;
+}
+
+.Button .fa {
+	font-size: $font-size-large;
 }
 
 //------------------------------------------------------------------------------
@@ -352,6 +356,11 @@ form [type='submit'] {
 
 .BuyForm [type='submit'] {
 	@include icon-before($fa-var-shopping-cart);
+	padding: 12px 48px;
+	
+	&:before {
+		font-size: $font-size-large;
+	}
 }
 
 //------------------------------------------------------------------------------
@@ -371,29 +380,42 @@ form [type='submit'] {
 }
 
 #SearchForm #SearchInput,
-#SearchForm #SearchButton  {
-	border: 0;
-	border-radius: 0;
+#SearchForm #SearchButton {
+	transition-duration: $transition-fast;
 }
 
 #SearchForm #SearchInput {
-	width: 100%;
+	border-color: transparent;
 	border-bottom: 1px solid $color-navbar-border;
-}
-
-#SearchForm:hover #SearchInput,
-#SearchForm:hover #SearchButton {
-	border-color: $color-text-dark;
-	color: $color-text-dark !important;
+	border-radius: $border-radius;
+	width: 100%;
 }
 
 #SearchForm #SearchButton {
 	@include icon-replace($fa-var-search);
-	background-color: $color-navbar-bg;
-	color: $black-25 !important;
+	background: transparent;
+	border: 0;
+	color: mix($color-text-light, $color-text-dark, 50%) !important;
 	position: absolute;
 	right: 0;
-	width: 50px;
+	max-width: 70px;
+}
+
+#SearchForm:hover #SearchInput,
+#SearchForm:hover #SearchButton {
+	border-color: $color-navbar-border;
+	color: $color-text-dark !important;
+}
+
+#SearchForm #SearchInput:focus {
+	border: 1px solid $color-accent-2;
+	outline: 0;
+	position: relative;
+	z-index: 1000;
+}
+
+#SearchForm #SearchInput:focus + button {
+	z-index: 1000;
 }
 
 //------------------------------------------------------------------------------

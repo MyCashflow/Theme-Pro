@@ -1,25 +1,24 @@
 {Banners(
 	name: 'category-{CategoryID}',
-	before: '<div class="Banners Banners-Wide" data-slider="banners-wide">',
+	before: '<div class="Banners Banners-Wide" data-flickity="banner">',
 	after: '</div>',
 	helper: '{{
-		<div class="Banner Banner-Wide" {BannerImageURL(width: '1920', before: 'style="background-image: url(', after: ')"')}>
-			{BannerUrl(
-				before: '<a class="CoverLink" href="',
-				after: '" {BannerLinkData}></a>'
-			)}
-			{BannerText(
-				before: '
-					<div class="Container">
-						<div class="BannerContentWrap">
-							<div class="BannerContent">
-								<div class="BannerText">',
-				after: '
-								</div>
+		<div class="Banner Banner-Wide">
+			<div class="AspectRatio">
+				{BannerUrl(
+					before: '<a class="BannerCoverLink" href="',
+					after: '" {BannerLinkData}></a>'
+				)}
+				<div class="BannerBackgroundImage" style="background-image: url({BannerImageURL(width: '1920')})"></div>
+				{BannerText(
+					before: '
+						<div class="Container">
+							<div class="BannerContent">',
+					after: '
 							</div>
-						</div>
-					</div>'
-			)}
+						</div>'
+				)}
+			</div>
 		</div>
 	}}'
 )}

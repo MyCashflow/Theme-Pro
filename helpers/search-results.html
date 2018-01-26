@@ -1,25 +1,19 @@
 <div id="SearchResults">
 	<div class="ContentSection">
-		<div class="Flex Flex-Collapse">
-			<div class="FlexItem">
-				<h1 class="H2">
-					{SearchKeyword(
-						before: '{%SearchPageTitle}:&nbsp;',
-						after: '',
-						or: '{%SearchNoTerms}'
-					)}
-				</h1>
-			</div>
-			<div class="FlexItem FlexSpacer"></div>
-			<div class="FlexItem">
-				{Helper(file: 'helpers/pagination-form')}
-			</div>
-		</div>
+		<h1 class="H2">
+			{SearchKeyword(
+				before: '{%SearchPageTitle}:&nbsp;',
+				after: '',
+				or: '{%SearchNoTerms}'
+			)}
+		</h1>
 	</div>
+	{Helper(file: 'helpers/pagination-form')}
 	<div class="ContentSection">
 		{Notifications(group: 'search')}
 		{SearchProducts(
 			pagination: 'true',
+			limit: '40|100',
 			before: '
 				<div class="Grid">
 					<div class="Col-3-12 Col-Tablet-12-12">
@@ -59,32 +53,19 @@
 			</li>
 		}}'
 	)}
-	{TopSellers(
-		limit: '18',
-		type: 'normal',
-		before: '
-			<div class="ContentSection">
-				<h2 class="ContentTitle">{%BestsellingProducts}</h2>
-				<div class="List ProductList">
-					<div class="GridList GridList-Wide" data-slider="grid-list-wide">',
-		after: '
-					</div>
-				</div>
-			</div>',
-		helper: 'helpers/list-product'
-	)}
 	{LastViewedProducts(
-		limit: '18',
+		limit: '14',
 		type: 'normal',
+		classes: 'ListProduct-Compact',
+		helper: 'helpers/list-product',
 		before: '
 			<div class="ContentSection">
-				<h2 class="ContentTitle">{%ProductsConsidered}</h2>
+				<h3 class="ContentTitle">{%PreviouslyBrowsedProducts}</h3>
 				<div class="List ProductList">
-					<div class="GridList GridList-Wide" data-slider="grid-list-wide">',
+					<div class="GridList GridList-Small" data-flickity="list">',
 		after: '
 					</div>
 				</div>
-			</div>',
-		helper: 'helpers/list-product'
+			</div>'
 	)}
 </div>

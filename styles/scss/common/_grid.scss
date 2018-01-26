@@ -8,6 +8,13 @@
 	padding: 0 ($grid-gutter / 2);
 }
 
+@media screen and (min-width: $breakpoint-mobile) {
+	.Container {
+		padding: 0 ($grid-gutter / 2);
+		// padding: 0 5vw;
+	}
+}
+
 //------------------------------------------------------------------------------
 // Grid
 //------------------------------------------------------------------------------
@@ -35,15 +42,23 @@
 //------------------------------------------------------------------------------
 
 .GridList {
-	@include clearfix;
-	margin: -($grid-list-gutter / 2);
+	margin: 0 (-($grid-list-gutter / 2));
+}
+
+.GridList:not(.flickity-enabled) {
+	@include flexbox;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
 }
 
 .GridList .ListItem {
 	float: left;
-	padding: ($grid-list-gutter / 2);
+	padding: 6px ($grid-list-gutter / 2);
 	position: relative;
 	width: 33.33%;
+	.ProductImage img {
+		max-height: ($container-max-width / 4) - ($grid-list-gutter + $grid-gutter);
+	}
 }
 
 .GridList-Wide .ListItem {
@@ -54,48 +69,76 @@
 	width: 50%;
 }
 
-@media screen and (max-width: $breakpoint-desktop) {
+@media screen and (max-width: $container-max-width) {
 	.GridList .ListItem {
 		width: 33.33%;
+		@include item-count(4, $container-max-width);
+	}
+	
+	.GridList-Wide .ListItem {
+		width: 25%;
+		@include item-count(4, $container-max-width);
+	}
+	
+	.GridList-Narrow .ListItem {
+		width: 50%;
+		@include item-count(4, $container-max-width);
+	}
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+	.GridList .ListItem {
+		width: 33.33%;
+		@include item-count(3, $breakpoint-mobile-wide);
 	}
 }
 
 @media screen and (max-width: $breakpoint-mobile-wide) {
 	.GridList .ListItem {
 		width: 33.33%;
+		@include item-count(3, $breakpoint-mobile);
 	}
 }
 
 @media screen and (max-width: $breakpoint-mobile) {
 	.GridList .ListItem {
 		width: 50%;
-	}
-
-	.GridList-Wide .ListItem {
-		width: 50%;
+		@include item-count(2, ($breakpoint-mobile / 1.5));
 	}
 }
 
-//------------------------------------------------------------------------------
-// Grid List Slider
-//------------------------------------------------------------------------------
-
-.GridList.slick-slider .slick-slide {
-	padding: ($grid-list-gutter / 2);
+.GridList-Small {
+	margin: 0 -1px;
 }
 
-.GridList.slick-slider .slick-prev {
-	right: 50px;
+.GridList-Small .ListItem {
+	margin: 0 -1px -1px 0;
+	padding: 0;
+	width: ($container-max-width / 7) - 3.125;
+	.ProductImage img {
+		max-height: ($container-max-width / 7) - ($grid-list-gutter);
+	}
 }
 
-.GridList.slick-slider .slick-next {
-	right: 10px;
-}
-
-.GridList.slick-slider .slick-prev,
-.GridList.slick-slider .slick-next {
-	bottom: auto;
-	top: -45px;
+@media screen and (max-width: $breakpoint-desktop) {
+	.GridList-Small.flickity-enabled {
+		@include breakfree;
+	}
+	
+	.GridList-Small.flickity-enabled:after {
+		background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1));
+		bottom: 0;
+		content: '';
+		display: block;
+		height: 100%;
+		left: auto;
+		position: absolute;
+		pointer-events: none;
+		right: 0;
+		top: 0;
+		width: 40px;
+		z-index: 1;
+	}
 }
 
 //------------------------------------------------------------------------------
@@ -135,7 +178,7 @@
 	margin-bottom: 0;
 }
 
-@media screen and (max-width: $breakpoint-mobile) {
+@media screen and (max-width: $breakpoint-mobile-wide) {
 	.Flex-Collapse {
 		display: block;
 	}

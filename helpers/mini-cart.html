@@ -3,6 +3,12 @@
 		<div class="MiniCartHeader">
 			<h3 class="MiniCartTitle">{%ShoppingCart}</h3>
 		</div>
+		<div class="MiniCartActions">
+			<div class="Buttons Buttons-Block">
+				<a class="Button" href="/cart/">{%ShoppingCartEdit}</a>
+				<a class="Button Button-Primary OrderProducts" href="/checkout/">{%OrderProducts}</a>
+			</div>
+		</div>
 		<div class="MiniCartProducts">',
 	after: '
 		</div>
@@ -25,13 +31,7 @@
 		{CartTotal(
 			before: '<div class="MiniCartTotal">{%Total}: &nbsp;',
 			after: '</div>'
-		)}
-		<div class="MiniCartActions">
-			<div class="Buttons Buttons-Block">
-				<a class="Button" href="/cart/">{%ShoppingCartEdit}</a>
-				<a class="Button Button-Primary OrderProducts" href="/checkout/">{%OrderProducts}</a>
-			</div>
-		</div>',
+		)}',
 	or: '
 		<div class="DrawerSection">
 			<div class="Notification">
@@ -75,6 +75,10 @@
 						)}'
 				)}
 			</div>
+			{CartProductDelete(
+				before: '<span class="ProductRemove">',
+				after: '</span>'
+			)}
 		</div>
 	}}'
 )}

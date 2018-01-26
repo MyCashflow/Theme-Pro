@@ -3,39 +3,45 @@
 		{ProductImage(
 			imagesize: 'list',
 			link: 'false',
-			before: '<a class="ProductImage" href="{ProductURL}" {ProductLinkData}>',
-			after: '</a>'
-		)}
-		{ProductName(
 			before: '
-				<h3 class="H5 ProductName">
-					<a href="{ProductURL}" {ProductLinkData}>',
+				<a class="ProductImage" href="{ProductURL}" {ProductLinkData}>
+					<div class="AspectRatio">',
 			after: '
-					</a>
-				</h3>'
+					</div>
+				</a>'
 		)}
 		{ProductDiscountPercent(
 			before: '<span class="Badge ProductDiscountPercent">-',
 			after: '&#37;</span>'
 		)}
-		<div class="ProductPrices">
-			{ProductComparePrice(
-				currencysymbol: 'true',
+		<div class="ProductInformation">
+			{ProductName(
 				before: '
-					{ProductPrice(
-						currencysymbol: 'true',
-						before: '<span class="ProductDiscountPrice">',
-						after: '</span>'
-					)}
-					<span class="ProductComparePrice">',
-				after: '</span>',
-				or: '
-					{ProductPrice(
-						currencysymbol: 'true',
-						before: '<span class="ProductCurrentPrice">',
-						after: '</span>'
-					)}'
+					<h3 class="H5 ProductName">
+						<a href="{ProductURL}" {ProductLinkData}>',
+				after: '
+						</a>
+					</h3>'
 			)}
+			<div class="ProductPrices">
+				{ProductComparePrice(
+					currencysymbol: 'true',
+					before: '
+						{ProductPrice(
+							currencysymbol: 'true',
+							before: '<span class="ProductDiscountPrice">',
+							after: '</span>'
+						)}
+						<span class="ProductComparePrice">',
+					after: '</span>',
+					or: '
+						{ProductPrice(
+							currencysymbol: 'true',
+							before: '<span class="ProductCurrentPrice">',
+							after: '</span>'
+						)}'
+				)}
+			</div>
 		</div>
 	</div>
 </div>

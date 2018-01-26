@@ -2,6 +2,10 @@
 // Full Cart
 //------------------------------------------------------------------------------
 
+.FullCart a {
+	text-decoration: none;
+}
+
 .FullCartSection {
 	border-bottom: 1px solid $color-body-border;
 	padding: 24px 0;
@@ -161,9 +165,13 @@
 .MiniCartProduct .ProductName {
 	@include truncate;
 	display: block;
-	font-weight: bold;
+	font-weight: normal;
 	margin-bottom: 0;
 	text-decoration: none;
+}
+
+.MiniCartProduct .ProductPrices {
+	font-weight: bold;
 }
 
 .MiniCartProduct .ProductQuantity {
@@ -174,19 +182,41 @@
 	top: auto;
 }
 
+.MiniCartProduct .ProductRemove {
+	bottom: 0;
+	border-left: 1px solid $color-body-border;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.MiniCartProduct .CartRemove {
+	@extend .ExtendHitArea;
+	@include icon-before($fa-var-trash);
+	@include valign;
+	display: block;
+	opacity: .5;
+	padding: 5px 5px 5px 15px;
+	text-decoration: none;
+}
+
+.MiniCartProduct .CartRemove span {
+	display: none;
+}
+
 .MiniCart-Checkout {
 	@extend %default-margin;
-	@include box-shadow(0 1px 2px $black-10);
 	background-color: $color-boxed-bg;
 	border: 1px solid $color-body-border;
 	border-radius: $border-radius;
 	z-index: 1;
 }
 
-.MiniCart-Checkout .MiniCartActions {
+.MiniCart-Checkout .MiniCartTotal:last-child {
 	border-bottom-width: 0;
 }
 
-.MiniCart-Checkout .OrderProducts {
+.MiniCart-Checkout .OrderProducts,
+.MiniCart-Checkout .CartRemove {
 	display: none !important;
 }
