@@ -19,3 +19,60 @@
 		display: none;
 	}
 }
+
+//------------------------------------------------------------------------------
+// Relative Squares
+//------------------------------------------------------------------------------
+
+.AspectRatio {
+	@include flexbox;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	width: 100%;
+}
+
+.AspectRatio:before {
+	content: "";
+	width: 1px;
+	margin-left: -1px;
+	float: left;
+	height: 0;
+	padding-top: $list-item-ratio;
+}
+
+.AspectRatio:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+//------------------------------------------------------------------------------
+// Extend Hit Area
+//------------------------------------------------------------------------------
+
+.ExtendHitArea {
+	position: relative;
+}
+
+.ExtendHitArea:after {
+	bottom: -10px;
+	content: '';
+	display: block;
+	left: -10px;
+	position: absolute;
+	right: -10px;
+	top: -10px;
+}
+
+//------------------------------------------------------------------------------
+// Misc
+//------------------------------------------------------------------------------
+
+.NoLink {
+	cursor: default;
+}
+
+.NavHighlight > a {
+	color: $color-accent-2;
+}
