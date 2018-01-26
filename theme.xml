@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <Theme>
 	<ImageSizes>
-		<Mini width="80" height="80" />
-		<List width="260" height="260" />
-		<Normal width="600" height="600" />
+		<Mini width="260" height="260" />
+		<List width="520" height="520" />
+		<Normal width="520" height="520" />
 		<Big width="1200" height="1200" />
 	</ImageSizes>
 	<Features>
