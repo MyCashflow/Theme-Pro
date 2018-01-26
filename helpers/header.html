@@ -20,20 +20,19 @@
 		<div class="SiteWrapper">
 			<div class="Site">
 				<div class="SiteHeader">
-					<div class="InfoHeader Hide-Tablet">
+					<div class="UtilityBar Hide-Tablet">
 						<div class="Container">
 							<div class="Flex Flex-NoMargin">
 								{LanguageNavigation(
+									showcurrent: 'true',
 									before: '
-										<div class="SimpleDropNavigation">
-											<ul class="NavigationList LanguageNavigation">
-												<li class="HasSubCategories">
-													<a href="" class="NoLink">{CurrentLanguage}</a>',
+										<div class="FlexItem VersionNavigation">
+											<div class="InlineNavigation">',
 									after: '
-												</li>
-											</ul>
+											</div>
 										</div>'
 								)}
+								
 								{CurrencyNavigation(
 									before: '
 										<div class="FlexItem">
@@ -41,7 +40,7 @@
 												<span class="NavigationLabel">{%Currency}:</span>
 												<ul class="NavigationList CurrencyNavigation">
 													<li class="HasSubCategories">
-														<a href="" class="NoLink">{Currency}</a>',
+														<a href="#" class="NoLink">{Currency}</a>',
 									after: '
 													</li>
 												</ul>
@@ -49,22 +48,20 @@
 										</div>'
 								)}
 								<div class="FlexItem FlexSpacer"></div>
-								<div class="FlexItem">
-									{CustomerNavigation(
-										register: 'true',
-										before: '
-											<div class="FlexItem">
-												<div class="SimpleDropNavigation MainNavigation-Right">
-													<ul class="CustomerNavigation NavigationList">
-														<li class="HasSubCategories">
-															<a href="/account/">{%MyAccount}</a>',
-										after: '
-														</li>
-													</ul>
-												</div>
-											</div>'
-									)}
-								</div>
+								{CustomerNavigation(
+									register: 'true',
+									before: '
+										<div class="FlexItem">
+											<div class="SimpleDropNavigation MainNavigation-Right">
+												<ul class="CustomerNavigation NavigationList">
+													<li class="HasSubCategories">
+														<a href="/account/">{%MyAccount}</a>',
+									after: '
+													</li>
+												</ul>
+											</div>
+										</div>'
+								)}
 							</div>
 						</div>
 					</div>
@@ -93,13 +90,15 @@
 														}}'
 													)}
 												</div>
-											</div>'
+											</div>
+											<div class="LiveSearchBackground"></div>'
 									)}
 								</div>
-								<div class="FlexItem">
+								<div class="FlexItem Text-Right">
 									<a href="/cart/" class="Button Button-Primary" data-drawer-toggle="cart">
 										<span class="fa fa-shopping-cart"></span>
 										{%ShoppingCart}
+										<span class="CartTotal">{CartSubTotal}</span>
 									</a>
 								</div>
 							</div>
@@ -124,8 +123,8 @@
 											<div class="FlexItem">
 												<div class="MainNavigation MainNavigation-Right">
 													<ul>
-														<li class="HasSubCategories">
-															<a>{%Campaigns}</a>',
+														<li class="HasSubCategories NavHighlight">
+															<a class="NoLink">{%Campaigns}</a>',
 										after: '
 														</li>
 													</ul>
@@ -137,17 +136,18 @@
 							</div>
 							<div class="Hide-Desktop">
 								<div class="Flex Flex-NoMargin">
-									<div class="FlexItem">
-										<a href="#" class="NavigationBarToggle NavigationBarToggle-Left" data-drawer-toggle="menu">
-											<span class="fa fa-bars"></span>
-										</a>
-									</div>
-									<div class="FlexItem FlexItem-Grow Text-Center">
+									<div class="FlexItem FlexItem-Grow">
 										{Logo(width: '240', height: '120')}
 									</div>
 									<div class="FlexItem">
 										<a href="#" class="NavigationBarToggle NavigationBarToggle-Right" data-drawer-toggle="cart">
 											<span class="fa fa-shopping-cart"></span>
+											<span class="CartTotal">{CartSubTotal}</span>
+										</a>
+									</div>
+									<div class="FlexItem">
+										<a href="#" class="NavigationBarToggle NavigationBarToggle-Right" data-drawer-toggle="menu">
+											<span class="fa fa-bars"></span>
 										</a>
 									</div>
 								</div>

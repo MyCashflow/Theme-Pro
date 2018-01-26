@@ -2,7 +2,7 @@
 // Info Header
 //------------------------------------------------------------------------------
 
-.InfoHeader {
+.UtilityBar {
 	border-bottom: 1px solid $color-body-border;
 	font-size: $font-size-small;
 }
@@ -16,12 +16,12 @@
 }
 
 .BrandHeader .LogoLink > img {
-	max-height: 160px;
+	max-height: 110px;
 }
 
 .BrandHeader #LiveSearch {
 	margin: auto;
-	max-width: 400px;
+	max-width: 500px;
 	vertical-align: middle;
 }
 
@@ -31,4 +31,21 @@
 
 .BrandHeader .FlexItem.FlexSpacer {
 	width: 50%;
+}
+
+//------------------------------------------------------------------------------
+// Brand Header
+//------------------------------------------------------------------------------
+
+.BrandHeader input,
+.BrandHeader button,
+.BrandHeader .Button {
+	padding: 12px;
+	height: auto;
+}
+
+.Button .CartTotal {
+	border-left: 1px solid;
+	padding-left: 15px;
+	margin-left: 10px;
 }
