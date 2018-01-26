@@ -1,58 +1,122 @@
 {Helper(file: 'helpers/header')}
+{Banners(
+	name: 'frontpage',
+	before: '<div class="Banners Banners-Wide Banners-Wide-Contained" data-flickity="banner">',
+	after: '</div>',
+	helper: '{{
+		<div class="Banner Banner-Wide">
+			<div class="AspectRatio">
+				{BannerUrl(
+					before: '<a class="BannerCoverLink" href="',
+					after: '" {BannerLinkData}></a>'
+				)}
+				<div class="BannerBackgroundImage" style="background-image: url({BannerImageURL(width: '1920')})"></div>
+				{BannerText(
+					before: '
+						<div class="Container">
+							<div class="BannerContent">',
+					after: '
+							</div>
+						</div>'
+				)}
+			</div>
+		</div>
+	}}'
+)}
 <div class="SiteContent">
 	<div class="Container">
-		{Banners(
-			name: 'frontpage',
-			before: '<div class="Banners Banners-Wide" data-flickity="banner">',
-			after: '</div>',
-			helper: '{{
-				<div class="Banner Banner-Wide" {BannerImageURL(width: '1920', before: 'style="background-image: url(', after: ')"')}>
-					{BannerUrl(
-						before: '<a class="CoverLink" href="',
-						after: '" {BannerLinkData}></a>'
-					)}
-					{BannerText(
-						before: '
-							<div class="Container">
-								<div class="BannerContentWrap">
-									<div class="BannerContent">
-										<div class="BannerText">',
-						after: '
-										</div>
-									</div>
-								</div>
-							</div>'
-					)}
-				</div>
-			}}'
-		)}
 		<div class="Grid">
 			<div class="Col-12-12">
 				{Notifications(group: 'account')}
 				{LastViewedProducts(
-					limit: '18',
+					limit: '14',
 					type: 'normal',
+					classes: 'ListProduct-Compact',
 					before: '
 						<div class="ContentSection">
 							<h2 class="ContentTitle ContentTitle-Fancy">{%ProductsConsidered}</h2>
 							<div class="List ProductList">
-								<div class="GridList GridList-Wide" data-flickity="list">',
+								<div class="GridList GridList-Small" data-flickity="list">',
 					after: '
 								</div>
 							</div>
 						</div>',
-					helper: 'helpers/list-product'
+					helper: 'helpers/list-product',
+					or: '
+						{NewProducts(
+							limit: '14',
+							type: 'normal',
+							classes: 'ListProduct-Compact',
+							before: '
+								<div class="ContentSection">
+									<h2 class="ContentTitle ContentTitle-Fancy">{%NewProducts}</h2>
+									<div class="List ProductList">
+										<div class="GridList GridList-Small" data-flickity="list">',
+							after: '
+										</div>
+									</div>
+								</div>',
+							helper: 'helpers/list-product'
+						)}'
 				)}
-				<div class="ContentSection">
-					<h1 class="ContentTitle">{PageTitle}</h1>
-					{CategoryImage(
-						width: '1024',
-						before: '<div class="Banner Banner-Body">',
-						after: '</div>'
-					)}
-					{CategoryDescription}
-					<div class="fb-like" data-send="true" data-width="480" data-size="large" data-show-faces="true" data-font="arial" data-href="{FacebookPageURL(or: '{ShopUrl}{CanonicalUrl}')}"></div>
-				</div>
+				{CategoryImageURL(
+					width: '1920',
+					before: '
+					<div class="ContentSection ContentSection-FullWidth">
+						<div class="Banners">
+							<div class="Banner Banner-UniHeight">
+								{CategoryLink(
+									before: '<a class="BannerCoverLink" href="',
+									after: '"></a>'
+								)}
+								<h1 class="ContentTitle Hide">{PageTitle}</h1>
+								<div class="BannerBackgroundImage" style="background-image: url(',
+					after: '
+								)"></div>
+								{CategoryDescription(
+									before: '
+										<div class="Container">
+											<div class="BannerContent">',
+									after: '
+											</div>
+										</div>'
+								)}
+							</div>
+						</div>
+					</div>',
+					or: '
+						<div class="ContentSection">
+							<h1 class="ContentTitle">{PageTitle}</h1>
+							{CategoryDescription}
+						</div>'
+				)}
+				{Banners(
+					name: 'sidebar-left',
+					limit: '3',
+					before: '
+						<div class="ContentSection">
+							<div class="Banners Banners-Blocks">',
+					helper: '{{
+						<div class="Block">
+							<div class="Banner Banner-Block">
+								<div class="AspectRatio">
+									{BannerUrl(
+										before: '<a class="BannerCoverLink" href="',
+										after: '" {BannerLinkData}></a>'
+									)}
+									<div class="BannerBackgroundImage" style="background-image: url({BannerImageURL(width: '740')})"></div>
+									{BannerText(
+										before: '<div class="BannerContent">',
+										after: '</div>'
+									)}
+								</div>
+							</div>
+						</div>
+					}}',
+					after: '
+							</div>
+						</div>'
+				)}
 				{HotPicks(
 					limit: '8',
 					type: 'normal',

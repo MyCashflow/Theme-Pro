@@ -10,17 +10,36 @@
 	text-decoration: none;
 }
 
-.CoverLink {
-	bottom: 0;
-	left: 0;
-	position: absolute;
-	right: 0;
-	top: 0;
+.BannerCoverLink {
+	@include cover;
 	z-index: 1;
 }
 
-.BannerText > * {
-	margin: 10px 0 !important;
+.BannerContent {
+	position: relative;
+}
+
+.BannerCaption {
+	@include cover;
+	background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.75));
+	color: $color-text-light;
+	padding: 48px 24px;
+	text-align: center;
+	top: auto;
+}
+
+//------------------------------------------------------------------------------
+// Background Element
+//------------------------------------------------------------------------------
+
+.BannerBackgroundImage {
+	@include cover;
+	@include transition($transition-slow);
+	background-color: $color-boxed-bg;
+	background-position: 50% top;
+	background-size: cover;
+	border-radius: $border-radius;
+	overflow: hidden;
 }
 
 //------------------------------------------------------------------------------
@@ -74,55 +93,128 @@
 //------------------------------------------------------------------------------
 
 .Banners-Wide {
-	@extend %default-margin;
-	border: 1px solid $color-body-border;
-	border-radius: 0;
-	border-width: 0 0 1px;
 	font-size: $font-size-large;
-	height: 480px;
 }
 
 .Banner-Wide {
-	background-position: 50%;
-	background-size: cover;
-	height: 480px;
 	position: relative;
 	width: 100%;
+	overflow: hidden;
 }
 
-.Banner-Wide:before {
-	@include cover;
-	content: '';
-	display: block;
+.Banner-Wide .AspectRatio {
+	max-height: 550px;
 }
 
-.Banner-Wide .Container {
-	position: relative;
-}
-
-.Banner-Wide .BannerContentWrap {
-	display: table;
-	height: 480px;
-	width: 100%;
+.Banner-Wide .AspectRatio:before {
+	padding-top: 40%;
 }
 
 .Banner-Wide .BannerContent {
-	display: table-cell;
-	vertical-align: middle;
+	padding: 20px;
+}
+
+.Banners-Wide-Contained {
+	@extend .Container;
 }
 
 @media screen and (max-width: $breakpoint-tablet) {
-	.Banners-Wide,
-	.Banner-Wide,
-	.Banner-Wide .BannerContentWrap {
-		height: 340px;
+	.Banner-Wide .AspectRatio:before {
+		padding-top: 50%;
 	}
 }
 
 @media screen and (max-width: $breakpoint-mobile) {
-	.Banners-Wide,
-	.Banner-Wide,
-	.Banner-Wide .BannerContentWrap {
-		height: 240px;
+	.Banners-Wide-Contained {
+		margin: 0 auto;
+		padding: 0;
+	}
+	
+	.Banner-Wide .AspectRatio:before {
+		padding-top: 50%;
+	}
+}
+
+@media screen and (min-width: $breakpoint-mobile) {
+	.Banners-Wide-Contained {
+		padding-top: 24px;
+	}
+}
+
+//------------------------------------------------------------------------------
+// Banner Universal Height
+//------------------------------------------------------------------------------
+
+.Banner-UniHeight {
+	height: 450px;
+	overflow: hidden;
+}
+
+.Banner-UniHeight .Container {
+	@include valign;
+}
+
+.Banner-UniHeight .BannerContent {
+	max-width: 300px;
+	padding: 20px;
+}
+
+//------------------------------------------------------------------------------
+// Banner Blocks
+//------------------------------------------------------------------------------
+
+.Banners-Blocks {
+	@extend %default-margin;
+	@include flexbox;
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+}
+
+.Block {
+	@include flex(1 1 33.33%);
+	padding: .5px;
+}
+
+.Banner-Block {
+	border-radius: $border-radius;
+	overflow: hidden;
+}
+
+.Banner-Block .BannerContent {
+	@include transition($transition-slow);
+	color: $color-text-light;
+	margin: auto;
+	max-width: 320px;
+	min-width: 170px;
+	opacity: 0;
+	text-align: center;
+	width: 90%;
+}
+
+.Banner-Block:hover .BannerBackgroundImage {
+	transform: scale(1.025);
+	-webkit-filter: grayscale(1) brightness(0.45) contrast(1.05);
+	filter: grayscale(1) brightness(0.45) contrast(1.05);
+}
+
+.Banner-Block:hover .BannerContent {
+	opacity: 1;
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+	.Banner-Block .BannerContent {
+		h1, h2, h3, h4 {
+			font-size: $font-size-large;
+			margin-bottom: 0;
+		}
+		& > * {
+			font-size: $font-size-small;
+		}
+	}
+}
+
+@media screen and (max-width: $breakpoint-mobile-wide) {
+	.Block:first-child {
+		@include flex(1 1 100%);
 	}
 }
