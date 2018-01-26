@@ -43,35 +43,48 @@
 // Flickity
 //------------------------------------------------------------------------------
 
-.flickity-prev-next-button.previous { left: -50px; }
-.flickity-prev-next-button.next { right: -50px; }
-/* right to left */
-.flickity-rtl .flickity-prev-next-button.previous {
-  left: auto;
-  right: -50px;
+.flickity-prev-next-button.previous {
+	left: 0;
 }
-.flickity-rtl .flickity-prev-next-button.next {
-  right: auto;
-  left: -50px;
+.flickity-prev-next-button.next {
+	right: 0;
 }
 
-/* big buttons, no circle */
+.flickity-rtl .flickity-prev-next-button.previous {
+	left: auto;
+	right: 0;
+}
+.flickity-rtl .flickity-prev-next-button.next {
+	right: auto;
+	left: 0;
+}
+
 .flickity-prev-next-button {
-  width: 40px;
-  height: 40px;
-  background: transparent;
+	width: 40px;
+	height: 100%;
+	border-radius: 0 !important;
+	background: transparent;
+	z-index: 2;
 }
+
 .flickity-prev-next-button:hover {
-  background: transparent;
+	background: transparent;
 }
-/* arrow color */
+
 .flickity-prev-next-button .arrow {
-  fill: $color-text-dark;
+	fill: $color-text-dark;
 }
+
 .flickity-prev-next-button.no-svg {
-  color: $color-text-dark;
+	color: $color-text-dark;
 }
-/* hide disabled button */
+
 .flickity-prev-next-button:disabled {
   display: none;
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+	.flickity-prev-next-button {
+		display: none;
+	}
 }
