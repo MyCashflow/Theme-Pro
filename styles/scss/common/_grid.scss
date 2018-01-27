@@ -56,9 +56,6 @@
 	padding: 6px ($grid-list-gutter / 2);
 	position: relative;
 	width: 33.33%;
-	.ProductImage img {
-		max-height: ($container-max-width / 4) - ($grid-list-gutter + $grid-gutter);
-	}
 }
 
 .GridList-Wide .ListItem {
@@ -72,38 +69,32 @@
 @media screen and (max-width: $container-max-width) {
 	.GridList .ListItem {
 		width: 33.33%;
-		@include item-count(4, $container-max-width);
 	}
 	
 	.GridList-Wide .ListItem {
 		width: 25%;
-		@include item-count(4, $container-max-width);
 	}
 	
 	.GridList-Narrow .ListItem {
 		width: 50%;
-		@include item-count(4, $container-max-width);
 	}
 }
 
 @media screen and (max-width: $breakpoint-tablet) {
 	.GridList .ListItem {
 		width: 33.33%;
-		@include item-count(3, $breakpoint-mobile-wide);
 	}
 }
 
 @media screen and (max-width: $breakpoint-mobile-wide) {
 	.GridList .ListItem {
 		width: 33.33%;
-		@include item-count(3, $breakpoint-mobile);
 	}
 }
 
 @media screen and (max-width: $breakpoint-mobile) {
 	.GridList .ListItem {
 		width: 50%;
-		@include item-count(2, ($breakpoint-mobile / 1.5));
 	}
 }
 
@@ -115,9 +106,6 @@
 	margin: 0 -1px -1px 0;
 	padding: 0;
 	width: ($container-max-width / 7) - 3.125;
-	.ProductImage img {
-		max-height: ($container-max-width / 7) - ($grid-list-gutter);
-	}
 }
 
 @media screen and (max-width: $breakpoint-desktop) {
