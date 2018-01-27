@@ -77,6 +77,15 @@
 	vertical-align: middle;
 }
 
+.ProductImageContainer {
+	@include cover;
+}
+
+.ListProduct .ProductImage img {
+	@include cover;
+	margin: auto;
+}
+
 .ListProduct:not(.ListProduct-Compact) .ProductImage:hover {
 	transform: translateY(-1px);
 	box-shadow: 0 4px 4px rgba(0,0,0,.05);

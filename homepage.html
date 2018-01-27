@@ -1,7 +1,7 @@
 {Helper(file: 'helpers/header')}
 {Banners(
 	name: 'frontpage',
-	before: '<div class="Banners Banners-Wide Banners-Wide-Contained" data-flickity="banner">',
+	before: '<div class="Banners Banners-Wide Banners-Wide-Contained"  data-flickity="banner">',
 	after: '</div>',
 	helper: '{{
 		<div class="Banner Banner-Wide">
@@ -13,7 +13,7 @@
 				<div class="BannerBackgroundImage" style="background-image: url({BannerImageURL(width: '1920')})"></div>
 				{BannerText(
 					before: '
-						<div class="Container">
+						<div class="BannerContainer">
 							<div class="BannerContent">',
 					after: '
 							</div>
@@ -106,8 +106,12 @@
 									)}
 									<div class="BannerBackgroundImage" style="background-image: url({BannerImageURL(width: '740')})"></div>
 									{BannerText(
-										before: '<div class="BannerContent">',
-										after: '</div>'
+										before: '
+											<div class="BannerContainer">
+												<div class="BannerContent">',
+										after: '
+												</div>
+											</div>'
 									)}
 								</div>
 							</div>

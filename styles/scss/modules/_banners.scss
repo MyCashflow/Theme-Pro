@@ -15,6 +15,10 @@
 	z-index: 1;
 }
 
+.BannerContainer {
+	@extend .Container;
+}
+
 .BannerContent {
 	position: relative;
 }
@@ -110,7 +114,12 @@
 	padding-top: 40%;
 }
 
+.Banner-Wide .BannerContainer {
+	@include cover;
+}
+
 .Banner-Wide .BannerContent {
+	@include valign;
 	padding: 20px;
 }
 
@@ -180,7 +189,12 @@
 	overflow: hidden;
 }
 
+.Banner-Block .BannerContainer {
+	@include cover;
+}
+
 .Banner-Block .BannerContent {
+	@include valign;
 	@include transition($transition-slow);
 	color: $color-text-light;
 	margin: auto;
