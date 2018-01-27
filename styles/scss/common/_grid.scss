@@ -59,20 +59,6 @@
 	width: 50%;
 }
 
-@media screen and (max-width: $container-max-width) {
-	.GridList .ListItem {
-		width: 33.33%;
-	}
-	
-	.GridList-Wide .ListItem {
-		width: 25%;
-	}
-	
-	.GridList-Narrow .ListItem {
-		width: 50%;
-	}
-}
-
 @media screen and (max-width: $breakpoint-tablet) {
 	.GridList .ListItem {
 		width: 33.33%;

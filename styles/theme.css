@@ -3239,14 +3239,6 @@ form .Active[type='submit'],
 .GridList-Narrow .ListItem {
   width: 50%; }
 
-@media screen and (max-width: 1200px) {
-  .GridList .ListItem {
-    width: 33.33%; }
-  .GridList-Wide .ListItem {
-    width: 25%; }
-  .GridList-Narrow .ListItem {
-    width: 50%; } }
-
 @media screen and (max-width: 1024px) {
   .GridList .ListItem {
     width: 33.33%; } }
