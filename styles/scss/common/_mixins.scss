@@ -267,8 +267,8 @@
 
 @mixin item-count($count: 4, $breakpoint: $container-max-width) {
 	.ProductImage img {
-		max-height: ($breakpoint / $count) - $grid-list-gutter;
-		max-height: calc((100vw / #{$count}) - (#{$grid-list-gutter} + #{$grid-gutter}) - 1vw);
+		max-height: (($breakpoint / $count) - $grid-list-gutter) * $list-item-ratio;
+		max-height: calc(((100vw / #{$count}) - (#{$grid-list-gutter} + #{$grid-gutter}) - 1vw) * #{$list-item-ratio});
 	}
 }
 
