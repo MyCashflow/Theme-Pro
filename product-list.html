@@ -4,7 +4,10 @@
 	<div class="Container">
 		{Helper(file: 'helpers/category-header')}
 		<div class="Grid">
-			<div class="Col-12-12">
+			<div class="Col-3-12 Col-Tablet-12-12">
+				{Helper(file: 'helpers/sidebar')}
+			</div>
+			<div class="Col-9-12 Col-Tablet-12-12">
 				<div class="ContentSection">
 					<h1 class="ContentTitle">{PageTitle}</h1>
 					{CategoryImage(
@@ -36,7 +39,7 @@
 						type: 'normal',
 						before: '
 							<div class="List ProductList">
-								<div class="GridList GridList-Wide">',
+								<div class="GridList">',
 						after: '
 								</div>
 							</div>
