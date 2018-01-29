@@ -108,13 +108,15 @@ label {
 }
 
 .Button-Primary {
+	background-color: $color-accent-1;
 	border-color: $color-accent-1;
-	color: $color-accent-1 !important;
+	color: text-contrast($color-accent-1) !important;
 }
 
 .Button-Primary:hover {
-	background-color: $color-accent-1;
-	color: text-contrast($color-accent-1) !important;
+	background-color: $color-button-bg;
+	border-color: $color-accent-1;
+	color: $color-accent-1 !important;
 }
 
 .Button-Primary:active,
@@ -385,8 +387,6 @@ form [type='submit'] {
 }
 
 #SearchForm #SearchInput {
-	border-color: transparent;
-	border-bottom: 1px solid $color-navbar-border;
 	border-radius: $border-radius;
 	width: 100%;
 }
@@ -403,7 +403,7 @@ form [type='submit'] {
 
 #SearchForm:hover #SearchInput,
 #SearchForm:hover #SearchButton {
-	border-color: $color-navbar-border;
+	border-color: $color-text-dark;
 	color: $color-text-dark !important;
 }
 
