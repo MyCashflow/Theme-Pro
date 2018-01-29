@@ -31,7 +31,7 @@ $white-50:                    rgba(255, 255, 255, 0.5);
 $white-75:                    rgba(255, 255, 255, 0.75);
 
 $color-base-1:                #ffffff !default;
-$color-base-2:                #fafafa !default;
+$color-base-2:                #f1ecf0 !default;
 
 $color-accent-1:              #154ef6 !default;
 $color-accent-2:              #154ef6 !default;
@@ -40,10 +40,10 @@ $color-success:               #88bb33 !default;
 $color-error:                 #ce2d4f !default;
 
 $color-text-light:            #fefefe !default;
-$color-text-dark:             #333333 !default;
+$color-text-dark:             mix($color-base-2, #000000, 20%) !default;
 
 $color-link-light:            #fafafa !default;
-$color-link-dark:             #333333 !default;
+$color-link-dark:             mix($color-base-2, #000000, 10%) !default;
 
 $color-discount:              #ce2d4f !default;
 
@@ -63,11 +63,11 @@ $color-button-bg:             #ffffff !default;
 $color-image-bg:              #ffffff !default;
 $color-input-bg:              #ffffff !default;
 
-$color-body-border:           #eeeeee !default;
-$color-navbar-border:         #eeeeee !default;
-$color-footer-border:         #eeeeee !default;
-$color-drawer-border:         #eeeeee !default;
-$color-image-border:          #eeeeee !default;
+$color-body-border:           mix($color-base-1, $color-base-2, 25%) !default;
+$color-navbar-border:         $color-body-border !default;
+$color-footer-border:         $color-body-border !default;
+$color-drawer-border:         $color-body-border !default;
+$color-image-border:          $color-body-border !default;
 
 //------------------------------------------------------------------------------
 // Raster Icons
