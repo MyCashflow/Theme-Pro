@@ -3,34 +3,34 @@
 <div class="SiteContent">
 	<div class="Container">
 		<div class="ContentSection">
-			<h1 class="ContentTitle">{PageTitle}</h1>
-			{ProductCategories(
-				before: '
-					<div class="ProductCategories">
-						<span>{%SearchFilterCategory}:</span>&nbsp;',
-				after: '
-						{ProductBrandName(
-							before: '<span>{%SearchFilterBrand}: <a href="{ProductBrandLink}">',
-							after: '</a></span>'
-						)}
-						{ProductCampaign(
-							helper: '{{ <span>{%Campaigns}: <a href="{CampaignURL}">{CampaignName}</a></span> }}'
-						)}
-					</div>'
-			)}
-		</div>
-		<div class="ContentSection">
 			<div class="Grid">
 				<div class="Col Col-12-12">
 					<section class="ProductSection {ProductClass}">
 						<div class="Grid">
-							<div class="Col Col-6-12 Col-Tablet-12-12">
+							<div class="Col Col-4-12 Col-Tablet-12-12">
 								{ProductImage}
 								{ProductImageCaption}
 								{ProductThumbnails}
 							</div>
-							<div class="Col Col-6-12 Col-Tablet-12-12">
+							<div class="Col Col-8-12 Col-Tablet-12-12">
 								<div class="ProductBuyColumn">
+									<div class="ContentSection">
+										<h1 class="ContentTitle">{PageTitle}</h1>
+										{ProductCategories(
+											before: '
+												<div class="ProductCategories">
+													<span>{%SearchFilterCategory}:</span>&nbsp;',
+											after: '
+													{ProductBrandName(
+														before: '<span>{%SearchFilterBrand}: <a href="{ProductBrandLink}">',
+														after: '</a></span>'
+													)}
+													{ProductCampaign(
+														helper: '{{ <span>{%Campaigns}: <a href="{CampaignURL}">{CampaignName}</a></span> }}'
+													)}
+												</div>'
+										)}
+									</div>
 									<div class="ContentSection">
 										<p class="ProductPrices ProductCardPrices">
 											{ProductComparePrice(
@@ -90,7 +90,7 @@
 			helper: 'helpers/list-product',
 			before: '
 				<div class="ContentSection">
-					<h3 class="ContentTitle">{%SimilarProducts}</h3>
+					<h3 class="ContentTitle ContentTitle-Fancy">{%SimilarProducts}</h3>
 					<div class="List ProductList">
 						<div class="GridList GridList-Wide" data-flickity="list">',
 			after: '
@@ -104,7 +104,7 @@
 			helper: 'helpers/list-product',
 			before: '
 				<div class="ContentSection">
-					<h3 class="ContentTitle">{%CompatibleProducts}</h3>
+					<h3 class="ContentTitle ContentTitle-Fancy">{%CompatibleProducts}</h3>
 					<div class="List ProductList">
 						<div class="GridList GridList-Wide" data-flickity="list">',
 			after: '
@@ -119,7 +119,7 @@
 			helper: 'helpers/list-product',
 			before: '
 				<div class="ContentSection">
-					<h3 class="ContentTitle">{%CrossSalesForProduct}</h3>
+					<h3 class="ContentTitle ContentTitle-Fancy">{%CrossSalesForProduct}</h3>
 					<div class="List ProductList">
 						<div class="GridList GridList-Small" data-flickity="list">',
 			after: '
@@ -134,7 +134,7 @@
 			helper: 'helpers/list-product',
 			before: '
 				<div class="ContentSection">
-					<h3 class="ContentTitle">{%PreviouslyBrowsedProducts}</h3>
+					<h3 class="ContentTitle ContentTitle-Fancy">{%PreviouslyBrowsedProducts}</h3>
 					<div class="List ProductList">
 						<div class="GridList GridList-Small" data-flickity="list">',
 			after: '
