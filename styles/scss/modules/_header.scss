@@ -12,40 +12,15 @@
 //------------------------------------------------------------------------------
 
 .BrandHeader {
-	padding: 24px 0;
+	padding: 15px 0;
 }
 
 .BrandHeader .LogoLink > img {
 	max-height: 110px;
+	max-width: 270px
 }
 
 .BrandHeader #LiveSearch {
 	margin: auto;
-	max-width: 500px;
 	vertical-align: middle;
-}
-
-.BrandHeader .FlexItem {
-	width: 25%;
-}
-
-.BrandHeader .FlexItem.FlexSpacer {
-	width: 50%;
-}
-
-//------------------------------------------------------------------------------
-// Brand Header
-//------------------------------------------------------------------------------
-
-.BrandHeader input,
-.BrandHeader button,
-.BrandHeader .Button {
-	padding: 12px;
-	height: auto;
-}
-
-.Button .CartTotal {
-	border-left: 1px solid;
-	padding-left: 15px;
-	margin-left: 10px;
 }

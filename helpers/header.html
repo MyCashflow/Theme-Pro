@@ -32,7 +32,7 @@
 											</div>
 										</div>'
 								)}
-								
+								<div class="FlexItem FlexSpacer"></div>
 								{CurrencyNavigation(
 									before: '
 										<div class="FlexItem">
@@ -47,7 +47,6 @@
 											</div>
 										</div>'
 								)}
-								<div class="FlexItem FlexSpacer"></div>
 								{CustomerNavigation(
 									register: 'true',
 									before: '
@@ -55,7 +54,7 @@
 											<div class="SimpleDropNavigation MainNavigation-Right">
 												<ul class="CustomerNavigation NavigationList">
 													<li class="HasSubCategories">
-														<a href="/account/">{%MyAccount}</a>',
+														<a href="/account/"><span class="fa fa-lock"></span> {%MyAccount}</a>',
 									after: '
 													</li>
 												</ul>
@@ -70,36 +69,6 @@
 							<div class="Flex Flex-NoMargin">
 								<div class="FlexItem">
 									{Logo(width: '480', height: '240')}
-								</div>
-								<div class="FlexItem FlexSpacer">
-									{Search(
-										before: '
-											<div id="LiveSearch">',
-										after: '
-												<div class="LiveSearchResults" id="LiveSearchResults">
-													{SearchPopularTerms(
-														before: '
-															<h3 class="LiveSearchTitle">{%SearchPopularTerms}</h3>
-															<ul class="SearchPopularTerms">',
-														after: '</ul>',
-														limit: '5',
-														helper: '{{
-															<li>
-																<a href="{SearchUrl}">{SearchKeyword}</a>
-															</li>
-														}}'
-													)}
-												</div>
-											</div>
-											<div class="LiveSearchBackground"></div>'
-									)}
-								</div>
-								<div class="FlexItem Text-Right">
-									<a href="/cart/" class="Button Button-Primary" data-drawer-toggle="cart">
-										<span class="fa fa-shopping-cart"></span>
-										{%ShoppingCart}
-										<span class="CartTotal">{CartSubTotal}</span>
-									</a>
 								</div>
 							</div>
 						</div>
@@ -130,7 +99,35 @@
 												</div>
 											</div>'
 									)}
-									<div class="FlexItem FlexSpacer"></div>
+									<div class="FlexItem FlexSpacer">
+										{Search(
+											before: '
+												<div id="LiveSearch">',
+											after: '
+													<div class="LiveSearchResults" id="LiveSearchResults">
+														{SearchPopularTerms(
+															before: '
+																<h3 class="LiveSearchTitle">{%SearchPopularTerms}</h3>
+																<ul class="SearchPopularTerms">',
+															after: '</ul>',
+															limit: '5',
+															helper: '{{
+																<li>
+																	<a href="{SearchUrl}">{SearchKeyword}</a>
+																</li>
+															}}'
+														)}
+													</div>
+												</div>
+												<div class="LiveSearchBackground"></div>'
+										)}
+									</div>
+									<div class="FlexItem Text-Right">
+										<a href="/cart/" class="Button" data-drawer-toggle="cart">
+											<span class="fa fa-shopping-cart"></span>
+											<span class="CartTotal">{CartSubTotal}</span>
+										</a>
+									</div>
 								</div>
 							</div>
 							<div class="Hide-Desktop">
