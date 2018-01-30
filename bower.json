@@ -34,11 +34,6 @@
     ],
     "normalize-css": [
       "normalize.css"
-    ],
-    "slick-carousel": [
-      "slick/fonts/*",
-      "slick/*.{gif,css}",
-      "slick/slick.js"
     ]
   },
   "ignore": [
@@ -54,7 +49,6 @@
     "jquery": "1.9.1",
     "jquery.finger": "~0.1.4",
     "magnific-popup": "~1.0.1",
-    "normalize-css": "normalize.css#~3.0.3",
-    "slick-carousel": "~1.5.9"
+    "normalize-css": "normalize.css#~3.0.3"
   }
 }
