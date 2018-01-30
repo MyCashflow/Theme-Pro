@@ -48,20 +48,20 @@
 	float: left;
 	padding: 6px ($grid-list-gutter / 2);
 	position: relative;
-	width: 33.33%;
-}
-
-.GridList-Wide .ListItem {
 	width: 25%;
 }
 
+.GridList-Wide .ListItem {
+	width: 20%;
+}
+
 .GridList-Narrow .ListItem {
-	width: 50%;
+	width: 33.33%;
 }
 
 @media screen and (max-width: $breakpoint-tablet) {
 	.GridList .ListItem {
-		width: 33.33%;
+		width: 25%;
 	}
 }
 
