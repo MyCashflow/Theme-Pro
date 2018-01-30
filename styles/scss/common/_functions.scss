@@ -3,7 +3,7 @@
 // Source: https://gist.github.com/voxpelli/6304812
 //------------------------------------------------------------------------------
 
-@function best-contrast($base, $colors, $tolerance: 0) {
+@function best-contrast($base, $colors, $tolerance: 1) {
 	$contrast: color-contrast($base, nth($colors, 1));
 	$best: nth($colors, 1);
 	@for $i from 2 through length($colors) {

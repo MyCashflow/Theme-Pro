@@ -4,7 +4,7 @@
 
 input, select, textarea {
 	background-color: $color-input-bg;
-	border: 1px solid darken($color-button-bg, 15%);
+	border: 1px solid darken($color-body-border, 2%);
 	border-radius: $border-radius;
 	color: text-contrast($color-input-bg);
 	display: inline-block;
@@ -82,13 +82,13 @@ label {
 //------------------------------------------------------------------------------
 
 .Button {
+	@extend %styleset;
 	background: $color-button-bg;
 	border: 1px solid darken($color-button-bg, 15%);
 	border-radius: $border-radius-medium;
 	color: text-contrast($color-button-bg) !important;
 	cursor: pointer;
 	display: inline-block;
-	font-weight: normal;
 	padding: 6px 12px;
 	text-align: center;
 	text-decoration: none;
@@ -403,8 +403,8 @@ form [type='submit'] {
 
 #SearchForm:hover #SearchInput,
 #SearchForm:hover #SearchButton {
-	border-color: $color-text-dark;
-	color: $color-text-dark !important;
+	border-color: $color-accent-2;
+	color: $color-accent-2 !important;
 }
 
 #SearchForm #SearchInput:focus {

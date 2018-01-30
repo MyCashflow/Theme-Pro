@@ -30,11 +30,11 @@ $white-25:                    rgba(255, 255, 255, 0.25);
 $white-50:                    rgba(255, 255, 255, 0.5);
 $white-75:                    rgba(255, 255, 255, 0.75);
 
-$color-base-1:                #ffffff !default;
-$color-base-2:                #f1ecf0 !default;
+$color-accent-1:              #7A9D28 !default;
+$color-accent-2:              #7A9D28 !default;
 
-$color-accent-1:              #154ef6 !default;
-$color-accent-2:              #154ef6 !default;
+$color-base-1:                #ffffff !default;
+$color-base-2:                scale-color($color-accent-2, $lightness: 97%, $saturation: -50%) !default;
 
 $color-success:               #88bb33 !default;
 $color-error:                 #ce2d4f !default;
@@ -54,7 +54,7 @@ $color-footer-bg:             $color-base-2 !default;
 $color-navbar-bg:             $color-base-1 !default;
 $color-path-bg:               $color-base-2 !default;
 $color-drawer-bg:             $color-base-2 !default;
-$color-boxed-bg:              #fafafa !default;
+$color-boxed-bg:              $color-base-2 !default;
 
 $color-banner-bg:             $white-75 !default;
 $color-loader-bg:             $white-50 !default;
@@ -63,7 +63,7 @@ $color-button-bg:             #ffffff !default;
 $color-image-bg:              #ffffff !default;
 $color-input-bg:              #ffffff !default;
 
-$color-body-border:           mix($color-base-1, $color-base-2, 25%) !default;
+$color-body-border:           scale-color($color-base-2, $lightness: -8%, $saturation: -75%) !default;
 $color-navbar-border:         $color-body-border !default;
 $color-footer-border:         $color-body-border !default;
 $color-drawer-border:         $color-body-border !default;
@@ -97,9 +97,9 @@ $list-item-ratio:             1 !default;
 // Border Radiuses
 //------------------------------------------------------------------------------
 
-$border-radius:               3px !default;
-$border-radius-medium:        4px !default;
-$border-radius-large:         6px !default;
+$border-radius:               1px !default;
+$border-radius-medium:        2px !default;
+$border-radius-large:         3px !default;
 
 //------------------------------------------------------------------------------
 // Transition Durations
