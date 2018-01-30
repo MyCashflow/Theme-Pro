@@ -9,7 +9,6 @@
 	display: block;
 	margin-bottom: 10px;
 	padding: 10px;
-	text-align: center;
 	transition-duration: $transition-fast;
 }
 
@@ -25,12 +24,6 @@
 // Product Card
 //------------------------------------------------------------------------------
 
-.ProductSection {
-	border: 4px double $color-body-border;
-	border-radius: $border-radius;
-	padding: 20px;
-}
-
 .ProductSection .BuyForm input,
 .ProductSection .BuyForm select,
 .ProductSection table {
@@ -42,7 +35,7 @@
 }
 
 .ProductCardPrices span {
-	@extend h3;
+	@extend h1;
 	font-weight: bold;
 }
 
@@ -51,13 +44,6 @@
 	position: initial;
 	margin: 0 0 0 10px;
 	transform: rotate(3deg);
-}
-
-@media screen and (min-width: $breakpoint-tablet + 1) {
-	.ProductBuyColumn {
-		border-left: 1px solid $color-body-border;
-		padding: 20px 0 20px 20px;
-	}
 }
 
 //------------------------------------------------------------------------------
@@ -93,7 +79,6 @@
 
 .ListProduct .ProductName {
 	display: block;
-	font-weight: normal;
 	margin: 0;
 }
 
@@ -102,29 +87,8 @@
 }
 
 .ListProduct .ProductPrices {
-	font-weight: bold;
+	@extend h2;
 	margin: 0;
-}
-
-//------------------------------------------------------------------------------
-// List Product ProductInformation
-//------------------------------------------------------------------------------
-
-@media screen and (min-width: $breakpoint-desktop + 1) {
-	.ProductInformation {
-		@include flexbox;
-		@include align-items(flex-start);
-		margin: 0 12px;
-	}
-
-	.ProductInformation > .ProductName {
-		@include flex(1);
-		margin-right: 10px;
-	}
-
-	.ProductInformation > .ProductPrices {
-		text-align: right;
-	}
 }
 
 //------------------------------------------------------------------------------
@@ -137,7 +101,6 @@
 	border-radius: $border-radius;
 	font-size: $font-size-small;
 	padding-bottom: 24px;
-	text-align: center;
 	transition-duration: $transition-fast;
 }
 
@@ -167,22 +130,15 @@
 	margin-right: 0;
 }
 
-.ListProduct-Compact .ProductInformation > .ProductPrices {
-	font-size: inherit;
-	text-align: center;
-}
-
 //------------------------------------------------------------------------------
 // Current Product Image
 //------------------------------------------------------------------------------
 
 #CurrentProductImage {
 	@extend %default-margin;
-	border: 0;
 	border-radius: $border-radius;
 	display: block;
 	height: auto;
-	padding: 0;
 	text-align: center;
 }
 
@@ -247,7 +203,6 @@
 	color: mix($color-text-light, $color-text-dark, 50%);
 	font-size: $font-size-small;
 	margin: 0;
-	text-align: center;
 }
 
 h1 + .ProductCategories,

@@ -72,7 +72,6 @@
 
 .Banner-Side {
 	@extend %default-margin;
-	background-color: $color-boxed-bg;
 	border: 1px solid $color-body-border;
 	border-radius: $border-radius;
 	display: inline-block;
@@ -80,7 +79,7 @@
 }
 
 .Banner-Side .BannerImage {
-	background-color: #ffffff;
+	background-color: $color-image-bg;
 	display: block;
 	text-align: center;
 	overflow: hidden;
@@ -89,7 +88,6 @@
 .Banner-Side .BannerContent {
 	border-top: 1px solid $color-body-border;
 	padding: 10px;
-	text-align: center;
 }
 
 //------------------------------------------------------------------------------

@@ -16,7 +16,6 @@
 
 .NavigationBar .CartTotal {
 	font-size: $font-size;
-	font-weight: 600;
 }
 
 .NavigationBar [data-drawer-toggle="menu"] {
@@ -39,6 +38,17 @@
 
 .NavigationBarToggle-Right {
 	margin-right: -15px;
+}
+
+@media screen and (min-width: $breakpoint-tablet + 1) {
+	.NavigationBar {
+		border-top: 1px solid $color-navbar-border;
+	}
+}
+
+.NavigationBar input {
+	border-color: transparent;
+	height: 100%;
 }
 
 //------------------------------------------------------------------------------
@@ -286,7 +296,7 @@
 
 .SimpleDropNavigation li li a {
 	box-shadow: 0 1px 0 $color-navbar-border;
-	padding: 12px 15px;
+	padding: 6px 15px;
 }
 
 .SimpleDropNavigation li li:last-child a {
@@ -356,13 +366,24 @@
 	@extend .DropNavigation-Right;
 }
 
+.MainNavigation a {
+	border: 0px solid $color-body-border;
+	font-family: $font-headings;
+}
+
 .MainNavigation li ul {
 	background-color: $color-body-bg;
 	border: 1px solid $color-body-border;
 }
 
 .MainNavigation > ul > li > a {
-	font-weight: normal;
+	@extend %styleset;
+	border-right-width: 1px;
+}
+
+.MainNavigation > ul > li:first-child > a {
+	border-left-width: 1px;
+	margin-left: -1px;
 }
 
 .MainNavigation li li a {
@@ -383,11 +404,6 @@
 	color: $color-accent-2;
 }
 
-.MainNavigation .NavHighlight > a {
-	color: $color-accent-2;
-	font-weight: 600;
-}
-
 .MainNavigation .HasSubCategories > a {
 	@include icon-after($fa-var-angle-down);
 }
@@ -401,8 +417,6 @@
 //------------------------------------------------------------------------------
 
 .SubNavigationBar {
-	@include box-shadow(inset 0 -3px 8px rgba(0,0,0,.025));
-	@include breakfree;
 	border-bottom: 1px solid $color-navbar-border;
 	text-align: center;
 	z-index: 1;

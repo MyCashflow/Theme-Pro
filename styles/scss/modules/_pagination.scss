@@ -3,10 +3,8 @@
 //------------------------------------------------------------------------------
 
 .PaginationBar {
-	@include breakfree;
 	background-color: $color-body-bg;
 	border: 1px solid $color-body-border;
-	border-width: 1px 0;
 	margin-bottom: 48px;
 	margin-top: 24px;
 }

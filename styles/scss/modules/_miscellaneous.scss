@@ -50,20 +50,16 @@
 
 .ContentTitle {
 	line-height: 48px;
-	text-transform: uppercase;
 }
 
 h1.ContentTitle {
-	@extend %fancyheading;
-	font-weight: lighter;
-	text-align: center;
+	@extend %styleset;
 }
 
 .ContentTitle-Fancy {
 	@include flexbox;
-	@extend %fancyheading;
-	font-size: $font-size;
-	text-align: center;
+	@extend %styleset;
+	font-size: $font-size-large;
 	
 	flex-direction: row;
 	justify-content: center;
@@ -79,6 +75,10 @@ h1.ContentTitle {
 	margin: 0 15px;
 	position: relative;
 	top: 24px;
+}
+
+.ContentTitle-Fancy::before {
+	max-width: 20px;
 }
 
 .ContentTitle-Fancy::before {
