@@ -1,7 +1,16 @@
 {Helper(file: 'helpers/header')}
-<div class="SiteContent">
-	<div class="Container">
-		{Content}
+	<div class="Layout">
+		<div class="LayoutAside Hide-Tablet">
+			{Helper(file: 'helpers/sidebar')}
+		</div>
+		<div class="LayoutMain">
+			{Helper(file: 'helpers/site-header')}
+			<div class="SiteContent">
+				<div class="Container">
+					{Content}
+				</div>
+			</div>
+			{Helper(file: 'helpers/site-footer')}
+		</div>
 	</div>
-</div>
 {Helper(file: 'helpers/footer')}

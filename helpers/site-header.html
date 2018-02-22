@@ -1,0 +1,94 @@
+<div class="UtilityBar Hide-Tablet">
+	<div class="Container">
+		<div class="Flex Flex-NoMargin">
+			{LanguageNavigation(
+				showcurrent: 'true',
+				before: '
+					<div class="FlexItem VersionNavigation">
+						<div class="InlineNavigation">',
+				after: '
+						</div>
+					</div>'
+			)}
+			<div class="FlexItem FlexSpacer"></div>
+			{CurrencyNavigation(
+				before: '
+					<div class="FlexItem">
+						<div class="SimpleDropNavigation">
+							<span class="NavigationLabel">{%Currency}:</span>
+							<ul class="NavigationList CurrencyNavigation">
+								<li class="HasSubCategories">
+									<a href="#" class="NoLink">{Currency}</a>',
+				after: '
+								</li>
+							</ul>
+						</div>
+					</div>'
+			)}
+		</div>
+	</div>
+</div>
+<div class="SiteHeader">
+	<div class="Container Hide-Tablet">
+		<div class="Flex Flex-NoMargin">
+			{InfoNavigation(
+				show: 'all',
+				before: '
+					<div class="FlexItem">
+						<div class="MainNavigation MainNavigation-Left">',
+				after: '
+						</div>
+					</div>',
+			)}
+			<div class="FlexItem FlexSpacer"></div>
+			
+		</div>
+	</div>
+	<div class="Container">
+		<div class="Flex Flex-NoMargin">
+			<div class="FlexItem FlexSpacer">
+				{Search(
+					before: '
+						<div id="LiveSearch">',
+					after: '
+							<div class="LiveSearchResults" id="LiveSearchResults">
+								{SearchPopularTerms(
+									before: '
+										<h3 class="LiveSearchTitle">{%SearchPopularTerms}</h3>
+										<ul class="SearchPopularTerms">',
+									after: '</ul>',
+									limit: '5',
+									helper: '{{
+										<li>
+											<a href="{SearchUrl}">{SearchKeyword}</a>
+										</li>
+									}}'
+								)}
+							</div>
+						</div>
+						<div class="LiveSearchBackground"></div>'
+				)}
+			</div>
+			{CustomerNavigation(
+				register: 'true',
+				before: '
+					<div class="FlexItem Hide-Tablet">
+						<div class="SimpleDropNavigation">
+							<ul class="CustomerNavigation NavigationList">
+								<li class="HasSubCategories">
+									<a href="/account/"><span class="fa fa-lock"></span> {%MyAccount}</a>',
+				after: '
+								</li>
+							</ul>
+						</div>
+					</div>'
+			)}
+			<div class="FlexItem Text-Right Hide-Tablet">
+				<a href="/cart/" class="Button Button-Primary" data-drawer-toggle="cart">
+					<span class="fa fa-shopping-cart"></span>
+					<span class="CartTotal">{CartSubTotal}</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>

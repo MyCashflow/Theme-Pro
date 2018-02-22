@@ -1,7 +1,17 @@
 {Helper(file: 'helpers/header')}
-<div class="SiteContent">
-	<div class="Container">
-		{Helper(file: 'helpers/full-cart')}
+	<div class="Layout">
+		<div class="LayoutAside Hide-Tablet">
+			{Helper(file: 'helpers/sidebar')}
+		</div>
+		<div class="LayoutMain">
+			{Helper(file: 'helpers/site-header')}
+			{Helper(file: 'helpers/path')}
+			<div class="SiteContent">
+				<div class="Container">
+					{Helper(file: 'helpers/full-cart')}
+				</div>
+			</div>
+			{Helper(file: 'helpers/site-footer')}
+		</div>
 	</div>
-</div>
 {Helper(file: 'helpers/footer')}

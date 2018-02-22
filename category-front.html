@@ -1,88 +1,96 @@
 {Helper(file: 'helpers/header')}
-{Helper(file: 'helpers/path')}
-<div class="SiteContent">
-	<div class="Container">
-		{Helper(file: 'helpers/category-header')}
-		<div class="Grid">
-			<div class="Col-3-12 Col-Tablet-12-12">
+		<div class="Layout">
+			<div class="LayoutAside Hide-Tablet">
 				{Helper(file: 'helpers/sidebar')}
 			</div>
-			<div class="Col-9-12 Col-Tablet-12-12">
-				<div class="ContentSection">
-					<h1 class="ContentTitle">{PageTitle}</h1>
-					{CategoryImage(
-						width: '1140',
-						before: '<div class="Banner Banner-Body">',
-						after: '</div>'
-					)}
-					{CategoryDescription}
-				</div>
-				{SubCategories(
-					before: '
-						<div class="ContentSection SubNavigationBar Hide-Tablet">
-							<div class="Container">
-								<div class="Flex Flex-NoMargin">
-									<div class="FlexItem FlexSpacer">
-										<div class="SubNavigation">',
-					after: '
-										</div>
+			<div class="LayoutMain">
+				{Helper(file: 'helpers/site-header')}
+				{CategoryImageUrl(
+						width: '1920',
+						before: '
+							<div class="Banners Banners-Wide">
+								<div class="Banner Banner-Wide">
+									<div class="AspectRatio">
+										{CategoryLink(
+											before: '<a class="BannerCoverLink" href="',
+											after: '"></a>'
+										)}
+										<div class="BannerBackgroundImage" style="background-image: url(',
+						after: ')"></div>
 									</div>
-								</div>
 							</div>
 						</div>'
 				)}
-				{Helper(file: 'helpers/pagination-form')}
-				<div class="ContentSection">
-					{CategoryProducts(
-						sort: 'sales_asc|released_desc|price_asc|price_desc|name_asc',
-						subcategories: 'true',
-						pagination: 'true',
-						limit: '40|100',
-						type: 'normal',
-						before: '
-							<div class="List ProductList">
-								<div class="GridList">',
-						after: '
+				<div class="Container">
+					<div class="SiteContent">
+						{Helper(file: 'helpers/category-header')}
+						<div class="Grid">
+							<div class="Col-12-12 Col-Tablet-12-12">
+								<div class="ContentSection">
+									<h1 class="ContentTitle">{PageTitle}</h1>
+									{CategoryDescription}
 								</div>
+								{SubCategories(
+									helper: '{{
+										<section class="ContentSection">
+											<div class="CategoryHeader">
+												<h2 class="ContentTitle ContentTitle-Fancy">
+													<a href="{CategoryUrl}">{CategoryName}</a>
+												</h2>
+												<div class="ContentTitleSupport">
+													<a href="{CategoryUrl}">{%SeeAllCategoryProducts}</a>
+												</div>
+											</div>
+											<div class="List ProductList">
+												<div class="GridList GridList-Small CategoryPreview">
+													{CategoryProducts(
+														limit: '6',
+														classes: 'ListProduct-Compact',
+														helper: 'helpers/list-product',
+														subcategories: 'true'
+													)}
+												</div>
+											</div>
+									</section>
+									}}'
+								)}
+								{CategoryHotPicks(
+									subcategories: 'true',
+									limit: '14',
+									type: 'normal',
+									classes: 'ListProduct-Compact',
+									before: '
+										<div class="ContentSection">
+											<h2 class="ContentTitle ContentTitle-Fancy">{%RecommendedProducts}</h2>
+											<div class="List ProductList">
+												<div class="GridList GridList-Small" data-flickity="list">',
+									after: '
+												</div>
+											</div>
+										</div>',
+									helper: 'helpers/list-product'
+								)}
+								{CategoryNewProducts(
+									subcategories: 'true',
+									limit: '14',
+									type: 'normal',
+									classes: 'ListProduct-Compact',
+									before: '
+										<div class="ContentSection">
+											<h2 class="ContentTitle ContentTitle-Fancy">{%NewProducts}</h2>
+											<div class="List ProductList">
+												<div class="GridList GridList-Small" data-flickity="list">',
+									after: '
+												</div>
+											</div>
+										</div>',
+									helper: 'helpers/list-product'
+								)}
 							</div>
-							{Helper(file: 'helpers/pagination')}',
-						helper: 'helpers/list-product'
-					)}
-				</div>
-				{CategoryHotPicks(
-					subcategories: 'true',
-					limit: '14',
-					type: 'normal',
-					classes: 'ListProduct-Compact',
-					before: '
-						<div class="ContentSection">
-							<h2 class="ContentTitle ContentTitle-Fancy">{%RecommendedProducts}</h2>
-							<div class="List ProductList">
-								<div class="GridList GridList-Small" data-flickity="list">',
-					after: '
-								</div>
-							</div>
-						</div>',
-					helper: 'helpers/list-product'
-				)}
-				{CategoryNewProducts(
-					subcategories: 'true',
-					limit: '14',
-					type: 'normal',
-					classes: 'ListProduct-Compact',
-					before: '
-						<div class="ContentSection">
-							<h2 class="ContentTitle ContentTitle-Fancy">{%NewProducts}</h2>
-							<div class="List ProductList">
-								<div class="GridList GridList-Small" data-flickity="list">',
-					after: '
-								</div>
-							</div>
-						</div>',
-					helper: 'helpers/list-product'
-				)}
+						</div>
+					</div>
 			</div>
+			{Helper(file: 'helpers/site-footer')}
 		</div>
-	</div>
 </div>
 {Helper(file: 'helpers/footer')}

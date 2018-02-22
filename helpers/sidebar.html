@@ -1,18 +1,10 @@
 <div class="Sidebar">
-	{Categories(
-		show: 'active',
-		before: '
-			<h3 class="ContentTitle">{%BrowseCategories}</h3>
-			<div class="SideNavigation">',
-		after: '</div>'
-	)}
-	{Brands(
-		category: 'current',
-		before: '
-			<h3 class="ContentTitle">{%Brands}</h3>
-			<div class="SideNavigation">',
-		after: '</div>'
-	)}
+	{Logo(width: '550', height: '550')}
+	<div class="MainCategories DrawerNavigation">
+		{Categories(show: 'all')}
+		{Campaigns(classes: 'NavHighlight')}
+	</div>
+	
 	{Banners(
 		name: 'sidebar-left',
 		before: '<div class="Banners Banners-Side">',

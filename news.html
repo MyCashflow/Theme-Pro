@@ -1,45 +1,47 @@
 {Helper(file: 'helpers/header')}
-{NewsImageUrl(
-		width: '1920',
-		before: '
-			<div class="Banners Banners-Wide">
-				<div class="Banner Banner-Wide">
-					<div class="AspectRatio">
-						{NewsLink(
-							before: '<a class="BannerCoverLink" href="',
-							after: '" {BannerLinkData}></a>'
-						)}
-						<div class="BannerBackgroundImage" style="background-image: url(',
-		after: ')"></div>
-						{NewsImageCaption(
-							before: '
-								<div class="BannerCaption">
-									<div class="Container">',
-							after: '
-									</div>
-								</div>'
-						)}
+	<div class="Layout">
+		<div class="LayoutAside Hide-Tablet">
+			{Helper(file: 'helpers/sidebar')}
+		</div>
+		<div class="LayoutMain">
+			{Helper(file: 'helpers/site-header')}
+			{NewsImageUrl(
+					width: '1920',
+					before: '
+						<div class="Banners Banners-Wide">
+							<div class="Banner Banner-Wide">
+								<div class="AspectRatio">
+									{NewsLink(
+										before: '<a class="BannerCoverLink" href="',
+										after: '" {BannerLinkData}></a>'
+									)}
+									<div class="BannerBackgroundImage" style="background-image: url(',
+					after: ')"></div>
+									{NewsImageCaption(
+										before: '
+											<div class="BannerCaption">
+												<div class="Container">',
+										after: '
+												</div>
+											</div>'
+									)}
+								</div>
+						</div>
+					</div>'
+			)}
+			<div class="SiteContent">
+				<div class="Container">
+					<div class="Grid">
+						<div class="Col-12-12">
+							<div class="ContentSection ContentSection-Narrow">
+								<h1 class="ContentTitle">{PageTitle}</h1>
+								{Content}
+							</div>
+						</div>
 					</div>
-			</div>
-		</div>'
-)}
-<div class="SiteContent">
-	<div class="Container">
-		<div class="Grid">
-			<div class="Col-12-12">
-				<div class="ContentSection ContentSection-Narrow">
-					<h1 class="ContentTitle">{PageTitle}</h1>
-					{Content}
-				</div>
-				<div class="ContentSection ContentSection-Narrow">
-					<h3 class="ContentTitle ContentTitle-Fancy">{%News}</h3>
-					{News(
-						before: '<div class="SimpleNavigation">',
-						after: '</div>'
-					)}
 				</div>
 			</div>
+			{Helper(file: 'helpers/site-footer')}
 		</div>
 	</div>
-</div>
 {Helper(file: 'helpers/footer')}

@@ -1,147 +1,189 @@
 {Helper(file: 'helpers/header')}
-{Helper(file: 'helpers/path')}
-<div class="SiteContent">
-	<div class="Container">
-		<div class="ContentSection">
-			<div class="Grid">
-				<div class="Col Col-12-12">
-					<section class="ProductSection {ProductClass}">
+	<div class="Layout">
+		<div class="LayoutAside Hide-Tablet">
+			{Helper(file: 'helpers/sidebar')}
+		</div>
+		<div class="LayoutMain">
+			{Helper(file: 'helpers/site-header')}
+			{Helper(file: 'helpers/path')}
+			<div class="SiteContent">
+				<div class="Container">
+					<div class="ContentSection">
 						<div class="Grid">
-							<div class="Col Col-4-12 Col-Tablet-12-12">
-								{ProductImage}
-								{ProductImageCaption}
-								{ProductThumbnails}
-							</div>
-							<div class="Col Col-8-12 Col-Tablet-12-12">
-								<div class="ProductBuyColumn">
-									<div class="ContentSection">
-										<h1 class="ContentTitle">{PageTitle}</h1>
-										{ProductCategories(
-											before: '
-												<div class="ProductCategories">
-													<span>{%SearchFilterCategory}:</span>&nbsp;',
-											after: '
-													{ProductBrandName(
-														before: '<span>{%SearchFilterBrand}: <a href="{ProductBrandLink}">',
-														after: '</a></span>'
-													)}
-													{ProductCampaign(
-														helper: '{{ <span>{%Campaigns}: <a href="{CampaignURL}">{CampaignName}</a></span> }}'
-													)}
-												</div>'
-										)}
-									</div>
-									<div class="ContentSection">
-										<p class="ProductPrices ProductCardPrices">
-											{ProductComparePrice(
-												currencysymbol: 'true',
-												before: '
-													{ProductPrice(
-														currencysymbol: 'true',
-														before: '{%Price} <span class="ProductDiscountPrice">',
-														after: '</span>'
-													)}
-													<span class="ProductComparePrice">',
-												after: '</span>',
-												or: '
-													{ProductPrice(
-														currencysymbol: 'true',
-														before: '{%Price} <span class="ProductCurrentPrice">',
-														after: '</span>'
-													)}'
-											)}
+							<div class="Col Col-12-12">
+								<section class="ProductSection {ProductClass}">
+									<div class="Grid">
+										<div class="Col Col-4-12 Col-Tablet-12-12">
 											{ProductDiscountPercent(
 												before: '<span class="Badge ProductDiscountPercent">-',
 												after: '&#37;</span>'
 											)}
-										</p>
-										{ProductShortDesc(or:'{BannerText(name:'tuotekuvaus')}')}
-										{ProductBundles}
-									</div>
-									<div class="ContentSection">
-										{ProductAvailability}
-										{ProductBuy(variations: 'select')}
-									</div>
-									<div class="ContentSection">
-										{ProductFullDesc(or:'{BannerText(name:'tuotetiedot')}')}
-										<div class="ShareSection">
-											{ShareButtons}
-											<div class="fb-like" data-send="true" data-width="480" data-size="large" data-show-faces="true" data-font="arial"></div>
+											{ProductImage}
+											{ProductImageCaption}
+											{ProductThumbnails}
+										</div>
+										<div class="Col Col-8-12 Col-Tablet-12-12">
+											<div class="ContentSection">
+												<h1 class="ContentTitle">{PageTitle}</h1>
+												{ProductCategories(
+													before: '
+														<div class="ProductCategories">
+															<span>{%SearchFilterCategory}:</span>&nbsp;',
+													after: '
+															{ProductBrandName(
+																before: '<span>{%SearchFilterBrand}: <a href="{ProductBrandLink}">',
+																after: '</a></span>'
+															)}
+															{ProductCampaign(
+																helper: '{{ <span>{%Campaigns}: <a href="{CampaignURL}">{CampaignName}</a></span> }}'
+															)}
+														</div>'
+												)}
+											</div>
+											<div class="ContentSection">
+												<div class="Flex Flex-NoMargin">
+												<p class="FlexItem ProductPrices ProductCardPrices">
+													{ProductComparePrice(
+														currencysymbol: 'true',
+														before: '
+															{ProductPrice(
+																currencysymbol: 'true',
+																before: '{%Price} <span class="ProductDiscountPrice">',
+																after: '</span>'
+															)}
+															<span class="ProductComparePrice">',
+														after: '</span>',
+														or: '
+															{ProductPrice(
+																currencysymbol: 'true',
+																before: '{%Price} <span class="ProductCurrentPrice">',
+																after: '</span>'
+															)}'
+													)}
+												</p>
+												<div class="FlexItem FlexSpacer"></div>
+												{ProductAvailability(
+													before:'<div class="FlexItem ProductAvailability">',
+													after:'</div>'
+												)}
+												</div>
+											</div>
+											<div class="ContentSection">
+												<div class="Grid">
+													<div class="Col Col-8-12 Col-Mobile-12-12">
+														{ProductShortDesc(
+															before: '<div class="ContentSection ProductDescription">',
+															after: '</div>'
+														)}
+														{ProductBundles(
+															before: '<div class="ContentSection">',
+															after: '</div>'
+														)}
+														{ProductBuy(
+															variations: 'select',
+															before: '<div class="ContentSection">',
+															after: '</div>'
+														)}
+														{ProductFullDesc(
+															before: '<div class="ContentSection ProductDescription">',
+															after: '</div>'
+														)}
+														<div class="ContentSection ShareSection">
+															{ShareButtons}
+															<div class="fb-like" data-send="true" data-width="480" data-size="large" data-show-faces="true" data-font="arial"></div>
+														</div>
+														{AvailabilityNotificationForm(
+															before:'
+																<div class="ContentSection">
+																	<h3>{%AvailabilityNotificationIntroTitle}</h3>
+																	<p>{%AvailabilityNotificationIntroText}</p>',
+															after: '
+																</div>'
+														)}
+													</div>
+													<div class="Col Col-4-12 Col-Mobile-12-12">
+														{ProductShippingMethods(
+															limit: '4',
+															sort: 'price',
+															before:'
+																<div class="ContentSection">
+																	<h2 class="ProductDetailsTitle">{%ShippingCosts}</h2>
+																		<div class="ProductShippingMethods">',
+															after:'
+																		<p class="ProductDetailsItem-Info ShippingInfo">{%CheckoutChooseShippingMethodIntro}</p>
+																	</div>
+																</div>'
+														)}
+													</div>
+												</div>
+											</div>
 										</div>
 									</div>
-									{AvailabilityNotificationForm(
-										before:'
-											<div class="ContentSection">
-												<h3>{%AvailabilityNotificationIntroTitle}</h3>
-												<p>{%AvailabilityNotificationIntroText}</p>',
-										after: '
-											</div>'
-									)}
-								</div>
+								</section>
 							</div>
 						</div>
-					</section>
+					</div>
+					{SimilarProducts(
+						limit: '12',
+						type: 'normal',
+						helper: 'helpers/list-product',
+						before: '
+							<div class="ContentSection">
+								<h3 class="ContentTitle ContentTitle-Fancy">{%SimilarProducts}</h3>
+								<div class="List ProductList">
+									<div class="GridList GridList-Wide" data-flickity="list">',
+						after: '
+									</div>
+								</div>
+							</div>'
+					)}
+					{CompatibleProducts(
+						limit: '12',
+						type: 'normal',
+						helper: 'helpers/list-product',
+						before: '
+							<div class="ContentSection">
+								<h3 class="ContentTitle ContentTitle-Fancy">{%CompatibleProducts}</h3>
+								<div class="List ProductList">
+									<div class="GridList GridList-Wide" data-flickity="list">',
+						after: '
+									</div>
+								</div>
+							</div>'
+					)}
+					{CrossSaleProducts(
+						limit: '14',
+						type: 'normal',
+						classes: 'ListProduct-Compact',
+						helper: 'helpers/list-product',
+						before: '
+							<div class="ContentSection">
+								<h3 class="ContentTitle ContentTitle-Fancy">{%CrossSalesForProduct}</h3>
+								<div class="List ProductList">
+									<div class="GridList GridList-Small" data-flickity="list">',
+						after: '
+									</div>
+								</div>
+							</div>'
+					)}
+					{LastViewedProducts(
+						limit: '14',
+						type: 'normal',
+						classes: 'ListProduct-Compact',
+						helper: 'helpers/list-product',
+						before: '
+							<div class="ContentSection">
+								<h3 class="ContentTitle ContentTitle-Fancy">{%PreviouslyBrowsedProducts}</h3>
+								<div class="List ProductList">
+									<div class="GridList GridList-Small" data-flickity="list">',
+						after: '
+									</div>
+								</div>
+							</div>'
+					)}
 				</div>
 			</div>
+			{Helper(file: 'helpers/site-footer')}
 		</div>
-		{SimilarProducts(
-			limit: '12',
-			type: 'normal',
-			helper: 'helpers/list-product',
-			before: '
-				<div class="ContentSection">
-					<h3 class="ContentTitle ContentTitle-Fancy">{%SimilarProducts}</h3>
-					<div class="List ProductList">
-						<div class="GridList GridList-Wide" data-flickity="list">',
-			after: '
-						</div>
-					</div>
-				</div>'
-		)}
-		{CompatibleProducts(
-			limit: '12',
-			type: 'normal',
-			helper: 'helpers/list-product',
-			before: '
-				<div class="ContentSection">
-					<h3 class="ContentTitle ContentTitle-Fancy">{%CompatibleProducts}</h3>
-					<div class="List ProductList">
-						<div class="GridList GridList-Wide" data-flickity="list">',
-			after: '
-						</div>
-					</div>
-				</div>'
-		)}
-		{CrossSaleProducts(
-			limit: '14',
-			type: 'normal',
-			classes: 'ListProduct-Compact',
-			helper: 'helpers/list-product',
-			before: '
-				<div class="ContentSection">
-					<h3 class="ContentTitle ContentTitle-Fancy">{%CrossSalesForProduct}</h3>
-					<div class="List ProductList">
-						<div class="GridList GridList-Small" data-flickity="list">',
-			after: '
-						</div>
-					</div>
-				</div>'
-		)}
-		{LastViewedProducts(
-			limit: '14',
-			type: 'normal',
-			classes: 'ListProduct-Compact',
-			helper: 'helpers/list-product',
-			before: '
-				<div class="ContentSection">
-					<h3 class="ContentTitle ContentTitle-Fancy">{%PreviouslyBrowsedProducts}</h3>
-					<div class="List ProductList">
-						<div class="GridList GridList-Small" data-flickity="list">',
-			after: '
-						</div>
-					</div>
-				</div>'
-		)}
 	</div>
-</div>
 {Helper(file: 'helpers/footer')}

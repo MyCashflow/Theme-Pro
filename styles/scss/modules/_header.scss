@@ -5,6 +5,7 @@
 .UtilityBar {
 	border-bottom: 1px solid $color-body-border;
 	font-size: $font-size-small;
+	margin: 0 (-($grid-gutter / 2));
 }
 
 //------------------------------------------------------------------------------
@@ -12,7 +13,8 @@
 //------------------------------------------------------------------------------
 
 .BrandHeader {
-	padding: 15px 0;
+	padding: 0;
+	margin: 0 (-($grid-gutter / 2));
 }
 
 .BrandHeader .LogoLink > img {
