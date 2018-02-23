@@ -40,54 +40,54 @@
 						</div>
 					</div>',
 			)}
-			<div class="FlexItem FlexSpacer"></div>
-			
 		</div>
 	</div>
-	<div class="Container">
-		<div class="Flex Flex-NoMargin">
-			<div class="FlexItem FlexSpacer">
-				{Search(
-					before: '
-						<div id="LiveSearch">',
-					after: '
-							<div class="LiveSearchResults" id="LiveSearchResults">
-								{SearchPopularTerms(
-									before: '
-										<h3 class="LiveSearchTitle">{%SearchPopularTerms}</h3>
-										<ul class="SearchPopularTerms">',
-									after: '</ul>',
-									limit: '5',
-									helper: '{{
-										<li>
-											<a href="{SearchUrl}">{SearchKeyword}</a>
-										</li>
-									}}'
-								)}
+	<div class="TopBar" id="StickyTopBar">
+		<div class="Container">
+			<div class="Flex Flex-NoMargin">
+				<div class="FlexItem FlexSpacer">
+					{Search(
+						before: '
+							<div id="LiveSearch">',
+						after: '
+								<div class="LiveSearchResults" id="LiveSearchResults">
+									{SearchPopularTerms(
+										before: '
+											<h3 class="LiveSearchTitle">{%SearchPopularTerms}</h3>
+											<ul class="SearchPopularTerms">',
+										after: '</ul>',
+										limit: '5',
+										helper: '{{
+											<li>
+												<a href="{SearchUrl}">{SearchKeyword}</a>
+											</li>
+										}}'
+									)}
+								</div>
 							</div>
-						</div>
-						<div class="LiveSearchBackground"></div>'
+							<div class="LiveSearchBackground"></div>'
+					)}
+				</div>
+				{CustomerNavigation(
+					register: 'true',
+					before: '
+						<div class="FlexItem Hide-Tablet">
+							<div class="SimpleDropNavigation">
+								<ul class="CustomerNavigation NavigationList">
+									<li class="HasSubCategories">
+										<a href="/account/"><span class="fa fa-lock"></span> {%MyAccount}</a>',
+					after: '
+									</li>
+								</ul>
+							</div>
+						</div>'
 				)}
-			</div>
-			{CustomerNavigation(
-				register: 'true',
-				before: '
-					<div class="FlexItem Hide-Tablet">
-						<div class="SimpleDropNavigation">
-							<ul class="CustomerNavigation NavigationList">
-								<li class="HasSubCategories">
-									<a href="/account/"><span class="fa fa-lock"></span> {%MyAccount}</a>',
-				after: '
-								</li>
-							</ul>
-						</div>
-					</div>'
-			)}
-			<div class="FlexItem Text-Right Hide-Tablet">
-				<a href="/cart/" class="Button Button-Primary" data-drawer-toggle="cart">
-					<span class="fa fa-shopping-cart"></span>
-					<span class="CartTotal">{CartSubTotal}</span>
-				</a>
+				<div class="FlexItem Text-Right Hide-Tablet">
+					<a href="/cart/" class="Button Button-Primary" data-drawer-toggle="cart">
+						<span class="fa fa-shopping-cart"></span>
+						<span class="CartTotal">{CartSubTotal}</span>
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>
