@@ -67,6 +67,28 @@
 }
 
 //------------------------------------------------------------------------------
+// Iframe Video Wrapper
+//------------------------------------------------------------------------------
+
+.VideoWrapper {
+	@include box-shadow(0 4px 8px $black-25);
+	height: 0;
+	margin: 20px 0;
+	padding-bottom: 56.25%;
+	position: relative;
+}
+
+.VideoWrapper iframe,
+.VideoWrapper object,
+.VideoWrapper embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+//------------------------------------------------------------------------------
 // Misc
 //------------------------------------------------------------------------------
 

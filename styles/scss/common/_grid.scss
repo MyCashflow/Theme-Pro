@@ -46,17 +46,17 @@
 
 .GridList .ListItem {
 	float: left;
-	padding: 6px ($grid-list-gutter / 2);
+	padding: ($grid-list-gutter / 2);
 	position: relative;
-	width: 25%;
+	width: 33.33%;
 }
 
 .GridList-Wide .ListItem {
-	width: 20%;
+	width: 25%;
 }
 
 .GridList-Narrow .ListItem {
-	width: 33.33%;
+	width: 50%;
 }
 
 @media screen and (max-width: $breakpoint-tablet) {
@@ -77,34 +77,15 @@
 	}
 }
 
-.GridList-Small {
-	margin: 0 -1px;
-}
-
 .GridList-Small .ListItem {
-	margin: 0 -1px -1px 0;
-	padding: 0;
-	width: ($container-max-width / 7) - 3.125;
+	width: 16.66%;
+	min-width: ($container-max-width - $grid-gutter) / 6;
 }
 
-@media screen and (max-width: $breakpoint-desktop) {
+@media screen and (max-width: $breakpoint-tablet) {
 	.GridList-Small.flickity-enabled {
 		@include breakfree;
-	}
-	
-	.GridList-Small.flickity-enabled:after {
-		background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1));
-		bottom: 0;
-		content: '';
-		display: block;
-		height: 100%;
-		left: auto;
-		position: absolute;
-		pointer-events: none;
-		right: 0;
-		top: 0;
-		width: 40px;
-		z-index: 1;
+		padding-left: 15px;
 	}
 }
 
@@ -115,7 +96,7 @@
 .Flex {
 	@include align-items(center);
 	@include flexbox;
-	margin-bottom: 24px;
+	margin-bottom: 20px;
 	margin-left: -($grid-gutter / 2);
 	margin-right: -($grid-gutter / 2);
 }
