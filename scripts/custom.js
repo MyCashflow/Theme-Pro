@@ -227,6 +227,34 @@ $(document).ready(function () {
 				closeSearch();
 		}
 	});
+	
+	//--------------------------------------------------------------------------
+	// Add products to the cart via AJAX
+	//--------------------------------------------------------------------------
+	
+	/**
+	 * Add products to the cart via AJAX
+	 *
+	 * Add products to the cart without reloading the page. If product has any
+	 * options, like variations, user will be redirected to the actual product
+	 * page to make all required decisions before adding the product to the cart.
+	 *
+	 */
+
+	$(document).on('submit', '.ProductAddToCart', function(evt){
+		var $buyForm = $(evt.currentTarget);
+		var $product = $buyForm.closest('.Product');
+		var $addToCartButton = $product.find('button.SubmitButton');
+
+		var productID = $buyForm.attr('action').split('/')[2];
+		var isCustomizableProduct = $product.is(
+			'.ProductVariations, .ProductTailorings, .ProductDownloads');
+
+		if(!isCustomizableProduct) {
+			evt.preventDefault();
+			MCF.Cart.addProduct($buyForm);
+		}
+	});
 
 	$(document).on('click', '[href="/terms/"]', function () {
 		MCF.Drawers.toggleByName('terms');
