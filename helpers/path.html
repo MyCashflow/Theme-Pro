@@ -2,15 +2,6 @@
 	before: '
 		<div class="Path">
 			<div class="Container">
-				{Helper(
-					case: 'isCategory',
-					file: '{{
-						{Category(
-							id: 'parent',
-							helper: 'helpers/path-parentcategory'
-						)}
-					}}'
-				)}
 				{Helper(case: 'isProduct', file: '{{ <a href="javascript:history.back()" class="BackLink">{%Back}</a> }}')}',
 	after: '
 			</div>
