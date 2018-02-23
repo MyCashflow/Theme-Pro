@@ -12,13 +12,9 @@
 }
 
 .FooterCopy .Copyright {
-	color: $black-50;
 	font-size: $font-size-small;
+	opacity: .5;
 	padding: 24px 0;
-	
-	a {
-		color: inherit;
-	}
 }
 
 //------------------------------------------------------------------------------

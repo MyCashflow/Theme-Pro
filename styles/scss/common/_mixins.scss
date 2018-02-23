@@ -19,6 +19,24 @@
 	-webkit-appearance: $value;
 }
 
+
+//------------------------------------------------------------------------------
+// Border Color
+//------------------------------------------------------------------------------
+
+// @mixin border-color($bg) {
+// 	$border: best-contrast($bg, ($color-link-light, $color-link-dark));
+// 
+// 	@if (lightness($bg) > 40) {
+// 		$border: scale-color($color, $lightness: -8%, $saturation: -75%);
+// 		@return $border;
+// 	}
+// 	@else {
+// 		$border: scale-color($color, $lightness: 20%, $saturation: -25%);
+// 		@return $border;
+// 	}
+// }
+
 //------------------------------------------------------------------------------
 // Box Shadow
 //------------------------------------------------------------------------------
@@ -248,16 +266,43 @@
 }
 
 //------------------------------------------------------------------------------
+// Current Link
+//------------------------------------------------------------------------------
+
+@mixin current-link($bg) {
+	$link: best-contrast($bg, ($color-link-light, $color-link-dark));
+	$current-link: mix($link, $color-accent-2, 50%);
+
+	@if (lightness($bg) > 90) {
+		color: $color-accent-2;
+	}
+	@else {
+		color: $current-link;
+	}
+}
+
+//------------------------------------------------------------------------------
 // Link Colors
 //------------------------------------------------------------------------------
 
-@mixin link-colors($bg) {
-	a {
-		color: best-contrast($bg, ($color-link-light, $color-link-dark));
-	}
+@mixin link-colors($bg, $hover: $color-accent-2) {
+	$link: best-contrast($bg, ($color-link-light, $color-link-dark));
 
-	a:hover {
-		color: $color-accent-2;
+	@if (lightness($bg) > 90) {
+		a {
+			color: $link;
+		}
+		a:hover {
+			color: $hover;
+		}
+	}
+	@else {
+		a {
+			color: $link;
+		}
+		a:hover {
+			color: mix($link, $color-accent-2, 50%);
+		}
 	}
 }
 

@@ -3,9 +3,9 @@
 //------------------------------------------------------------------------------
 
 .NavigationBar {
+	@include link-colors($color-navbar-bg);
 	@include box-shadow(0 3px 4px rgba(0,0,0,.025));
 	background-color: $color-navbar-bg;
-	border-bottom: 1px solid $color-navbar-border;
 	position: relative;
 	z-index: 100;
 }
@@ -15,11 +15,12 @@
 }
 
 .NavigationBar .CartTotal {
+	font-weight: bold;
 	font-size: $font-size;
 }
 
 .NavigationBar [data-drawer-toggle="menu"] {
-	border-left: 1px solid $color-body-border;
+	border-left: 1px solid darken($color-sitecolumn-bg, 5%);
 	padding-left: 20px;
 	padding-right: 15px;
 }
@@ -29,6 +30,7 @@
 	display: inline-block;
 	font-size: 24px;
 	padding: 15px 10px;
+	text-decoration: none;
 	vertical-align: middle;
 }
 
@@ -40,15 +42,19 @@
 	margin-right: -15px;
 }
 
-@media screen and (min-width: $breakpoint-tablet + 1) {
-	.NavigationBar {
-		border-top: 1px solid $color-navbar-border;
+.NavigationBar #LiveSearch {
+	#SearchInput {
+		border-radius: $border-radius;
+		width: 100%;
 	}
 }
 
-.NavigationBar input {
-	border-color: transparent;
-	height: 100%;
+@media screen and (min-width: $breakpoint-tablet + 1) {
+	.NavigationBar {
+		@include box-shadow(none);
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
 }
 
 //------------------------------------------------------------------------------
@@ -62,10 +68,21 @@
 
 .NavigationExpander:before {
 	@include icon($fa-var-angle-right);
+	transition-duration: $transition-fast;
 }
 
 .NavigationExpander.Open:before {
-	@include icon($fa-var-angle-down);
+	@include transform(rotateZ(90deg));
+	height: 14px;
+	width: 14px;
+}
+
+.LayoutAside .NavigationExpander {
+	opacity: .5;
+}
+
+.LayoutAside .NavigationExpander.Open {
+	opacity: 1;
 }
 
 //------------------------------------------------------------------------------
@@ -92,10 +109,6 @@
 
 .InlineNavigation li:last-child {
 	margin-right: 0;
-}
-
-.InlineNavigation li.Current > a {
-	color: $color-accent-2;
 }
 
 .InlineNavigation a[href='/account/'] {
@@ -143,15 +156,13 @@
 
 .InlineNavigation .LanguageNavigation a {
 	@include truncate;
-	border-right: 1px solid $color-body-border;
-	display: inline-block;
-	max-width: 160px;
-	padding: 4px 15px;
+	padding: 5px;
+	text-decoration: none;
 	vertical-align: middle;
 }
 
 .InlineNavigation .LanguageNavigation > li.Current > a {
-	font-weight: normal;
+	box-shadow: inset 0 -2px
 }
 
 .InlineNavigation .LanguageNavigation li {
@@ -196,7 +207,11 @@
 }
 
 .SimpleNavigation .Current > a {
-	color: $color-accent-2;
+	@include current-link($color-header-bg);
+}
+
+.SiteFooter .SimpleNavigation .Current > a {
+	@include current-link($color-footer-bg);
 }
 
 //------------------------------------------------------------------------------
@@ -206,7 +221,7 @@
 .DropNavigation a {
 	@include truncate;
 	display: block;
-	padding: 12px 15px;
+	padding: 10px 15px;
 	text-decoration: none;
 	transition-duration: $transition-fast;
 }
@@ -224,6 +239,10 @@
 }
 
 .DropNavigation li ul {
+	@include link-colors($color-boxed-bg);
+	background-color: $color-boxed-bg;
+	border: 1px solid $color-navbar-border;
+	color: text-contrast($color-boxed-bg);
 	margin: 0;
 	max-width: 300px;
 	min-width: 200px;
@@ -287,8 +306,6 @@
 }
 
 .SimpleDropNavigation li ul {
-	background-color: $color-body-bg;
-	border: 1px solid $color-navbar-border;
 	margin: 0 -15px;
 	max-width: 300px;
 	min-width: 40px;
@@ -296,7 +313,7 @@
 
 .SimpleDropNavigation li li a {
 	box-shadow: 0 1px 0 $color-navbar-border;
-	padding: 6px 15px;
+	padding: 5px 15px;
 }
 
 .SimpleDropNavigation li li:last-child a {
@@ -313,7 +330,7 @@
 
 .TabsNavigation a {
 	@include truncate;
-	background-color: $color-button-bg;
+	background-color: $color-body-bg;
 	border: 1px solid $color-body-border;
 	border-radius: $border-radius $border-radius 0 0;
 	color: text-contrast($color-button-bg);
@@ -336,6 +353,7 @@
 .TabsNavigation li {
 	float: left;
 	margin-left: 5px;
+	max-width: 49%;
 }
 
 .TabsNavigation li:first-child {
@@ -343,8 +361,9 @@
 }
 
 .TabsNavigation .Current > a {
-	background-color: $color-body-bg;
-	border-bottom-color: $color-body-bg;
+	background-color: $color-boxed-bg;
+	border-bottom-color: $color-boxed-bg;
+	@include current-link($color-boxed-bg);
 }
 
 @media screen and (max-width: $breakpoint-mobile) {
@@ -367,28 +386,16 @@
 }
 
 .MainNavigation a {
-	border: 0px solid $color-body-border;
-	font-family: $font-headings;
-}
-
-.MainNavigation li ul {
-	background-color: $color-body-bg;
 	border: 1px solid $color-body-border;
+	font-family: $font-headings;
 }
 
 .MainNavigation > ul > li > a {
 	@extend %styleset;
-	border-right-width: 1px;
-}
-
-.MainNavigation > ul > li:first-child > a {
-	border-left-width: 1px;
-	margin-left: -1px;
+	border: 0;
 }
 
 .MainNavigation li li a {
-	background-color: $color-navbar-bg;
-	border: 1px solid $color-body-border;
 	border-width: 1px 0 0;
 }
 
@@ -396,12 +403,8 @@
 	border-width: 0;
 }
 
-.MainNavigation > ul > li.Current > a {
-	box-shadow: inset 0 -2px;
-}
-
 .MainNavigation .Current > a {
-	color: $color-accent-2;
+	@include current-link($color-header-bg);
 }
 
 .MainNavigation .HasSubCategories > a {
@@ -413,37 +416,13 @@
 }
 
 //------------------------------------------------------------------------------
-// Sub Navigation
-//------------------------------------------------------------------------------
-
-.SubNavigationBar {
-	border-bottom: 1px solid $color-navbar-border;
-	text-align: center;
-	z-index: 1;
-}
-
-.SubNavigation {
-	@extend .MainNavigation;
-}
-
-.SubNavigation ul li {
-	text-align: initial;
-}
-
-.SubNavigationBar + .ContentSection {
-	margin-top: 48px;
-}
-
-.SubNavigationBar + .PaginationBar {
-	margin-top: -1px;
-}
-
-//------------------------------------------------------------------------------
 // Side Navigation
 //------------------------------------------------------------------------------
 
 .SideNavigation {
 	@extend %default-margin;
+	background-color: $color-body-bg;
+	border: 1px solid $color-body-border;
 }
 
 .SideNavigation-Left {
@@ -479,7 +458,7 @@
 }
 
 .SideNavigation .Current > a {
-	color: $color-accent-2;
+	@include current-link($color-body-bg);
 }
 
 //------------------------------------------------------------------------------
@@ -523,18 +502,13 @@
 }
 
 .DrawerNavigation .NavigationExpander {
+	@include valign;
 	cursor: pointer;
-	line-height: 45px;
 	margin-left: 0;
 	position: absolute;
 	right: 0;
 	text-align: center;
-	top: 0;
 	width: 45px;
-}
-
-.DrawerNavigation .Current > a {
-	color: $color-accent-2;
 }
 
 .DrawerNavigation .HasSubCategories > ul {
@@ -550,20 +524,63 @@
 }
 
 //------------------------------------------------------------------------------
-// DraweNavigation Styles
+// Main Categories Navigation
+//------------------------------------------------------------------------------
+
+.MainCategories {
+	@include link-colors($color-sitecolumn-bg);
+	@extend %default-margin;
+}
+
+.MainCategories a {
+	border-color: darken($color-sitecolumn-bg, 5%);
+	font-family: $font-headings;
+	font-size: $font-size-small;
+	padding-bottom: 5px;
+	padding-top: 5px
+}
+
+.MainCategories a:hover {
+	box-shadow: inset 3px 0 0;
+}
+
+.MainCategories li.Current > a {
+	box-shadow: inset 3px 0 0;
+}
+
+.MainCategories li ul {
+	background-color: scale-color($color-sitecolumn-bg, $lightness: -2%);
+}
+
+.MainCategories > ul > li:first-child > a {
+	border-top: 0;
+}
+
+.MainCategories > ul > li:last-child > a {
+	border-bottom: 0;
+}
+
+.MainCategories > ul > li > a {
+	@extend %styleset;
+	font-size: $font-size;
+	padding-bottom: 10px;
+	padding-top: 10px
+}
+
+.MainCategories > .Campaigns > li > a {
+	@include icon-before($fa-var-star);
+}
+
+//------------------------------------------------------------------------------
+// Drawe Navigation Styles
 //------------------------------------------------------------------------------
 
 .Drawer .DrawerNavigation > ul > li > a {
-	font-weight: normal;
+	@extend %styleset;
 }
 
 .Drawer .DrawerNavigation ul ul a {
 	background-color: lighten($color-drawer-bg, 5%);
-}
-
-.Drawer .DrawerNavigation .NavHighlight > a {
-	color: $color-accent-2;
-	font-weight: bold;
 }
 
 .DrawerNavigation a[href='/account/'] {

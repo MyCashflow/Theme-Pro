@@ -3,7 +3,7 @@
 //------------------------------------------------------------------------------
 
 %default-margin {
-	margin: 0 0 24px;
+	margin: 0 0 20px;
 }
 
 %clearfix {
@@ -70,7 +70,7 @@ select::-ms-expand {
 //------------------------------------------------------------------------------
 
 body {
-	background-color: $color-footer-bg;
+	background-color: $color-document-bg;
 }
 
 //------------------------------------------------------------------------------
@@ -158,7 +158,7 @@ table th,
 table td {
 	background-color: $color-boxed-bg;
 	border-bottom: 1px solid $color-body-border;
-	padding: 12px 15px;
+	padding: 10px 15px;
 	vertical-align: top;
 }
 
