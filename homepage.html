@@ -29,8 +29,8 @@
 					</div>
 				}}'
 			)}
-			<div class="Container">
-				<div class="SiteContent">
+			<div class="SiteContent">
+				<div class="Container">
 					<div class="Grid">
 						<div class="Col-12-12 Col-Tablet-12-12">
 							{Notifications(group: 'account')}
@@ -52,11 +52,12 @@
 									{NewProducts(
 										limit: '14',
 										type: 'normal',
+										classes: 'ListProduct-Compact',
 										before: '
 											<div class="ContentSection">
 												<h2 class="ContentTitle ContentTitle-Fancy">{%NewProducts}</h2>
 												<div class="List ProductList">
-													<div class="GridList GridList-Wide" data-flickity="list">',
+													<div class="GridList GridList-Small" data-flickity="list">',
 										after: '
 													</div>
 												</div>
@@ -140,13 +141,14 @@
 								helper: 'helpers/list-product'
 							)}
 							{TopSellers(
-								limit: '14',
+								limit: '12',
 								type: 'normal',
+								classes: 'ListProduct-Compact',
 								before: '
 									<div class="ContentSection">
 										<h2 class="ContentTitle ContentTitle-Fancy">{%BestsellingProducts}</h2>
 										<div class="List ProductList">
-											<div class="GridList GridList-Wide" data-flickity="list">',
+											<div class="GridList GridList-Small" data-flickity="list">',
 								after: '
 											</div>
 										</div>

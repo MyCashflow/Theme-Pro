@@ -1,38 +1,57 @@
 {Helper(file: 'helpers/header')}
-<!-- {Helper(file: 'helpers/path')} -->
-<div class="SiteContent">
-	<div class="Container">
-		{Helper(file: 'helpers/category-header')}
-		<div class="Grid">
-			<div class="Col-12-12">
-				<div class="ContentSection">
-					<h1 class="ContentTitle">{PageTitle}</h1>
-					{CategoryImage(
-						width: '1140',
-						before: '<div class="Banner Banner-Body">',
-						after: '</div>'
-					)}
-					{CategoryDescription}
-				</div>
-				{Helper(file: 'helpers/pagination-form')}
-				<div class="ContentSection">
-					{NewProducts(
-						pagination: 'true',
-						timelimit: '-6 months',
-						limit: '40|100',
-						type: 'normal',
-						before: '
-							<div class="List ProductList">
-								<div class="GridList GridList-Wide">',
-						after: '
+		<div class="Layout">
+			<div class="LayoutAside Hide-Tablet">
+				{Helper(file: 'helpers/sidebar')}
+			</div>
+			<div class="LayoutMain">
+				{Helper(file: 'helpers/site-header')}
+				{CategoryImageUrl(
+					width: '1920',
+					before: '
+						<div class="Banners Banners-Wide">
+							<div class="Banner Banner-Wide">
+								<div class="AspectRatio">
+									{CategoryLink(
+										before: '<a class="BannerCoverLink" href="',
+										after: '"></a>'
+									)}
+									<div class="BannerBackgroundImage" style="background-image: url(',
+					after: ')"></div>
 								</div>
 							</div>
-							{Helper(file: 'helpers/pagination')}',
-						helper: 'helpers/list-product'
-					)}
+						</div>'
+				)}
+				<div class="SiteContent">
+					<div class="Container">
+						{Helper(file: 'helpers/category-header')}
+						<div class="Grid">
+							<div class="Col-12-12 Col-Tablet-12-12">
+								<div class="ContentSection">
+									<h1 class="ContentTitle">{PageTitle}</h1>
+									{CategoryDescription}
+								</div>
+								{Helper(file: 'helpers/pagination-form')}
+								<div class="ContentSection">
+									{NewProducts(
+										pagination: 'true',
+										timelimit: '-6 months',
+										limit: '40|100',
+										type: 'normal',
+										before: '
+											<div class="List ProductList">
+												<div class="GridList GridList-Wide">',
+										after: '
+												</div>
+											</div>
+											{Helper(file: 'helpers/pagination')}',
+										helper: 'helpers/list-product'
+									)}
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
+				{Helper(file: 'helpers/site-footer')}
 			</div>
 		</div>
-	</div>
-</div>
 {Helper(file: 'helpers/footer')}
