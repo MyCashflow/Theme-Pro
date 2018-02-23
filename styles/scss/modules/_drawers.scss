@@ -50,22 +50,18 @@
 }
 
 .Drawer[data-drawer-side='top'].Open {
-	@include box-shadow(0 1px 3px $black-25);
 	@include transform(translateY(0));
 }
 
 .Drawer[data-drawer-side='bottom'].Open {
-	@include box-shadow(0 -1px 3px $black-25);
 	@include transform(translateY(0));
 }
 
 .Drawer[data-drawer-side='left'].Open {
-	@include box-shadow(1px 0 3px $black-25);
 	@include transform(translateX(0));
 }
 
 .Drawer[data-drawer-side='right'].Open {
-	@include box-shadow(-1px 0 3px $black-25);
 	@include transform(translateX(0));
 }
 
