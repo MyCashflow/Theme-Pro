@@ -16,12 +16,19 @@
 	color: $color-discount;
 }
 
+.Badge.ProductDiscountPercent {
+	font-weight: bold;
+	background-color: $color-discount;
+	color: text-contrast($color-discount);
+}
+
 .ProductComparePrice {
 	text-decoration: line-through;
+	font-size: .8em;
 }
 
 //------------------------------------------------------------------------------
-// Product Card
+// Product Section
 //------------------------------------------------------------------------------
 
 .ProductSection .BuyForm input,
@@ -34,29 +41,45 @@
 	border: 0;
 }
 
-.ProductCardPrices span {
-	@extend h1;
+.ProductCardPrices {
+	@extend h2;
 	font-weight: bold;
+	margin: 0;
 }
 
-.ProductCardPrices .Badge.ProductDiscountPercent {
-	display: inline-block;
-	position: initial;
-	margin: 0 0 0 10px;
+.ProductSection .Badge.ProductDiscountPercent {
+	@extend h2;
+	font-weight: bold;
 	transform: rotate(3deg);
+}
+
+.ProductDescription iframe {
+	@include box-shadow(0 4px 8px $black-25);
+	max-width: 100%;
+}
+
+.ProductSection .ContentSection + .ContentSection {
+	margin-top: 10px;
+	padding-top: 10px;
+	border-top: 1px solid $color-body-border;
 }
 
 //------------------------------------------------------------------------------
 // List Product
 //------------------------------------------------------------------------------
 
-.ListProduct {
-	position: relative;
-	padding-bottom: 48px;
+.flickity-enabled .ListProduct:not(.ListProduct-Compact) .ProductName {
+	@include truncate;
 }
 
-.flickity-enabled .ListProduct {
-	padding-bottom: 24px;
+.ListProduct {
+	@include link-colors($color-boxed-bg);
+	background-color: $color-boxed-bg;
+	border: 1px solid $color-boxed-border;
+	border-radius: $border-radius;
+	padding-bottom: 100px;
+	position: relative;
+	transition-duration: $transition-fast;
 }
 
 .ListProduct .ProductImage {
@@ -67,14 +90,22 @@
 	@include cover;
 }
 
+.ListProduct .ProductImage {
+	border: 0;
+}
+
 .ListProduct .ProductImage img {
 	@include cover;
 	margin: auto;
 }
 
-.ListProduct:not(.ListProduct-Compact) .ProductImage:hover {
+.ListProduct:hover {
 	transform: translateY(-1px);
 	box-shadow: 0 4px 4px rgba(0,0,0,.05);
+}
+
+.ListProduct .ProductInformation {
+	padding: 0 10px;
 }
 
 .ListProduct .ProductName {
@@ -88,7 +119,18 @@
 
 .ListProduct .ProductPrices {
 	@extend h2;
+	font-weight: bold;
 	margin: 0;
+}
+
+.ListProduct .ProductAddToCart {
+	bottom: 0;
+	left: 0;
+	margin-bottom: 20px;
+	padding: 0 10px;
+	position: absolute;
+	right: 0;
+	z-index: 1
 }
 
 //------------------------------------------------------------------------------
@@ -96,38 +138,31 @@
 //------------------------------------------------------------------------------
 
 .ListProduct-Compact {
-	background-color: $color-body-bg;
-	border: 1px solid $color-image-border;
-	border-radius: $border-radius;
 	font-size: $font-size-small;
-	padding-bottom: 24px;
+	padding-bottom: 20px;
 	transition-duration: $transition-fast;
 }
 
-.ListProduct-Compact:hover {
-	transform: translateY(-1px);
-	box-shadow: 0 2px 4px rgba(0,0,0,.05);
-}
-
 .ListProduct-Compact .ProductImage {
-	border: 0;
-	padding: 6px;
-}
-
-.flickity-enabled .ListProduct-Compact {
-	margin-bottom: 4px;
-	margin-top: 4px;
+	padding: 5px;
 }
 
 .ListProduct-Compact .ProductInformation {
 	display: block;
-	margin: 0 12px;
 }
 
-.ListProduct-Compact .ProductInformation > .ProductName {
+.ListProduct-Compact .ProductName {
 	@include truncate;
 	font-size: inherit;
-	margin-right: 0;
+}
+
+.ListProduct-Compact .ProductPrices {
+	@extend h3;
+	@include truncate;
+}
+
+.ListProduct-Compact .ProductAddToCart {
+	display: none;
 }
 
 //------------------------------------------------------------------------------
@@ -136,6 +171,7 @@
 
 #CurrentProductImage {
 	@extend %default-margin;
+	background-color: $color-image-bg;
 	border-radius: $border-radius;
 	display: block;
 	height: auto;
@@ -232,4 +268,121 @@ h1 + .ProductCategories,
 .ProductCategories li {
 	display: inline-block;
 	margin: 0 5px 5px 0;
+}
+
+//------------------------------------------------------------------------------
+// Product Details
+//------------------------------------------------------------------------------
+
+.ProductDetailsTitle {
+	@extend h2;
+	display: block;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.ProductDetailsItem-Info {
+	position: relative;
+	display: none;
+	margin: 10px 0 0 0;
+	background-color: $color-body-border;
+	border: 1px solid $color-body-border;
+	border-radius: $border-radius-large;
+	display: block;
+	padding: 5px 7px;
+}
+
+.ProductDetailsItem-Info::before {
+	position: absolute;
+	z-index: 1;
+	bottom: 100%;
+	left: 0;
+	width: 0;
+	height: 0;
+	margin-left: 20px;
+	content: '';
+	border: 8px solid transparent;
+	border-bottom: 8px solid $color-body-border;
+}
+
+//------------------------------------------------------------------------------
+// Product Availability
+//------------------------------------------------------------------------------
+
+.ProductAvailability .DeliveryTime {
+	font-weight: bold;
+}
+
+.ProductAvailability dt.StorageInfo {
+	display: inline-block;
+	margin-right: 5px
+}
+
+.ProductAvailability dt.StorageInfo + dd.StorageInfo {
+	background-color: $color-boxed-bg;
+	display: inline-block;
+	border: 1px solid $color-body-border;
+	padding: 0px 10px 2px;
+	border-radius: 30px;
+}
+
+.ProductAvailability dd.StorageInfo::before {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	margin-right: 5px;
+	content: '';
+	vertical-align: middle;
+	border-radius: 50%;
+}
+
+.Available dd.StorageInfo::before,
+.Available.AvailabilityOutOfStock dd.StorageInfo::before {
+	background-color: darken($color-notification-bg, 10%);
+	border: 1px solid darken($color-notification-bg, 20%);
+}
+
+.Available.AvailabilityInStock dd.StorageInfo::before {
+	background-color: $color-success;
+	border: 0;
+}
+
+.AvailabilityOutOfStock dd.StorageInfo::before {
+	background-color: $color-error;
+	border: 0;
+}
+
+//------------------------------------------------------------------------------
+// Product Shipping Details
+//------------------------------------------------------------------------------
+
+.ProductShippingMethods {
+	background-color: $color-boxed-bg;
+	border: 1px solid $color-body-border;
+	border-radius: $border-radius-large;
+	padding: 10px;
+}
+
+.ProductShippingMethods .ShippingCosts > * {
+	margin: 0;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+.ProductShippingMethods dt.ShippingMethodName {
+	@include truncate;
+	border-bottom: 1px solid $color-body-border;
+	display: block;
+	font-weight: normal;
+	padding-right: 60px;
+}
+
+.ProductShippingMethods dd.ShippingMethodPrice {
+	font-weight: bold;
+	margin-top: -35px;
+	text-align: right;
+}
+
+.ProductShippingMethods dd.ShippingMethodInfo {
+	display: none;
 }

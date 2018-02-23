@@ -2084,10 +2084,10 @@
 .fa-percent:before {
   content: ""; }
 
-h1, h2, .LogoLink, h3, table caption, .ProductCardPrices span, h4, h5, .LiveSearchTitle, #OrderProductsTable .ProductName, .SearchFilterTitle, h6, p, form, table,
+h1, h2, .LogoLink, .ProductCardPrices, .ProductSection .Badge.ProductDiscountPercent, .ListProduct .ProductPrices, .ProductDetailsTitle, h3, table caption, .ListProduct-Compact .ProductPrices, h4, h5, .LiveSearchTitle, #OrderProductsTable .ProductName, .SearchFilterTitle, h6, p, form, table,
 hr, dl, ol, ul, .GroupLabel, .FormItem, .Notification, .GroupErrorMessage,
-.FormNotification, #OrderStatus, .Banner-Body, .Banner-Side, .Banners-Blocks, .Breadcrumb, .MiniCart-Checkout, .SimpleNavigation, .SideNavigation, #CurrentProductImage, .SearchFilter {
-  margin: 0 0 24px; }
+.FormNotification, #OrderStatus, .Banner-Body, .Banner-Side, .Banners-Blocks, .Breadcrumb, .MiniCart-Checkout, .SimpleNavigation, .SideNavigation, .MainCategories, #CurrentProductImage, .SearchFilter {
+  margin: 0 0 20px; }
 
 html {
   -moz-box-sizing: border-box;
@@ -2124,7 +2124,7 @@ select::-ms-expand {
   display: none; }
 
 body {
-  background-color: #fafafa; }
+  background-color: #BF98A0; }
 
 audio, canvas, img, progress, video {
   display: inline-block;
@@ -2133,10 +2133,10 @@ audio, canvas, img, progress, video {
   vertical-align: middle; }
 
 a {
-  color: #333333; }
+  color: #191919; }
 
 a:hover {
-  color: #e74c3c; }
+  color: #BF98A0; }
 
 a {
   transition-duration: 0.15s; }
@@ -2174,7 +2174,7 @@ dl dd {
   height: 5px; }
 
 table {
-  border: 1px solid #eeeeee;
+  border: 1px solid #e9e8e8;
   border-collapse: collapse;
   border-spacing: 0;
   text-align: left; }
@@ -2184,9 +2184,9 @@ table caption {
 
 table th,
 table td {
-  background-color: #fafafa;
-  border-bottom: 1px solid #eeeeee;
-  padding: 12px 15px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e9e8e8;
+  padding: 10px 15px;
   vertical-align: top; }
 
 table th > :last-child,
@@ -2195,56 +2195,55 @@ table td > :last-child {
 
 table tbody th,
 table tbody td {
-  background-color: #ffffff; }
+  background-color: #fdfcfc; }
 
 hr {
-  background-color: #eeeeee;
+  background-color: #e9e8e8;
   border: 0;
   display: block;
   height: 1px;
   margin: 48px 0; }
 
 body {
-  color: #333333;
-  font: 14.4px/24px "Open Sans", sans-serif;
-  font-weight: 300; }
+  color: #333232;
+  font: 16px/24px "Asap", sans-serif; }
 
 button, input, select, textarea {
   color: inherit;
   font: inherit; }
 
 blockquote {
-  border-left: 5px solid #e74c3c;
-  font-size: 16px;
+  border-left: 5px solid #BF98A0;
+  font-size: 18px;
   margin-left: 0;
   padding-left: 15px; }
 
 strong {
   font-weight: bold; }
 
-h1, .H1, h2, .LogoLink, .H2, h3, table caption, .ProductCardPrices span, .H3, h4, .H4, h5, .LiveSearchTitle, #OrderProductsTable .ProductName, .SearchFilterTitle, .H5,
+.Button, form button, #OrderDocuments a, .Footer h2, .Footer .LogoLink, .Footer .ProductCardPrices, .Footer .ProductSection .Badge.ProductDiscountPercent, .ProductSection .Footer .Badge.ProductDiscountPercent, .Footer .ListProduct .ProductPrices, .ListProduct .Footer .ProductPrices, .Footer .ProductDetailsTitle, h1.ContentTitle, .ContentTitle-Fancy, .MainNavigation > ul > li > a, .MainCategories > ul > li > a, .Drawer .DrawerNavigation > ul > li > a {
+  font-family: "Asap Condensed", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase; }
+
+h1, .H1, h2, .LogoLink, .ProductCardPrices, .ProductSection .Badge.ProductDiscountPercent, .ListProduct .ProductPrices, .ProductDetailsTitle, .H2, h3, table caption, .ListProduct-Compact .ProductPrices, .H3, h4, .H4, h5, .LiveSearchTitle, #OrderProductsTable .ProductName, .SearchFilterTitle, .H5,
 h6, .H6 {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Asap Condensed", sans-serif;
   font-weight: normal;
   margin: 48px 0 24px; }
-  h1:first-child, .H1:first-child, h2:first-child, .LogoLink:first-child, .H2:first-child, h3:first-child, table caption:first-child, .ProductCardPrices span:first-child, .H3:first-child, h4:first-child, .H4:first-child, h5:first-child, .LiveSearchTitle:first-child, #OrderProductsTable .ProductName:first-child, .SearchFilterTitle:first-child, .H5:first-child,
+  h1:first-child, .H1:first-child, h2:first-child, .LogoLink:first-child, .ProductCardPrices:first-child, .ProductSection .Badge.ProductDiscountPercent:first-child, .ListProduct .ProductPrices:first-child, .ProductDetailsTitle:first-child, .H2:first-child, h3:first-child, table caption:first-child, .ListProduct-Compact .ProductPrices:first-child, .H3:first-child, h4:first-child, .H4:first-child, h5:first-child, .LiveSearchTitle:first-child, #OrderProductsTable .ProductName:first-child, .SearchFilterTitle:first-child, .H5:first-child,
   h6:first-child, .H6:first-child {
     margin-top: 0; }
-
-.Footer h2, .Footer .LogoLink, h1.ContentTitle, .ContentTitle-Fancy {
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase; }
 
 h1, .H1 {
   font-size: 32px;
   line-height: 48px; }
 
-h2, .LogoLink, .H2 {
+h2, .LogoLink, .ProductCardPrices, .ProductSection .Badge.ProductDiscountPercent, .ListProduct .ProductPrices, .ProductDetailsTitle, .H2 {
   font-size: 24px;
   line-height: 36px; }
 
-h3, table caption, .ProductCardPrices span, .H3 {
+h3, table caption, .ListProduct-Compact .ProductPrices, .H3 {
   font-size: 18px;
   line-height: 24px; }
 
@@ -2267,13 +2266,13 @@ h6, .H6 {
   text-align: right; }
 
 .Text-Small {
-  font-size: 12.8px; }
+  font-size: 14px; }
 
 .Text-Large {
-  font-size: 16px; }
+  font-size: 18px; }
 
 .Text-Accent {
-  color: #e74c3c; }
+  color: #BF98A0; }
 
 .Text-Truncate {
   overflow: hidden;
@@ -2282,13 +2281,13 @@ h6, .H6 {
 
 input, select, textarea {
   background-color: #ffffff;
-  border: 1px solid #d9d9d9;
+  border: 1px solid #e0e0e0;
   border-radius: 3px;
-  color: #333333;
+  color: #333232;
   display: inline-block;
-  min-height: 38px;
+  min-height: 46px;
   max-width: 100%;
-  padding: 6px 12px;
+  padding: 10px 15px;
   transition-duration: 0.3s;
   vertical-align: middle; }
 
@@ -2315,9 +2314,9 @@ select {
   -webkit-appearance: none;
   background: #ffffff url("../images/angle-down-dark.png") top 50% right 14px no-repeat;
   background-size: 12px 12px;
-  color: #333333;
+  color: #333232;
   cursor: pointer;
-  height: 38px;
+  height: 46px;
   padding-right: 35px; }
 
 select::-ms-expand {
@@ -2338,21 +2337,20 @@ label {
   cursor: pointer; }
 
 .GroupLabel {
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #e9e8e8;
   display: block;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   padding-bottom: 10px; }
 
 .Button, form button, #OrderDocuments a {
   background: #ffffff;
   border: 1px solid #d9d9d9;
-  border-radius: 4px;
-  color: #333333 !important;
+  border-radius: 5px;
+  color: #333232 !important;
   cursor: pointer;
   display: inline-block;
-  font-weight: normal;
-  padding: 6px 12px;
+  padding: 10px 15px;
   text-align: center;
   text-decoration: none;
   transition-duration: 0.15s;
@@ -2360,7 +2358,7 @@ label {
 
 .Button:hover, form button:hover, #OrderDocuments a:hover {
   background-color: white;
-  color: #333333 !important; }
+  color: #333232 !important; }
 
 .Button:active, form button:active, #OrderDocuments a:active,
 .Button.Active,
@@ -2373,18 +2371,20 @@ form button.Active,
   background-color: #f9f9f9; }
 
 .Button-Primary, form [type='submit'], #OrderDocuments a {
-  border-color: #e74c3c;
-  color: #e74c3c !important; }
+  background-color: #182825;
+  border-color: #182825;
+  color: #fefefe !important; }
 
 .Button-Primary:hover, form [type='submit']:hover, #OrderDocuments a:hover {
-  background-color: #e74c3c;
-  color: #fefefe !important; }
+  background-color: #ffffff;
+  border-color: #182825;
+  color: #182825 !important; }
 
 .Button-Primary:active, form [type='submit']:active, #OrderDocuments a:active,
 .Button-Primary.Active,
 form .Active[type='submit'],
 #OrderDocuments a.Active {
-  background-color: #e64231; }
+  background-color: #13201e; }
 
 .Button-Block, .Buttons-Block .Button, .Buttons-Block form button, form .Buttons-Block button, .Buttons-Block #OrderDocuments a, #OrderDocuments .Buttons-Block a {
   display: block;
@@ -2395,12 +2395,20 @@ form .Active[type='submit'],
   margin-top: 5px; }
 
 .Button .fa, form button .fa, #OrderDocuments a .fa {
-  font-size: 16px; }
+  font-size: 18px; }
+
+form.BuyForm .AddToCart {
+  display: block;
+  width: 100%; }
+
+form.ProductAddToCart .AddToCart {
+  display: block;
+  width: 100%; }
 
 .ShippingMethodWrapper,
 .PaymentMethodWrapper {
-  background-color: #fafafa;
-  border: 1px solid #eeeeee;
+  background-color: #ffffff;
+  border: 1px solid #e9e8e8;
   padding: 10px 15px; }
 
 .ShippingMethodWrapper + .ShippingMethodWrapper,
@@ -2425,21 +2433,21 @@ form .Active[type='submit'],
   margin-top: 10px; }
 
 .FormError {
-  color: #dd3333;
+  color: #ce2d4f;
   position: relative; }
 
 .FormError > input,
 .FormError > select,
 .FormError > textarea {
-  background-color: #fdf5f5 !important;
-  border-color: #dd3333 !important; }
+  background-color: #fdf5f6 !important;
+  border-color: #ce2d4f !important; }
 
 .FormErrorMessage {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  background-color: #ffffff;
-  color: #dd3333;
+  background-color: #fdfcfc;
+  color: #ce2d4f;
   display: block;
   margin: 0;
   opacity: 1;
@@ -2448,7 +2456,7 @@ form .Active[type='submit'],
 
 @media screen and (max-width: 600px) {
   .FormErrorMessage {
-    font-size: 12.8px;
+    font-size: 14px;
     opacity: 1;
     position: static; } }
 
@@ -2464,14 +2472,14 @@ form .Active[type='submit'],
   margin-bottom: 0; }
 
 .FormSubmit {
-  margin-top: 24px; }
+  margin-top: 20px; }
 
 .GroupItem {
   margin-bottom: 0; }
 
 .GroupItem > div {
   display: inline-block;
-  margin: 0 10px 24px 0;
+  margin: 0 10px 20px 0;
   vertical-align: bottom; }
 
 .GroupItem.required > label:after {
@@ -2480,13 +2488,13 @@ form .Active[type='submit'],
 @media screen and (max-width: 800px) {
   .FormItem .InlineCheck {
     display: block;
-    margin: 12px 0 0; }
+    margin: 10px 0 0; }
   .GroupItem > div {
     display: block;
     margin-right: 0; } }
 
 .Checks {
-  margin-bottom: 24px; }
+  margin-bottom: 20px; }
 
 .Checks label {
   font-weight: normal; }
@@ -2498,7 +2506,7 @@ form .Active[type='submit'],
   margin-top: 0; }
 
 .FormHelp {
-  font-size: 12.8px;
+  font-size: 14px;
   margin: 4px 0 0; }
 
 .FormAltAction {
@@ -2531,7 +2539,7 @@ form .Active[type='submit'],
     display: block; } }
 
 .BuyForm [type='submit'] {
-  padding: 12px 48px; }
+  padding: 10px 40px; }
   .BuyForm [type='submit']:before {
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
@@ -2542,10 +2550,13 @@ form .Active[type='submit'],
     content: "";
     margin-right: 0.5em; }
   .BuyForm [type='submit']:before {
-    font-size: 16px; }
+    font-size: 18px; }
 
 #SearchForm {
   margin-bottom: 0; }
+
+#SearchForm .FormItem {
+  position: relative; }
 
 #SearchForm label {
   display: none; }
@@ -2555,8 +2566,6 @@ form .Active[type='submit'],
   transition-duration: 0.15s; }
 
 #SearchForm #SearchInput {
-  border-color: transparent;
-  border-bottom: 1px solid #eeeeee;
   border-radius: 3px;
   width: 100%; }
 
@@ -2564,7 +2573,8 @@ form .Active[type='submit'],
   font-size: 0;
   background: transparent;
   border: 0;
-  color: #999999 !important;
+  border-left: 1px solid #e9e8e8;
+  color: #999898 !important;
   position: absolute;
   right: 0;
   max-width: 70px; }
@@ -2576,16 +2586,16 @@ form .Active[type='submit'],
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     content: "";
-    font-size: 14.4px;
+    font-size: 16px;
     vertical-align: middle; }
 
 #SearchForm:hover #SearchInput,
 #SearchForm:hover #SearchButton {
-  border-color: #eeeeee;
-  color: #333333 !important; }
+  border-color: #BF98A0;
+  color: #BF98A0 !important; }
 
 #SearchForm #SearchInput:focus {
-  border: 1px solid #e74c3c;
+  border: 1px solid #BF98A0;
   outline: 0;
   position: relative;
   z-index: 1000; }
@@ -2598,10 +2608,10 @@ form .Active[type='submit'],
   margin-right: 5px; }
 
 .CampaignCodeForm {
-  background-color: #fafafa;
-  border: 1px solid #eeeeee;
+  background-color: #ffffff;
+  border: 1px solid #e9e8e8;
   border-radius: 3px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   padding: 15px; }
 
 .CampaignCodeForm form {
@@ -2612,7 +2622,7 @@ form .Active[type='submit'],
   width: 100%; }
 
 .CampaignCodeForm .label {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   text-align: center; }
 
 .CampaignCodeForm-InModal {
@@ -2638,7 +2648,7 @@ form .Active[type='submit'],
 
 .Container, .BannerContainer, .Banners-Wide-Contained {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1100px;
   padding: 0 15px; }
 
 .Grid {
@@ -3216,7 +3226,7 @@ form .Active[type='submit'],
     left: -100%; } }
 
 .GridList {
-  margin: 0 -10px; }
+  margin: 0 -5px; }
 
 .GridList:not(.flickity-enabled) {
   display: -webkit-box;
@@ -3229,7 +3239,7 @@ form .Active[type='submit'],
 
 .GridList .ListItem {
   float: left;
-  padding: 6px 10px;
+  padding: 5px;
   position: relative;
   width: 33.33%; }
 
@@ -3241,7 +3251,7 @@ form .Active[type='submit'],
 
 @media screen and (max-width: 1024px) {
   .GridList .ListItem {
-    width: 33.33%; } }
+    width: 25%; } }
 
 @media screen and (max-width: 800px) {
   .GridList .ListItem {
@@ -3251,15 +3261,11 @@ form .Active[type='submit'],
   .GridList .ListItem {
     width: 50%; } }
 
-.GridList-Small {
-  margin: 0 -1px; }
-
 .GridList-Small .ListItem {
-  margin: 0 -1px -1px 0;
-  padding: 0;
-  width: 168.30357px; }
+  width: 16.66%;
+  min-width: 178.33333px; }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
   .GridList-Small.flickity-enabled {
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
@@ -3267,20 +3273,8 @@ form .Active[type='submit'],
     transform: translateX(-50%);
     width: 100vw;
     position: relative;
-    left: 50%; }
-  .GridList-Small.flickity-enabled:after {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
-    bottom: 0;
-    content: '';
-    display: block;
-    height: 100%;
-    left: auto;
-    position: absolute;
-    pointer-events: none;
-    right: 0;
-    top: 0;
-    width: 40px;
-    z-index: 1; } }
+    left: 50%;
+    padding-left: 15px; } }
 
 .Flex {
   -moz-flex-align: center;
@@ -3293,7 +3287,7 @@ form .Active[type='submit'],
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   margin-left: -15px;
   margin-right: -15px; }
 
@@ -3340,7 +3334,7 @@ form .Active[type='submit'],
   background-color: #ffeecc;
   border: 1px solid #ffcc66;
   border-radius: 3px;
-  color: #333333;
+  color: #333232;
   padding: 10px 15px;
   position: relative; }
 
@@ -3348,13 +3342,13 @@ form .Active[type='submit'],
 .Success.FormNotification, .Success#OrderStatus {
   background-color: #f3f8eb;
   border-color: #88bb33;
-  color: #333333; }
+  color: #333232; }
 
 .Notification.Error, .GroupErrorMessage,
 .FormNotification, .Error#OrderStatus {
-  background-color: #fcebeb;
-  border-color: #dd3333;
-  color: #333333; }
+  background-color: #faeaed;
+  border-color: #ce2d4f;
+  color: #333232; }
 
 .Notification > :last-child, .GroupErrorMessage > :last-child,
 .FormNotification > :last-child, #OrderStatus > :last-child {
@@ -3441,6 +3435,7 @@ form .Active[type='submit'],
   display: none; }
 
 .ShareSection {
+  border: 0 !important;
   max-width: 100%;
   overflow: hidden; }
 
@@ -3495,11 +3490,30 @@ form .Active[type='submit'],
   right: -10px;
   top: -10px; }
 
+.VideoWrapper {
+  -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  -ms-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  height: 0;
+  margin: 20px 0;
+  padding-bottom: 56.25%;
+  position: relative; }
+
+.VideoWrapper iframe,
+.VideoWrapper object,
+.VideoWrapper embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
 .NoLink {
   cursor: default; }
 
 .NavHighlight > a {
-  color: #e74c3c; }
+  color: #BF98A0; }
 
 .Banner {
   position: relative; }
@@ -3518,6 +3532,9 @@ form .Active[type='submit'],
 .BannerContent {
   position: relative; }
 
+.BannerText > *:last-child {
+  margin-bottom: 0; }
+
 .BannerCaption {
   bottom: 0;
   left: 0;
@@ -3526,7 +3543,7 @@ form .Active[type='submit'],
   top: 0;
   background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.75));
   color: #fefefe;
-  padding: 48px 24px;
+  padding: 20px;
   text-align: center;
   top: auto; }
 
@@ -3540,55 +3557,56 @@ form .Active[type='submit'],
   -ms-transition: 0.3s;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  background-color: #fafafa;
+  background-color: #ffffff;
   background-position: 50%;
   background-size: cover;
-  border-radius: 3px;
   overflow: hidden; }
 
 .Banner-Body {
-  background-color: #fafafa;
-  border: 1px solid #eeeeee;
+  background-color: #ffffff;
+  border: 1px solid #e9e8e8;
   border-radius: 3px;
   display: block; }
 
 .Banner-Body img {
+  border-radius: 3px;
   width: 100%; }
 
 .Banners-Side {
   text-align: center; }
 
 .Banner-Side {
-  background-color: #fafafa;
-  border: 1px solid #eeeeee;
+  background-color: #fdfcfc;
+  border: 1px solid #b58891;
   border-radius: 3px;
+  color: #333232;
   display: inline-block;
+  overflow: hidden;
   position: relative; }
 
 .Banner-Side .BannerImage {
   background-color: #ffffff;
+  border-radius: 3px 3px 0 0;
   display: block;
   text-align: center;
   overflow: hidden; }
 
 .Banner-Side .BannerContent {
-  border-top: 1px solid #eeeeee;
-  padding: 10px;
-  text-align: center; }
+  padding: 10px; }
 
-.Banners-Wide {
-  font-size: 16px; }
+.LayoutMain > .Banners-Wide {
+  background-color: #ffffff; }
 
 .Banner-Wide {
   position: relative;
-  width: 100%;
-  overflow: hidden; }
+  width: 100%; }
 
+.Banner-Wide,
 .Banner-Wide .AspectRatio {
   max-height: 550px; }
 
 .Banner-Wide .AspectRatio:before {
-  padding-top: 40%; }
+  padding-top: 50%; }
 
 .Banner-Wide .BannerContainer {
   bottom: 0;
@@ -3607,21 +3625,33 @@ form .Active[type='submit'],
   padding: 20px; }
 
 @media screen and (max-width: 1024px) {
+  [class^=Col-] > .Banners-Wide {
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    margin: 0; }
   .Banner-Wide .AspectRatio:before {
-    padding-top: 50%; } }
+    padding-top: 60%; } }
 
 @media screen and (max-width: 600px) {
   .Banners-Wide-Contained {
     margin: 0 auto;
     padding: 0; }
   .Banner-Wide .AspectRatio:before {
-    padding-top: 50%; } }
+    padding-top: 60%; } }
 
 @media screen and (min-width: 600px) {
   .Banners-Wide-Contained {
-    padding-top: 24px; } }
+    padding-top: 20px; } }
 
 .Banner-UniHeight {
+  background-color: #ffffff;
+  border: 1px solid #e9e8e8;
+  border-radius: 3px;
   height: 450px;
   overflow: hidden; }
 
@@ -3644,17 +3674,19 @@ form .Active[type='submit'],
   display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
-  -webkit-flex-wrap: wrap; }
+  -webkit-flex-wrap: wrap;
+  margin: -15px; }
 
 .Block {
-  -webkit-box-flex: 1 1 33.33%;
-  -moz-box-flex: 1 1 33.33%;
-  -ms-flex: 1 1 33.33%;
-  -webkit-flex: 1 1 33.33%;
-  flex: 1 1 33.33%;
-  padding: .5px; }
+  -webkit-box-flex: 0 1 33.33%;
+  -moz-box-flex: 0 1 33.33%;
+  -ms-flex: 0 1 33.33%;
+  -webkit-flex: 0 1 33.33%;
+  flex: 0 1 33.33%;
+  padding: 15px; }
 
 .Banner-Block {
+  border: 1px solid #e9e8e8;
   border-radius: 3px;
   overflow: hidden; }
 
@@ -3679,33 +3711,26 @@ form .Active[type='submit'],
   color: #fefefe;
   margin: auto;
   max-width: 320px;
-  min-width: 170px;
-  opacity: 0;
   text-align: center;
   width: 90%; }
 
 .Banner-Block:hover .BannerBackgroundImage {
-  transform: scale(1.025);
-  -webkit-filter: grayscale(1) brightness(0.45) contrast(1.05);
-  filter: grayscale(1) brightness(0.45) contrast(1.05); }
-
-.Banner-Block:hover .BannerContent {
-  opacity: 1; }
+  transform: scale(1.025); }
 
 @media screen and (max-width: 1024px) {
-  .Banner-Block .BannerContent h1, .Banner-Block .BannerContent h2, .Banner-Block .BannerContent .LogoLink, .Banner-Block .BannerContent h3, .Banner-Block .BannerContent table caption, table .Banner-Block .BannerContent caption, .Banner-Block .BannerContent .ProductCardPrices span, .ProductCardPrices .Banner-Block .BannerContent span, .Banner-Block .BannerContent h4 {
-    font-size: 16px;
+  .Banner-Block .BannerContent h1, .Banner-Block .BannerContent h2, .Banner-Block .BannerContent .LogoLink, .Banner-Block .BannerContent .ProductCardPrices, .Banner-Block .BannerContent .ProductSection .Badge.ProductDiscountPercent, .ProductSection .Banner-Block .BannerContent .Badge.ProductDiscountPercent, .Banner-Block .BannerContent .ListProduct .ProductPrices, .ListProduct .Banner-Block .BannerContent .ProductPrices, .Banner-Block .BannerContent .ProductDetailsTitle, .Banner-Block .BannerContent h3, .Banner-Block .BannerContent table caption, table .Banner-Block .BannerContent caption, .Banner-Block .BannerContent .ListProduct-Compact .ProductPrices, .ListProduct-Compact .Banner-Block .BannerContent .ProductPrices, .Banner-Block .BannerContent h4 {
+    font-size: 18px;
     margin-bottom: 0; }
   .Banner-Block .BannerContent > * {
-    font-size: 12.8px; } }
+    font-size: 14px; } }
 
 @media screen and (max-width: 800px) {
-  .Block:first-child {
-    -webkit-box-flex: 1 1 100%;
-    -moz-box-flex: 1 1 100%;
-    -ms-flex: 1 1 100%;
-    -webkit-flex: 1 1 100%;
-    flex: 1 1 100%; } }
+  .Block {
+    -webkit-box-flex: 1 1 50%;
+    -moz-box-flex: 1 1 50%;
+    -ms-flex: 1 1 50%;
+    -webkit-flex: 1 1 50%;
+    flex: 1 1 50%; } }
 
 .Breadcrumb {
   overflow: hidden;
@@ -3733,15 +3758,21 @@ form .Active[type='submit'],
   display: none; }
 
 .Path {
-  font-size: 12.8px;
-  padding-top: 24px;
-  text-align: center; }
+  background-color: #fdfcfc;
+  color: #333232;
+  font-size: 14px;
+  padding-bottom: 20px;
+  padding-top: 20px; }
+  .Path a {
+    color: #191919; }
+  .Path a:hover {
+    color: #BF98A0; }
 
 .Path a {
   text-decoration: none; }
 
 .Path .Current > a {
-  color: #999999; }
+  opacity: .5; }
 
 .Path .Breadcrumb {
   margin-bottom: 0; }
@@ -3751,10 +3782,11 @@ form .Active[type='submit'],
   display: inline; }
 
 .Path .BackLink {
-  border: 1px solid #eeeeee;
+  background-color: #ffffff;
+  border: 1px solid #e9e8e8;
   border-radius: 3px;
   margin-right: 15px;
-  padding: 6px 10px; }
+  padding: 5px 10px; }
 
 .Path .BackLink:before {
   display: inline-block;
@@ -3779,7 +3811,7 @@ a.BackLink[href='/'] {
   text-decoration: none; }
 
 .FullCartSection {
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #e9e8e8;
   padding: 24px 0; }
 
 .FullCartHeader {
@@ -3800,9 +3832,9 @@ a.BackLink[href='/'] {
   width: 100%; }
 
 .FullCartCol {
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #e9e8e8;
   display: table-cell;
-  padding: 24px 20px;
+  padding: 24px 10px;
   vertical-align: middle;
   white-space: nowrap; }
 
@@ -3838,7 +3870,7 @@ a.BackLink[href='/'] {
 
 .FullCartProduct .ProductImage, .FullCartProduct #ProductThumbnails .ProductThumbnail, #ProductThumbnails .FullCartProduct .ProductThumbnail {
   background-color: #ffffff;
-  border: 1px solid #eeeeee;
+  border: 1px solid #e9e8e8;
   border-radius: 3px;
   display: block;
   height: 160px;
@@ -3869,7 +3901,7 @@ a.BackLink[href='/'] {
     white-space: normal;
     width: 100%; }
   .FullCartProduct {
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: 1px solid #e9e8e8;
     display: block;
     padding: 40px 0;
     position: relative; }
@@ -3888,12 +3920,12 @@ a.BackLink[href='/'] {
 .MiniCartHeader,
 .MiniCartTotal,
 .MiniCartActions {
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #e9e8e8;
   padding: 15px; }
 
 .MiniCartProduct {
-  border-bottom: 1px solid #eeeeee;
-  padding: 15px 15px 15px 75px;
+  border-bottom: 1px solid #e9e8e8;
+  padding: 15px 45px 15px 75px;
   position: relative; }
 
 .MiniCartProduct .ProductImage, .MiniCartProduct #ProductThumbnails .ProductThumbnail, #ProductThumbnails .MiniCartProduct .ProductThumbnail {
@@ -3917,14 +3949,14 @@ a.BackLink[href='/'] {
 
 .MiniCartProduct .ProductQuantity {
   bottom: 2px;
-  font-size: 12.8px;
+  font-size: 14px;
   line-height: 15px;
   right: 2px;
   top: auto; }
 
 .MiniCartProduct .ProductRemove {
   bottom: 0;
-  border-left: 1px solid #eeeeee;
+  border-left: 1px solid #e9e8e8;
   position: absolute;
   right: 0;
   top: 0; }
@@ -3954,8 +3986,8 @@ a.BackLink[href='/'] {
   display: none; }
 
 .MiniCart-Checkout {
-  background-color: #fafafa;
-  border: 1px solid #eeeeee;
+  background-color: #ffffff;
+  border: 1px solid #e9e8e8;
   border-radius: 3px;
   z-index: 1; }
 
@@ -3979,16 +4011,16 @@ a.BackLink[href='/'] {
 
 .CheckoutTransferToPayment [type='submit'] {
   background-color: #ffffff;
-  border-color: #eeeeee;
-  color: #333333 !important;
+  border-color: #e9e8e8;
+  color: #333232 !important;
   display: block;
   height: 140px;
   width: 100%; }
 
 .CheckoutTransferToPayment [type='submit']:hover {
   background-color: #ffffff;
-  border-color: #e74c3c;
-  color: #333333 !important; }
+  border-color: #BF98A0;
+  color: #333232 !important; }
 
 @media screen and (max-width: 600px) {
   .CheckoutTransferToPaymentForm {
@@ -3997,7 +4029,7 @@ a.BackLink[href='/'] {
 
 #CheckoutMarketingPermissions .Checks label {
   background-color: #ffffff;
-  border: 1px solid #eeeeee;
+  border: 1px solid #e9e8e8;
   border-radius: 3px;
   display: inline-block;
   padding: 10px 15px;
@@ -4020,13 +4052,13 @@ a.BackLink[href='/'] {
   margin: -12px; }
 
 #KlarnaCheckoutThanks {
-  border: 1px solid #eeeeee;
+  border: 1px solid #e9e8e8;
   border-radius: 3px;
   padding: 20px; }
 
 .Drawer {
-  background-color: #fafafa;
-  color: #333333;
+  background-color: #fdfcfc;
+  color: #333232;
   position: fixed;
   transition-duration: 0.3s; }
 
@@ -4049,7 +4081,7 @@ a.BackLink[href='/'] {
   -ms-transform: translateY(-100%);
   -webkit-transform: translateY(-100%);
   transform: translateY(-100%);
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #e9e8e8;
   top: 0; }
 
 .Drawer[data-drawer-side='bottom'] {
@@ -4057,7 +4089,7 @@ a.BackLink[href='/'] {
   -ms-transform: translateY(100%);
   -webkit-transform: translateY(100%);
   transform: translateY(100%);
-  border-top: 1px solid #eeeeee;
+  border-top: 1px solid #e9e8e8;
   bottom: 0; }
 
 .Drawer[data-drawer-side='left'] {
@@ -4065,7 +4097,7 @@ a.BackLink[href='/'] {
   -ms-transform: translateX(-100%);
   -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
-  border-right: 1px solid #eeeeee;
+  border-right: 1px solid #e9e8e8;
   left: 0; }
 
 .Drawer[data-drawer-side='right'] {
@@ -4073,44 +4105,28 @@ a.BackLink[href='/'] {
   -ms-transform: translateX(100%);
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
-  border-left: 1px solid #eeeeee;
+  border-left: 1px solid #e9e8e8;
   right: 0; }
 
 .Drawer[data-drawer-side='top'].Open {
-  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
-  -ms-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
   -webkit-transform: translateY(0);
   transform: translateY(0); }
 
 .Drawer[data-drawer-side='bottom'].Open {
-  -moz-box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.25);
-  -ms-box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.25);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
   -webkit-transform: translateY(0);
   transform: translateY(0); }
 
 .Drawer[data-drawer-side='left'].Open {
-  -moz-box-shadow: 1px 0 3px rgba(0, 0, 0, 0.25);
-  -ms-box-shadow: 1px 0 3px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: 1px 0 3px rgba(0, 0, 0, 0.25);
-  box-shadow: 1px 0 3px rgba(0, 0, 0, 0.25);
   -moz-transform: translateX(0);
   -ms-transform: translateX(0);
   -webkit-transform: translateX(0);
   transform: translateX(0); }
 
 .Drawer[data-drawer-side='right'].Open {
-  -moz-box-shadow: -1px 0 3px rgba(0, 0, 0, 0.25);
-  -ms-box-shadow: -1px 0 3px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: -1px 0 3px rgba(0, 0, 0, 0.25);
-  box-shadow: -1px 0 3px rgba(0, 0, 0, 0.25);
   -moz-transform: translateX(0);
   -ms-transform: translateX(0);
   -webkit-transform: translateX(0);
@@ -4148,39 +4164,43 @@ a.BackLink[href='/'] {
   visibility: visible; }
 
 .Footer {
-  padding: 48px 0 96px 0; }
+  padding: 40px 0 20px 0; }
 
-.Footer h2, .Footer .LogoLink {
-  font-size: 14.4px; }
+.Footer h2, .Footer .LogoLink, .Footer .ProductCardPrices, .Footer .ProductSection .Badge.ProductDiscountPercent, .ProductSection .Footer .Badge.ProductDiscountPercent, .Footer .ListProduct .ProductPrices, .ListProduct .Footer .ProductPrices, .Footer .ProductDetailsTitle {
+  font-size: 16px; }
 
 .FooterCopy .Copyright {
-  color: rgba(0, 0, 0, 0.5);
-  font-size: 12.8px;
+  font-size: 14px;
+  opacity: .5;
   padding: 24px 0; }
-  .FooterCopy .Copyright a {
-    color: inherit; }
 
 .NewsletterSubscribe {
-  background-color: #ffffff;
-  border: 1px solid #e74c3c;
+  background-color: #fdfcfc;
+  border: 1px solid #BF98A0;
   border-radius: 3px;
-  color: #e74c3c;
+  color: #BF98A0;
   max-width: 440px;
   padding: 12px 15px; }
 
-.NewsletterSubscribe > h2, .NewsletterSubscribe > .LogoLink {
+.NewsletterSubscribe > h2, .NewsletterSubscribe > .LogoLink, .NewsletterSubscribe > .ProductCardPrices, .ProductSection .NewsletterSubscribe > .Badge.ProductDiscountPercent, .ListProduct .NewsletterSubscribe > .ProductPrices, .NewsletterSubscribe > .ProductDetailsTitle {
   text-align: center; }
 
 .Footer #NewsletterSubscribeForm label {
   display: none; }
 
 .Footer #NewsletterSubscribeForm input {
-  border-color: #e74c3c;
+  border-color: #BF98A0;
   margin-right: -1px;
   width: 65%; }
 
 .Footer #NewsletterSubscribeForm button {
+  background-color: #BF98A0;
+  border-color: #BF98A0;
+  color: #fefefe !important;
   width: 35%; }
+
+.Footer #NewsletterSubscribeForm button:hover {
+  color: #fefefe !important; }
 
 .Footer #NewsletterCaptchaBadge {
   display: none;
@@ -4190,41 +4210,17 @@ a.BackLink[href='/'] {
   .NewsletterSubscribe {
     margin-top: -13px; } }
 
-.UtilityBar {
-  border-bottom: 1px solid #eeeeee;
-  font-size: 12.8px; }
-
 .BrandHeader {
-  padding: 24px 0; }
+  padding: 0;
+  margin: 0 -15px; }
 
 .BrandHeader .LogoLink > img {
-  max-height: 110px; }
+  max-height: 110px;
+  max-width: 270px; }
 
 .BrandHeader #LiveSearch {
   margin: auto;
-  max-width: 500px;
   vertical-align: middle; }
-
-.BrandHeader .FlexItem {
-  width: 25%; }
-
-.BrandHeader .FlexItem.FlexSpacer {
-  width: 50%; }
-
-.BrandHeader input,
-.BrandHeader button,
-.BrandHeader .Button,
-.BrandHeader form button, form
-.BrandHeader button,
-.BrandHeader #OrderDocuments a, #OrderDocuments
-.BrandHeader a {
-  padding: 12px;
-  height: auto; }
-
-.Button .CartTotal, form button .CartTotal, #OrderDocuments a .CartTotal {
-  border-left: 1px solid;
-  padding-left: 15px;
-  margin-left: 10px; }
 
 .LiveSearch {
   position: relative; }
@@ -4243,7 +4239,7 @@ a.BackLink[href='/'] {
   padding: 0 15px; }
 
 .LiveSearchSeparator {
-  border-top: 1px solid #eeeeee;
+  border-top: 1px solid #e9e8e8;
   margin: 15px 0; }
 
 #LiveSearch.Initiated {
@@ -4286,7 +4282,7 @@ a.BackLink[href='/'] {
 
 .LiveSearchResults ul a:hover,
 .LiveSearchResults ul .Active > a {
-  background-color: #fef6f5;
+  background-color: #fcfafa;
   display: block;
   padding: 5px 15px; }
 
@@ -4352,11 +4348,11 @@ a.BackLink[href='/'] {
   margin-left: 0; }
 
 .Badge {
-  background-color: #e74c3c;
+  background-color: #BF98A0;
   border-radius: 3px;
   color: #fefefe;
   display: block;
-  font-size: 12.8px;
+  font-size: 14px;
   font-weight: normal;
   padding: 0 0.5em;
   position: absolute;
@@ -4366,17 +4362,20 @@ a.BackLink[href='/'] {
 
 .LogoLink {
   display: inline-block;
-  margin: 0 !important;
   text-decoration: none;
   vertical-align: middle; }
 
-.ContentTitle {
-  line-height: 48px;
-  text-transform: uppercase; }
+.Sidebar .LogoLink {
+  display: block;
+  margin-bottom: 40px; }
 
-h1.ContentTitle {
-  font-weight: lighter;
-  text-align: center; }
+.Sidebar .LogoLink img {
+  display: block;
+  margin: auto;
+  max-height: 120px; }
+
+.ContentTitle {
+  line-height: 40px; }
 
 .ContentTitle-Fancy {
   display: -webkit-box;
@@ -4384,8 +4383,7 @@ h1.ContentTitle {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  font-size: 14.4px;
-  text-align: center;
+  font-size: 18px;
   flex-direction: row;
   justify-content: center; }
 
@@ -4396,13 +4394,16 @@ h1.ContentTitle {
   -ms-flex: 1;
   -webkit-flex: 1;
   flex: 1;
-  background-color: #eeeeee;
+  background-color: #e9e8e8;
   content: '\a0';
   flex-grow: 1;
   height: 1px;
   margin: 0 15px;
   position: relative;
-  top: 24px; }
+  top: 20px; }
+
+.ContentTitle-Fancy::before {
+  max-width: 20px; }
 
 .ContentTitle-Fancy::before {
   margin-left: 0; }
@@ -4411,16 +4412,7 @@ h1.ContentTitle {
   margin-right: 0; }
 
 .ContentSection + .ContentSection {
-  margin-top: 24px; }
-
-.ContentSection-FullWidth {
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  width: 100vw;
-  position: relative;
-  left: 50%; }
+  margin-top: 40px; }
 
 .ContentSection-Narrow {
   margin-left: auto;
@@ -4432,10 +4424,10 @@ h1.ContentTitle {
   overflow: hidden; }
 
 .ExtShareButtons + .fb-like {
-  margin-top: 24px; }
+  margin-top: 20px; }
 
 .mfp-ajax-content {
-  background-color: #ffffff;
+  background-color: #fdfcfc;
   border-radius: 3px;
   margin: 0 auto;
   max-width: 640px;
@@ -4449,20 +4441,23 @@ h1.ContentTitle {
   -ms-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.025);
   -webkit-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.025);
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.025);
-  background-color: #ffffff;
-  border-bottom: 1px solid #eeeeee;
+  background-color: #BF98A0;
   position: relative;
   z-index: 100; }
+  .NavigationBar a {
+    color: #fafafa; }
+  .NavigationBar a:hover {
+    color: #ddc9cd; }
 
 .NavigationBar .LogoLink > img {
   max-height: 40px; }
 
 .NavigationBar .CartTotal {
-  font-size: 14.4px;
-  font-weight: 600; }
+  font-weight: bold;
+  font-size: 16px; }
 
 .NavigationBar [data-drawer-toggle="menu"] {
-  border-left: 1px solid #eeeeee;
+  border-left: 1px solid #b58891;
   padding-left: 20px;
   padding-right: 15px; }
 
@@ -4473,6 +4468,7 @@ h1.ContentTitle {
   display: inline-block;
   font-size: 24px;
   padding: 15px 10px;
+  text-decoration: none;
   vertical-align: middle; }
 
 .NavigationBarToggle-Left {
@@ -4480,6 +4476,19 @@ h1.ContentTitle {
 
 .NavigationBarToggle-Right {
   margin-right: -15px; }
+
+.NavigationBar #LiveSearch #SearchInput {
+  border-radius: 3px;
+  width: 100%; }
+
+@media screen and (min-width: 1025px) {
+  .NavigationBar {
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding-top: 15px;
+    padding-bottom: 15px; } }
 
 .NavigationExpander {
   display: inline-block;
@@ -4492,16 +4501,22 @@ h1.ContentTitle {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  content: ""; }
+  content: "";
+  transition-duration: 0.15s; }
 
 .NavigationExpander.Open:before {
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: ""; }
+  -moz-transform: rotateZ(90deg);
+  -ms-transform: rotateZ(90deg);
+  -webkit-transform: rotateZ(90deg);
+  transform: rotateZ(90deg);
+  height: 14px;
+  width: 14px; }
+
+.LayoutAside .NavigationExpander {
+  opacity: .5; }
+
+.LayoutAside .NavigationExpander.Open {
+  opacity: 1; }
 
 .InlineNavigation a {
   display: inline; }
@@ -4519,9 +4534,6 @@ h1.ContentTitle {
 
 .InlineNavigation li:last-child {
   margin-right: 0; }
-
-.InlineNavigation li.Current > a {
-  color: #e74c3c; }
 
 .InlineNavigation a[href='/account/']:before {
   display: inline-block;
@@ -4575,14 +4587,12 @@ h1.ContentTitle {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  border-right: 1px solid #eeeeee;
-  display: inline-block;
-  max-width: 160px;
-  padding: 4px 15px;
+  padding: 5px;
+  text-decoration: none;
   vertical-align: middle; }
 
 .InlineNavigation .LanguageNavigation > li.Current > a {
-  font-weight: normal; }
+  box-shadow: inset 0 -2px; }
 
 .InlineNavigation .LanguageNavigation li {
   display: inline-block;
@@ -4613,28 +4623,34 @@ h1.ContentTitle {
   margin-top: 0; }
 
 .SimpleNavigation .Current > a {
-  color: #e74c3c; }
+  color: #BF98A0; }
 
-.DropNavigation a, .SimpleDropNavigation a, .MainNavigation a, .SubNavigation a {
+.SiteFooter .SimpleNavigation .Current > a {
+  color: #ddc9cd; }
+
+.DropNavigation a, .SimpleDropNavigation a, .MainNavigation a {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   display: block;
-  padding: 12px 15px;
+  padding: 10px 15px;
   text-decoration: none;
   transition-duration: 0.15s; }
 
-.DropNavigation ul, .SimpleDropNavigation ul, .MainNavigation ul, .SubNavigation ul {
+.DropNavigation ul, .SimpleDropNavigation ul, .MainNavigation ul {
   list-style: none;
   margin: 0 -15px;
   padding: 0; }
 
-.DropNavigation li, .SimpleDropNavigation li, .MainNavigation li, .SubNavigation li {
+.DropNavigation li, .SimpleDropNavigation li, .MainNavigation li {
   display: inline-block;
   position: relative;
   vertical-align: middle; }
 
-.DropNavigation li ul, .SimpleDropNavigation li ul, .MainNavigation li ul, .SubNavigation li ul {
+.DropNavigation li ul, .SimpleDropNavigation li ul, .MainNavigation li ul {
+  background-color: #ffffff;
+  border: 1px solid #e9e8e8;
+  color: #333232;
   margin: 0;
   max-width: 300px;
   min-width: 200px;
@@ -4644,19 +4660,23 @@ h1.ContentTitle {
   transition-duration: 0.15s;
   visibility: hidden;
   z-index: 1000; }
+  .DropNavigation li ul a, .SimpleDropNavigation li ul a, .MainNavigation li ul a {
+    color: #191919; }
+  .DropNavigation li ul a:hover, .SimpleDropNavigation li ul a:hover, .MainNavigation li ul a:hover {
+    color: #BF98A0; }
 
-.DropNavigation li li, .SimpleDropNavigation li li, .MainNavigation li li, .SubNavigation li li {
+.DropNavigation li li, .SimpleDropNavigation li li, .MainNavigation li li {
   display: block; }
 
-.DropNavigation li li ul, .SimpleDropNavigation li li ul, .MainNavigation li li ul, .SubNavigation li li ul {
+.DropNavigation li li ul, .SimpleDropNavigation li li ul, .MainNavigation li li ul {
   left: 100%;
   position: absolute;
   top: 0; }
 
-.DropNavigation li li a, .SimpleDropNavigation li li a, .MainNavigation li li a, .SubNavigation li li a {
+.DropNavigation li li a, .SimpleDropNavigation li li a, .MainNavigation li li a {
   display: block; }
 
-.DropNavigation li:hover > ul, .SimpleDropNavigation li:hover > ul, .MainNavigation li:hover > ul, .SubNavigation li:hover > ul {
+.DropNavigation li:hover > ul, .SimpleDropNavigation li:hover > ul, .MainNavigation li:hover > ul {
   opacity: 1;
   visibility: visible; }
 
@@ -4680,15 +4700,13 @@ h1.ContentTitle {
   position: relative; }
 
 .SimpleDropNavigation li ul {
-  background-color: #ffffff;
-  border: 1px solid #eeeeee;
   margin: 0 -15px;
   max-width: 300px;
   min-width: 40px; }
 
 .SimpleDropNavigation li li a {
-  box-shadow: 0 1px 0 #eeeeee;
-  padding: 12px 15px; }
+  box-shadow: 0 1px 0 #e9e8e8;
+  padding: 5px 15px; }
 
 .SimpleDropNavigation li li:last-child a {
   box-shadow: none; }
@@ -4707,10 +4725,10 @@ h1.ContentTitle {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  background-color: #ffffff;
-  border: 1px solid #eeeeee;
+  background-color: #fdfcfc;
+  border: 1px solid #e9e8e8;
   border-radius: 3px 3px 0 0;
-  color: #333333;
+  color: #333232;
   display: block;
   font-weight: bold;
   margin-bottom: -1px;
@@ -4731,46 +4749,39 @@ h1.ContentTitle {
 
 .TabsNavigation li {
   float: left;
-  margin-left: 5px; }
+  margin-left: 5px;
+  max-width: 49%; }
 
 .TabsNavigation li:first-child {
   margin-left: 0; }
 
 .TabsNavigation .Current > a {
   background-color: #ffffff;
-  border-bottom-color: #ffffff; }
+  border-bottom-color: #ffffff;
+  color: #BF98A0; }
 
 @media screen and (max-width: 600px) {
   .TabsNavigation li {
     margin-left: 0;
     width: 50%; } }
 
-.MainNavigation li ul, .SubNavigation li ul {
-  background-color: #ffffff;
-  border: 1px solid #eeeeee; }
+.MainNavigation a {
+  border: 1px solid #e9e8e8;
+  font-family: "Asap Condensed", sans-serif; }
 
-.MainNavigation > ul > li > a, .SubNavigation > ul > li > a {
-  font-weight: normal; }
+.MainNavigation > ul > li > a {
+  border: 0; }
 
-.MainNavigation li li a, .SubNavigation li li a {
-  background-color: #ffffff;
-  border: 1px solid #eeeeee;
+.MainNavigation li li a {
   border-width: 1px 0 0; }
 
-.MainNavigation li li:first-child a, .SubNavigation li li:first-child a {
+.MainNavigation li li:first-child a {
   border-width: 0; }
 
-.MainNavigation > ul > li.Current > a, .SubNavigation > ul > li.Current > a {
-  box-shadow: inset 0 -2px; }
+.MainNavigation .Current > a {
+  color: #BF98A0; }
 
-.MainNavigation .Current > a, .SubNavigation .Current > a {
-  color: #e74c3c; }
-
-.MainNavigation .NavHighlight > a, .SubNavigation .NavHighlight > a {
-  color: #e74c3c;
-  font-weight: 600; }
-
-.MainNavigation .HasSubCategories > a:after, .SubNavigation .HasSubCategories > a:after {
+.MainNavigation .HasSubCategories > a:after {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -4780,7 +4791,7 @@ h1.ContentTitle {
   content: "";
   margin-left: 0.5em; }
 
-.MainNavigation li .HasSubCategories > a:after, .SubNavigation li .HasSubCategories > a:after {
+.MainNavigation li .HasSubCategories > a:after {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -4790,36 +4801,15 @@ h1.ContentTitle {
   content: "";
   margin-left: 0.5em; }
 
-.SubNavigationBar {
-  -moz-box-shadow: inset 0 -3px 8px rgba(0, 0, 0, 0.025);
-  -ms-box-shadow: inset 0 -3px 8px rgba(0, 0, 0, 0.025);
-  -webkit-box-shadow: inset 0 -3px 8px rgba(0, 0, 0, 0.025);
-  box-shadow: inset 0 -3px 8px rgba(0, 0, 0, 0.025);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  border-bottom: 1px solid #eeeeee;
-  text-align: center;
-  z-index: 1; }
-
-.SubNavigation ul li {
-  text-align: initial; }
-
-.SubNavigationBar + .ContentSection {
-  margin-top: 48px; }
-
-.SubNavigationBar + .PaginationBar {
-  margin-top: -1px; }
+.SideNavigation {
+  background-color: #fdfcfc;
+  border: 1px solid #e9e8e8; }
 
 .SideNavigation-Left {
-  border-right: 1px solid #eeeeee; }
+  border-right: 1px solid #e9e8e8; }
 
 .SideNavigation-Right {
-  border-left: 1px solid #eeeeee; }
+  border-left: 1px solid #e9e8e8; }
 
 .SideNavigation a {
   display: block;
@@ -4841,7 +4831,7 @@ h1.ContentTitle {
   border-width: 0; }
 
 .SideNavigation .Current > a {
-  color: #e74c3c; }
+  color: #BF98A0; }
 
 .DrawerNavigation {
   margin-top: -1px; }
@@ -4853,7 +4843,7 @@ h1.ContentTitle {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  border: 1px solid #eeeeee;
+  border: 1px solid #e9e8e8;
   border-width: 1px 0;
   display: block;
   padding: 10px 15px;
@@ -4875,17 +4865,18 @@ h1.ContentTitle {
   padding-left: 45px; }
 
 .DrawerNavigation .NavigationExpander {
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: relative;
+  top: 50%;
   cursor: pointer;
-  line-height: 45px;
   margin-left: 0;
   position: absolute;
   right: 0;
   text-align: center;
-  top: 0;
   width: 45px; }
-
-.DrawerNavigation .Current > a {
-  color: #e74c3c; }
 
 .DrawerNavigation .HasSubCategories > ul {
   display: none; }
@@ -4896,15 +4887,51 @@ h1.ContentTitle {
 .DrawerNavigation .Open > ul {
   display: block; }
 
-.Drawer .DrawerNavigation > ul > li > a {
-  font-weight: normal; }
+.MainCategories a {
+  color: #fafafa; }
+
+.MainCategories a:hover {
+  color: #ddc9cd; }
+
+.MainCategories a {
+  border-color: #b58891;
+  font-family: "Asap Condensed", sans-serif;
+  font-size: 14px;
+  padding-bottom: 5px;
+  padding-top: 5px; }
+
+.MainCategories a:hover {
+  box-shadow: inset 3px 0 0; }
+
+.MainCategories li.Current > a {
+  box-shadow: inset 3px 0 0; }
+
+.MainCategories li ul {
+  background-color: #bc949c; }
+
+.MainCategories > ul > li:first-child > a {
+  border-top: 0; }
+
+.MainCategories > ul > li:last-child > a {
+  border-bottom: 0; }
+
+.MainCategories > ul > li > a {
+  font-size: 16px;
+  padding-bottom: 10px;
+  padding-top: 10px; }
+
+.MainCategories > .Campaigns > li > a:before {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+  margin-right: 0.5em; }
 
 .Drawer .DrawerNavigation ul ul a {
   background-color: white; }
-
-.Drawer .DrawerNavigation .NavHighlight > a {
-  color: #e74c3c;
-  font-weight: bold; }
 
 .DrawerNavigation a[href='/account/']:before {
   display: inline-block;
@@ -4948,7 +4975,7 @@ h1.ContentTitle {
   text-decoration: underline; }
 
 .OrderInfo {
-  background-color: #fafafa; }
+  background-color: #ffffff; }
 
 #OrderProductsTable {
   clear: both;
@@ -5013,18 +5040,10 @@ h1.ContentTitle {
   margin-top: 40px; }
 
 .PaginationBar {
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  background-color: #ffffff;
-  border: 1px solid #eeeeee;
-  border-width: 1px 0;
-  margin-bottom: 48px;
-  margin-top: 24px; }
+  background-color: #fdfcfc;
+  border-bottom: 1px solid #e9e8e8;
+  margin-bottom: 40px;
+  margin-top: 20px; }
 
 .PaginationBar-Bottom {
   display: -webkit-box;
@@ -5034,31 +5053,37 @@ h1.ContentTitle {
   display: flex;
   border: 0; }
 
-.PaginationBar *:hover {
-  border-bottom-color: #e74c3c; }
+.PaginationBar .FlexItem:first-child {
+  padding-left: 0;
+  margin-left: -1px; }
+
+.PaginationBar .FlexItem:last-child {
+  padding-right: 0;
+  margin-right: -1px; }
+  .PaginationBar .FlexItem:last-child input,
+  .PaginationBar .FlexItem:last-child select {
+    border-radius: 3px 3px 0 0; }
 
 .PaginationBar label,
 .PaginationBar p {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: #999999;
-  font-size: 12.8px;
+  color: #999898;
+  font-size: 14px;
   font-weight: normal;
+  margin: 0 5px;
   vertical-align: middle; }
 
 .PaginationBar select,
 .PaginationBar input {
-  border-color: #eeeeee;
-  border-radius: 0;
+  border-color: #e9e8e8;
+  border-radius: 3px 3px 0 0;
   margin-top: -1px;
   margin-bottom: -1px !important; }
 
 .PaginationBar .PaginationForm {
   margin: 0; }
-
-.PaginationBar .FlexItem:last-child select {
-  margin-right: -1px; }
 
 .PaginationBar .Pagination {
   display: block;
@@ -5068,26 +5093,24 @@ h1.ContentTitle {
 .PaginationBar .Pagination ul {
   display: block; }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
   .PaginationBar .PaginationStatus {
     display: none; } }
 
 @media screen and (max-width: 800px) {
-  .PaginationBar {
-    border: 0;
-    box-shadow: none; }
   .PaginationBar .Flex .FlexItem {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
-    display: flex; }
+    display: flex;
+    padding: 0; }
   .PaginationBar label {
-    border: 1px solid #eeeeee;
-    height: 38px;
+    border: 1px solid #e9e8e8;
+    height: 46px;
     margin-right: -1px;
     min-width: 50%;
-    padding: 6px 12px; }
+    padding: 10px; }
   .PaginationBar .Pagination,
   .PaginationBar select,
   .PaginationBar input {
@@ -5104,7 +5127,7 @@ h1.ContentTitle {
 
 .Pagination a {
   display: block;
-  padding: 6px 12px;
+  padding: 10px;
   text-decoration: none; }
 
 .Pagination ul {
@@ -5114,7 +5137,7 @@ h1.ContentTitle {
 
 .Pagination li {
   background-color: #ffffff;
-  border: 1px solid #eeeeee;
+  border: 1px solid #e9e8e8;
   float: left;
   margin-left: -1px;
   text-align: center;
@@ -5132,11 +5155,11 @@ h1.ContentTitle {
 .Pagination .CurrentPage,
 .Pagination .DisabledPageLink,
 .Pagination .PagesBetween {
-  color: #999999;
-  padding: 6px 12px; }
+  color: #999898;
+  padding: 10px; }
 
 .Pagination .CurrentPage {
-  color: #e74c3c; }
+  color: #BF98A0; }
 
 .Pagination .PreviousPageLink > a,
 .Pagination .PreviousPageLink.DisabledPageLink {
@@ -5150,7 +5173,7 @@ h1.ContentTitle {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     content: "";
-    font-size: 14.4px;
+    font-size: 16px;
     vertical-align: middle; }
 
 .Pagination .NextPageLink > a,
@@ -5165,29 +5188,29 @@ h1.ContentTitle {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     content: "";
-    font-size: 14.4px;
+    font-size: 16px;
     vertical-align: middle; }
 
 .ProductImage, #ProductThumbnails .ProductThumbnail {
   background-color: #ffffff;
-  border: 1px solid #eeeeee;
+  border: 1px solid #e9e8e8;
   border-radius: 3px;
   display: block;
   margin-bottom: 10px;
   padding: 10px;
-  text-align: center;
   transition-duration: 0.15s; }
 
 .ProductDiscountPrice {
-  color: #e74c3c; }
+  color: #E84855; }
+
+.Badge.ProductDiscountPercent {
+  font-weight: bold;
+  background-color: #E84855;
+  color: #fefefe; }
 
 .ProductComparePrice {
-  text-decoration: line-through; }
-
-.ProductSection {
-  border: 4px double #eeeeee;
-  border-radius: 3px;
-  padding: 20px; }
+  text-decoration: line-through;
+  font-size: .8em; }
 
 .ProductSection .BuyForm input,
 .ProductSection .BuyForm select,
@@ -5197,26 +5220,42 @@ h1.ContentTitle {
 .ProductSection table {
   border: 0; }
 
-.ProductCardPrices span {
-  font-weight: bold; }
+.ProductCardPrices {
+  font-weight: bold;
+  margin: 0; }
 
-.ProductCardPrices .Badge.ProductDiscountPercent {
-  display: inline-block;
-  position: initial;
-  margin: 0 0 0 10px;
+.ProductSection .Badge.ProductDiscountPercent {
+  font-weight: bold;
   transform: rotate(3deg); }
 
-@media screen and (min-width: 1025px) {
-  .ProductBuyColumn {
-    border-left: 1px solid #eeeeee;
-    padding: 20px 0 20px 20px; } }
+.ProductDescription iframe {
+  -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  -ms-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  max-width: 100%; }
+
+.ProductSection .ContentSection + .ContentSection {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #e9e8e8; }
+
+.flickity-enabled .ListProduct:not(.ListProduct-Compact) .ProductName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
 
 .ListProduct {
+  background-color: #ffffff;
+  border: 1px solid #e9e8e8;
+  border-radius: 3px;
+  padding-bottom: 100px;
   position: relative;
-  padding-bottom: 48px; }
-
-.flickity-enabled .ListProduct {
-  padding-bottom: 24px; }
+  transition-duration: 0.15s; }
+  .ListProduct a {
+    color: #191919; }
+  .ListProduct a:hover {
+    color: #BF98A0; }
 
 .ListProduct .ProductImage, .ListProduct #ProductThumbnails .ProductThumbnail, #ProductThumbnails .ListProduct .ProductThumbnail {
   vertical-align: middle; }
@@ -5228,6 +5267,9 @@ h1.ContentTitle {
   right: 0;
   top: 0; }
 
+.ListProduct .ProductImage, .ListProduct #ProductThumbnails .ProductThumbnail, #ProductThumbnails .ListProduct .ProductThumbnail {
+  border: 0; }
+
 .ListProduct .ProductImage img, .ListProduct #ProductThumbnails .ProductThumbnail img, #ProductThumbnails .ListProduct .ProductThumbnail img {
   bottom: 0;
   left: 0;
@@ -5236,13 +5278,15 @@ h1.ContentTitle {
   top: 0;
   margin: auto; }
 
-.ListProduct:not(.ListProduct-Compact) .ProductImage:hover, .ListProduct:not(.ListProduct-Compact) #ProductThumbnails .ProductThumbnail:hover, #ProductThumbnails .ListProduct:not(.ListProduct-Compact) .ProductThumbnail:hover {
+.ListProduct:hover {
   transform: translateY(-1px);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05); }
 
+.ListProduct .ProductInformation {
+  padding: 0 10px; }
+
 .ListProduct .ProductName {
   display: block;
-  font-weight: normal;
   margin: 0; }
 
 .ListProduct .ProductName a {
@@ -5252,71 +5296,45 @@ h1.ContentTitle {
   font-weight: bold;
   margin: 0; }
 
-@media screen and (min-width: 1201px) {
-  .ProductInformation {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -moz-flex-align: flex-start;
-    -ms-flex-align: flex-start;
-    -webkit-flex-align: flex-start;
-    -webkit-align-items: flex-start;
-    align-items: flex-start;
-    margin: 0 12px; }
-  .ProductInformation > .ProductName {
-    -webkit-box-flex: 1;
-    -moz-box-flex: 1;
-    -ms-flex: 1;
-    -webkit-flex: 1;
-    flex: 1;
-    margin-right: 10px; }
-  .ProductInformation > .ProductPrices {
-    text-align: right; } }
+.ListProduct .ProductAddToCart {
+  bottom: 0;
+  left: 0;
+  margin-bottom: 20px;
+  padding: 0 10px;
+  position: absolute;
+  right: 0;
+  z-index: 1; }
 
 .ListProduct-Compact {
-  background-color: #ffffff;
-  border: 1px solid #eeeeee;
-  border-radius: 3px;
-  font-size: 12.8px;
-  padding-bottom: 24px;
-  text-align: center;
+  font-size: 14px;
+  padding-bottom: 20px;
   transition-duration: 0.15s; }
 
-.ListProduct-Compact:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); }
-
 .ListProduct-Compact .ProductImage, .ListProduct-Compact #ProductThumbnails .ProductThumbnail, #ProductThumbnails .ListProduct-Compact .ProductThumbnail {
-  border: 0;
-  padding: 6px; }
-
-.flickity-enabled .ListProduct-Compact {
-  margin-bottom: 4px;
-  margin-top: 4px; }
+  padding: 5px; }
 
 .ListProduct-Compact .ProductInformation {
-  display: block;
-  margin: 0 12px; }
+  display: block; }
 
-.ListProduct-Compact .ProductInformation > .ProductName {
+.ListProduct-Compact .ProductName {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: inherit;
-  margin-right: 0; }
+  font-size: inherit; }
 
-.ListProduct-Compact .ProductInformation > .ProductPrices {
-  font-size: inherit;
-  text-align: center; }
+.ListProduct-Compact .ProductPrices {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.ListProduct-Compact .ProductAddToCart {
+  display: none; }
 
 #CurrentProductImage {
-  border: 0;
+  background-color: #ffffff;
   border-radius: 3px;
   display: block;
   height: auto;
-  padding: 0;
   text-align: center; }
 
 #ProductImageCaption {
@@ -5356,7 +5374,7 @@ h1.ContentTitle {
   filter: none; }
 
 #ProductThumbnails .mz-thumb-selected {
-  border-color: #e1e1e1; }
+  border-color: #dddbdb; }
 
 @media screen and (max-width: 1024px) {
   #ProductThumbnails li {
@@ -5367,10 +5385,9 @@ h1.ContentTitle {
     width: 25%; } }
 
 .ProductCategories {
-  color: #999999;
-  font-size: 12.8px;
-  margin: 0;
-  text-align: center; }
+  color: #999898;
+  font-size: 14px;
+  margin: 0; }
 
 h1 + .ProductCategories,
 .ContentTitle + .ProductCategories {
@@ -5395,8 +5412,99 @@ h1 + .ProductCategories,
   display: inline-block;
   margin: 0 5px 5px 0; }
 
+.ProductDetailsTitle {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px; }
+
+.ProductDetailsItem-Info {
+  position: relative;
+  display: none;
+  margin: 10px 0 0 0;
+  background-color: #e9e8e8;
+  border: 1px solid #e9e8e8;
+  border-radius: 8px;
+  display: block;
+  padding: 5px 7px; }
+
+.ProductDetailsItem-Info::before {
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 0;
+  width: 0;
+  height: 0;
+  margin-left: 20px;
+  content: '';
+  border: 8px solid transparent;
+  border-bottom: 8px solid #e9e8e8; }
+
+.ProductAvailability .DeliveryTime {
+  font-weight: bold; }
+
+.ProductAvailability dt.StorageInfo {
+  display: inline-block;
+  margin-right: 5px; }
+
+.ProductAvailability dt.StorageInfo + dd.StorageInfo {
+  background-color: #ffffff;
+  display: inline-block;
+  border: 1px solid #e9e8e8;
+  padding: 0px 10px 2px;
+  border-radius: 30px; }
+
+.ProductAvailability dd.StorageInfo::before {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  content: '';
+  vertical-align: middle;
+  border-radius: 50%; }
+
+.Available dd.StorageInfo::before,
+.Available.AvailabilityOutOfStock dd.StorageInfo::before {
+  background-color: #ffdd99;
+  border: 1px solid #ffcc66; }
+
+.Available.AvailabilityInStock dd.StorageInfo::before {
+  background-color: #88bb33;
+  border: 0; }
+
+.AvailabilityOutOfStock dd.StorageInfo::before {
+  background-color: #ce2d4f;
+  border: 0; }
+
+.ProductShippingMethods {
+  background-color: #ffffff;
+  border: 1px solid #e9e8e8;
+  border-radius: 8px;
+  padding: 10px; }
+
+.ProductShippingMethods .ShippingCosts > * {
+  margin: 0;
+  padding-bottom: 5px;
+  padding-top: 5px; }
+
+.ProductShippingMethods dt.ShippingMethodName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-bottom: 1px solid #e9e8e8;
+  display: block;
+  font-weight: normal;
+  padding-right: 60px; }
+
+.ProductShippingMethods dd.ShippingMethodPrice {
+  font-weight: bold;
+  margin-top: -35px;
+  text-align: right; }
+
+.ProductShippingMethods dd.ShippingMethodInfo {
+  display: none; }
+
 .SearchFilter {
-  border: 1px solid #eeeeee;
+  border: 1px solid #e9e8e8;
   border-radius: 3px; }
 
 .SearchFilter a {
@@ -5408,8 +5516,8 @@ h1 + .ProductCategories,
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  background-color: #fafafa;
-  border: 1px solid #eeeeee;
+  background-color: #ffffff;
+  border: 1px solid #e9e8e8;
   border-width: 1px 0 0;
   display: block;
   margin: 0;
@@ -5439,7 +5547,7 @@ h1 + .ProductCategories,
   vertical-align: middle; }
 
 .FullSearchSuggestions a {
-  background-color: #e74c3c;
+  background-color: #BF98A0;
   border-radius: 3px;
   color: #fefefe;
   display: block;
@@ -5447,8 +5555,8 @@ h1 + .ProductCategories,
 
 .FullSearchSuggestions a:hover,
 .FullSearchSuggestions .Active a {
-  background-color: #ed7669;
-  color: #333333; }
+  background-color: #d3b7bd;
+  color: #333232; }
 
 .FullSearchSuggestionsTitle {
   display: inline-block;
@@ -5461,72 +5569,54 @@ h1 + .ProductCategories,
 #MobileSearchForm label {
   display: none; }
 
-.slick-arrow {
-  line-height: 20px;
-  padding: 4px;
-  position: absolute;
-  width: 40px;
-  z-index: 1; }
-
-.slick-arrow > .fa {
-  margin: 0; }
-
-.slick-prev,
-.slick-next {
-  bottom: 15px; }
-
-.slick-prev {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
-  right: 55px; }
-
-.slick-next {
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-  right: 15px; }
-
-.slick-slide:focus {
-  outline: 0; }
-
-.slick-slide img {
-  display: inline-block; }
-
 .flickity-prev-next-button.previous {
-  left: 0; }
+  left: -15px; }
 
 .flickity-prev-next-button.next {
-  right: 0; }
+  right: -15px; }
 
 .flickity-rtl .flickity-prev-next-button.previous {
   left: auto;
-  right: 0; }
+  right: -15px; }
 
 .flickity-rtl .flickity-prev-next-button.next {
   right: auto;
-  left: 0; }
+  left: -15px; }
 
 .flickity-prev-next-button {
+  border-radius: 50% !important;
+  background: #ffffff;
+  border: 1px solid #e9e8e8;
+  height: 40px;
   width: 40px;
-  height: 100%;
-  border-radius: 0 !important;
-  background: transparent;
   z-index: 2; }
 
 .flickity-prev-next-button:hover {
-  background: transparent; }
+  background: #fdfcfc; }
 
 .flickity-prev-next-button .arrow {
-  fill: #333333; }
+  fill: #333232; }
 
 .flickity-prev-next-button.no-svg {
-  color: #333333; }
+  color: #333232; }
 
 .flickity-prev-next-button:disabled {
   display: none; }
 
-@media screen and (max-width: 1024px) {
-  .flickity-prev-next-button {
-    display: none; } }
+.flickity-page-dots {
+  bottom: -22px; }
+
+.flickity-page-dots .dot {
+  height: 4px;
+  width: 40px;
+  margin: 0;
+  border-radius: 0; }
+
+.Banners-Wide .flickity-page-dots .dot {
+  background-color: #fdfcfc; }
+
+.Banners-Wide .flickity-page-dots {
+  bottom: 20px; }
 
 .Spinner {
   display: table;
@@ -5582,28 +5672,113 @@ h1 + .ProductCategories,
   -moz-osx-font-smoothing: grayscale;
   content: ""; }
 
+.Layout {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -moz-flex-align: flex-start;
+  -ms-flex-align: flex-start;
+  -webkit-flex-align: flex-start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  background-color: #BF98A0; }
+
+.LayoutAside, .LayoutMain {
+  padding: 0 15px; }
+
+.LayoutAside {
+  -webkit-box-flex: 1 0 320px;
+  -moz-box-flex: 1 0 320px;
+  -ms-flex: 1 0 320px;
+  -webkit-flex: 1 0 320px;
+  flex: 1 0 320px;
+  color: #fefefe;
+  padding-top: 50px;
+  width: 320px;
+  z-index: 1; }
+
+.LayoutMain {
+  -webkit-box-flex: 1 1 100%;
+  -moz-box-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  -webkit-flex: 1 1 100%;
+  flex: 1 1 100%;
+  background-color: #BF98A0;
+  border-left: 1px solid #b58891; }
+
+@media screen and (max-width: 1024px) {
+  .LayoutAside,
+  .LayoutMain {
+    padding: 0;
+    margin: 0;
+    border-radius: 0; }
+  .Layout {
+    display: block; }
+  .LayoutMain {
+    border: 0;
+    width: 100%; } }
+
+.UtilityBar {
+  color: #fefefe;
+  font-size: 14px;
+  padding: 10px 0; }
+  .UtilityBar a {
+    color: #fafafa; }
+  .UtilityBar a:hover {
+    color: #ddc9cd; }
+
 .SiteHeader {
   background-color: #ffffff;
-  color: #333333; }
+  border-bottom: 1px solid #e9e8e8;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.025);
+  color: #333232;
+  padding: 15px 15px 30px;
+  position: relative; }
   .SiteHeader a {
-    color: #333333; }
+    color: #191919; }
   .SiteHeader a:hover {
-    color: #e74c3c; }
+    color: #BF98A0; }
   .SiteHeader a {
     text-decoration: none; }
 
-.SiteBody {
+.TopBar {
   background-color: #ffffff;
-  color: #333333; }
+  margin: 0 -15px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  position: relative;
+  z-index: 100; }
+
+.sticky-active .TopBar {
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.025); }
+
+.SiteBody {
+  background-color: #fdfcfc;
+  color: #333232; }
 
 .SiteContent {
-  padding: 48px 0 72px; }
-
-.Banners-Wide + .SiteContent {
-  padding-top: 24px; }
+  background-color: #fdfcfc;
+  border-radius: 0 0 8px 8px;
+  padding: 40px 0; }
+  .SiteContent a {
+    color: #191919; }
+  .SiteContent a:hover {
+    color: #BF98A0; }
 
 .SiteFooter {
-  color: #333333; }
+  background-color: #BF98A0;
+  color: #fefefe; }
+  .SiteFooter a {
+    color: #fafafa; }
+  .SiteFooter a:hover {
+    color: #ddc9cd; }
+
+@media screen and (max-width: 1024px) {
+  .SiteHeader {
+    padding: 15px; } }
 
 .Tab {
   display: none; }
@@ -5616,7 +5791,7 @@ h1 + .ProductCategories,
 
 .Tabs {
   background-color: #ffffff;
-  border: 1px solid #eeeeee;
+  border: 1px solid #e9e8e8;
   border-radius: 0 3px 3px 3px;
   padding: 20px; }
 

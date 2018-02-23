@@ -30,8 +30,12 @@
 //------------------------------------------------------------------------------
 
 .Path {
+	@include link-colors($color-path-bg);
+	background-color: $color-path-bg;
+	color: text-contrast($color-path-bg);
 	font-size: $font-size-small;
-	padding-top: 24px;
+	padding-bottom: 20px;
+	padding-top: 20px;
 }
 
 .Path a {
@@ -39,7 +43,7 @@
 }
 
 .Path .Current > a {
-	color: mix($color-text-light, $color-text-dark, 50%);
+	opacity: .5;
 }
 
 .Path .Breadcrumb {
@@ -52,10 +56,11 @@
 }
 
 .Path .BackLink {
+	background-color: $color-boxed-bg;
 	border: 1px solid $color-body-border;
 	border-radius: $border-radius;
 	margin-right: 15px;
-	padding: 6px 10px;
+	padding: 5px 10px;
 }
 
 .Path .BackLink:before {

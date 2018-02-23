@@ -23,11 +23,15 @@
 	position: relative;
 }
 
+.BannerText > *:last-child {
+	margin-bottom: 0;
+}
+
 .BannerCaption {
 	@include cover;
 	background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.75));
 	color: $color-text-light;
-	padding: 48px 24px;
+	padding: 20px;
 	text-align: center;
 	top: auto;
 }
@@ -42,7 +46,6 @@
 	background-color: $color-boxed-bg;
 	background-position: 50%;
 	background-size: cover;
-	border-radius: $border-radius;
 	overflow: hidden;
 }
 
@@ -59,6 +62,7 @@
 }
 
 .Banner-Body img {
+	border-radius: $border-radius;
 	width: 100%;
 }
 
@@ -72,21 +76,24 @@
 
 .Banner-Side {
 	@extend %default-margin;
-	border: 1px solid $color-body-border;
+	background-color: $color-body-bg;
+	border: 1px solid darken($color-sitecolumn-bg, 5%);
 	border-radius: $border-radius;
+	color: text-contrast($color-body-bg);
 	display: inline-block;
+	overflow: hidden;
 	position: relative;
 }
 
 .Banner-Side .BannerImage {
 	background-color: $color-image-bg;
+	border-radius: $border-radius $border-radius 0 0;
 	display: block;
 	text-align: center;
 	overflow: hidden;
 }
 
 .Banner-Side .BannerContent {
-	border-top: 1px solid $color-body-border;
 	padding: 10px;
 }
 
@@ -94,22 +101,22 @@
 // Wide Banners
 //------------------------------------------------------------------------------
 
-.Banners-Wide {
-	font-size: $font-size-large;
+.LayoutMain > .Banners-Wide {
+	background-color: $color-boxed-bg;
 }
 
 .Banner-Wide {
 	position: relative;
 	width: 100%;
-	overflow: hidden;
 }
 
+.Banner-Wide,
 .Banner-Wide .AspectRatio {
 	max-height: 550px;
 }
 
 .Banner-Wide .AspectRatio:before {
-	padding-top: 40%;
+	padding-top: 50%;
 }
 
 .Banner-Wide .BannerContainer {
@@ -126,8 +133,13 @@
 }
 
 @media screen and (max-width: $breakpoint-tablet) {
+[class^=Col-] > .Banners-Wide {
+		@include breakfree;
+		margin: 0;
+	}
+	
 	.Banner-Wide .AspectRatio:before {
-		padding-top: 50%;
+		padding-top: 60%;
 	}
 }
 
@@ -138,13 +150,13 @@
 	}
 	
 	.Banner-Wide .AspectRatio:before {
-		padding-top: 50%;
+		padding-top: 60%;
 	}
 }
 
 @media screen and (min-width: $breakpoint-mobile) {
 	.Banners-Wide-Contained {
-		padding-top: 24px;
+		padding-top: 20px;
 	}
 }
 
@@ -153,6 +165,9 @@
 //------------------------------------------------------------------------------
 
 .Banner-UniHeight {
+	background-color: $color-boxed-bg;
+	border: 1px solid $color-body-border;
+	border-radius: $border-radius;
 	height: 450px;
 	overflow: hidden;
 }
@@ -175,14 +190,16 @@
 	@include flexbox;
 	flex-wrap: wrap;
 	-webkit-flex-wrap: wrap;
+	margin: -($grid-gutter / 2)
 }
 
 .Block {
-	@include flex(1 1 33.33%);
-	padding: .5px;
+	@include flex(0 1 33.33%);
+	padding: ($grid-gutter / 2);
 }
 
 .Banner-Block {
+	border: 1px solid $color-body-border;
 	border-radius: $border-radius;
 	overflow: hidden;
 }
@@ -197,20 +214,12 @@
 	color: $color-text-light;
 	margin: auto;
 	max-width: 320px;
-	min-width: 170px;
-	opacity: 0;
 	text-align: center;
 	width: 90%;
 }
 
 .Banner-Block:hover .BannerBackgroundImage {
 	transform: scale(1.025);
-	-webkit-filter: grayscale(1) brightness(0.45) contrast(1.05);
-	filter: grayscale(1) brightness(0.45) contrast(1.05);
-}
-
-.Banner-Block:hover .BannerContent {
-	opacity: 1;
 }
 
 @media screen and (max-width: $breakpoint-tablet) {
@@ -226,7 +235,7 @@
 }
 
 @media screen and (max-width: $breakpoint-mobile-wide) {
-	.Block:first-child {
-		@include flex(1 1 100%);
+	.Block {
+		@include flex(1 1 50%);
 	}
 }

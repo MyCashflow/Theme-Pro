@@ -46,7 +46,7 @@
 	@include box-shadow(0 2px 1px $black-10);
 	@include transition($transition-fast);
 	@include transform(translateY(20px));
-	background-color: $color-body-bg;
+	background-color: $color-boxed-bg;
 	border-radius: $border-radius;
 	margin-top: 5px;
 	opacity: 0;

@@ -39,9 +39,19 @@
 .LogoLink {
 	@extend h2;
 	display: inline-block;
-	margin: 0 !important;
 	text-decoration: none;
 	vertical-align: middle;
+}
+
+.Sidebar .LogoLink {
+	display: block;
+	margin-bottom: 40px;
+}
+
+.Sidebar .LogoLink img {
+	display: block;
+	margin: auto;
+	max-height: 120px;
 }
 
 //------------------------------------------------------------------------------
@@ -49,7 +59,7 @@
 //------------------------------------------------------------------------------
 
 .ContentTitle {
-	line-height: 48px;
+	line-height: 40px;
 }
 
 h1.ContentTitle {
@@ -60,7 +70,6 @@ h1.ContentTitle {
 	@include flexbox;
 	@extend %styleset;
 	font-size: $font-size-large;
-	
 	flex-direction: row;
 	justify-content: center;
 }
@@ -74,7 +83,7 @@ h1.ContentTitle {
 	height: 1px;
 	margin: 0 15px;
 	position: relative;
-	top: 24px;
+	top: 20px;
 }
 
 .ContentTitle-Fancy::before {
@@ -94,14 +103,7 @@ h1.ContentTitle {
 //------------------------------------------------------------------------------
 
 .ContentSection + .ContentSection {
-	margin-top: 24px;
-}
-
-.ContentSection-FullWidth {
-	@include transform(translateX(-50%));
-	width: 100vw;
-  position: relative;
-  left: 50%;
+	margin-top: 40px;
 }
 
 .ContentSection-Narrow {
@@ -120,5 +122,5 @@ h1.ContentTitle {
 }
 
 .ExtShareButtons + .fb-like {
-	margin-top: 24px;
+	margin-top: 20px;
 }
