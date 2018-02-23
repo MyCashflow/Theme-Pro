@@ -188,7 +188,8 @@ $(document).ready(function () {
 	$('[data-flickity="banner"]').flickity({
 		cellAlign: 'left',
 		contain: true,
-		pageDots: false,
+		pageDots: true,
+		prevNextButtons: false,
 		wrapAround: true
 	});
 	
