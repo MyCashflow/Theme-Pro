@@ -253,11 +253,16 @@ $(document).ready(function () {
 	});
 
 	$('#StickyNavigation').hcSticky({
+		stickTo: document,
+		top: 20,
+	});
+	
+	$('#StickyTopBar').hcSticky({
 		stickTo: document
 	});
 
 	$('#StickyCart').hcSticky({
-		stickTo: '.SiteBody',
+		stickTo: '.SiteContent',
 		top: 80,
 		bottomEnd: 80
 	});
