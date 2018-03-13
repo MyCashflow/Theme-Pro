@@ -2124,7 +2124,7 @@ select::-ms-expand {
   display: none; }
 
 body {
-  background-color: #BF98A0; }
+  background-color: #2a45a1; }
 
 audio, canvas, img, progress, video {
   display: inline-block;
@@ -2136,7 +2136,7 @@ a {
   color: #191919; }
 
 a:hover {
-  color: #BF98A0; }
+  color: #2a45a1; }
 
 a {
   transition-duration: 0.15s; }
@@ -2174,7 +2174,7 @@ dl dd {
   height: 5px; }
 
 table {
-  border: 1px solid #e9e8e8;
+  border: 1px solid #e5e5e8;
   border-collapse: collapse;
   border-spacing: 0;
   text-align: left; }
@@ -2185,7 +2185,7 @@ table caption {
 table th,
 table td {
   background-color: #ffffff;
-  border-bottom: 1px solid #e9e8e8;
+  border-bottom: 1px solid #e5e5e8;
   padding: 10px 15px;
   vertical-align: top; }
 
@@ -2195,17 +2195,17 @@ table td > :last-child {
 
 table tbody th,
 table tbody td {
-  background-color: #fdfcfc; }
+  background-color: #f9fafc; }
 
 hr {
-  background-color: #e9e8e8;
+  background-color: #e5e5e8;
   border: 0;
   display: block;
   height: 1px;
   margin: 48px 0; }
 
 body {
-  color: #333232;
+  color: #323232;
   font: 16px/24px "Asap", sans-serif; }
 
 button, input, select, textarea {
@@ -2213,7 +2213,7 @@ button, input, select, textarea {
   font: inherit; }
 
 blockquote {
-  border-left: 5px solid #BF98A0;
+  border-left: 5px solid #2a45a1;
   font-size: 18px;
   margin-left: 0;
   padding-left: 15px; }
@@ -2272,7 +2272,7 @@ h6, .H6 {
   font-size: 18px; }
 
 .Text-Accent {
-  color: #BF98A0; }
+  color: #2a45a1; }
 
 .Text-Truncate {
   overflow: hidden;
@@ -2283,7 +2283,7 @@ input, select, textarea {
   background-color: #ffffff;
   border: 1px solid #e0e0e0;
   border-radius: 3px;
-  color: #333232;
+  color: #323232;
   display: inline-block;
   min-height: 46px;
   max-width: 100%;
@@ -2314,7 +2314,7 @@ select {
   -webkit-appearance: none;
   background: #ffffff url("../images/angle-down-dark.png") top 50% right 14px no-repeat;
   background-size: 12px 12px;
-  color: #333232;
+  color: #323232;
   cursor: pointer;
   height: 46px;
   padding-right: 35px; }
@@ -2337,7 +2337,7 @@ label {
   cursor: pointer; }
 
 .GroupLabel {
-  border-bottom: 1px solid #e9e8e8;
+  border-bottom: 1px solid #e5e5e8;
   display: block;
   font-size: 18px;
   font-weight: bold;
@@ -2347,7 +2347,7 @@ label {
   background: #ffffff;
   border: 1px solid #d9d9d9;
   border-radius: 5px;
-  color: #333232 !important;
+  color: #323232 !important;
   cursor: pointer;
   display: inline-block;
   padding: 10px 15px;
@@ -2358,7 +2358,7 @@ label {
 
 .Button:hover, form button:hover, #OrderDocuments a:hover {
   background-color: white;
-  color: #333232 !important; }
+  color: #323232 !important; }
 
 .Button:active, form button:active, #OrderDocuments a:active,
 .Button.Active,
@@ -2408,7 +2408,7 @@ form.ProductAddToCart .AddToCart {
 .ShippingMethodWrapper,
 .PaymentMethodWrapper {
   background-color: #ffffff;
-  border: 1px solid #e9e8e8;
+  border: 1px solid #e5e5e8;
   padding: 10px 15px; }
 
 .ShippingMethodWrapper + .ShippingMethodWrapper,
@@ -2446,7 +2446,7 @@ form.ProductAddToCart .AddToCart {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  background-color: #fdfcfc;
+  background-color: #f9fafc;
   color: #ce2d4f;
   display: block;
   margin: 0;
@@ -2573,8 +2573,8 @@ form.ProductAddToCart .AddToCart {
   font-size: 0;
   background: transparent;
   border: 0;
-  border-left: 1px solid #e9e8e8;
-  color: #999898 !important;
+  border-left: 1px solid #e5e5e8;
+  color: #989898 !important;
   position: absolute;
   right: 0;
   max-width: 70px; }
@@ -2591,11 +2591,11 @@ form.ProductAddToCart .AddToCart {
 
 #SearchForm:hover #SearchInput,
 #SearchForm:hover #SearchButton {
-  border-color: #BF98A0;
-  color: #BF98A0 !important; }
+  border-color: #2a45a1;
+  color: #2a45a1 !important; }
 
 #SearchForm #SearchInput:focus {
-  border: 1px solid #BF98A0;
+  border: 1px solid #2a45a1;
   outline: 0;
   position: relative;
   z-index: 1000; }
@@ -2609,7 +2609,7 @@ form.ProductAddToCart .AddToCart {
 
 .CampaignCodeForm {
   background-color: #ffffff;
-  border: 1px solid #e9e8e8;
+  border: 1px solid #e5e5e8;
   border-radius: 3px;
   margin-bottom: 20px;
   padding: 15px; }
@@ -3334,7 +3334,7 @@ form.ProductAddToCart .AddToCart {
   background-color: #ffeecc;
   border: 1px solid #ffcc66;
   border-radius: 3px;
-  color: #333232;
+  color: #323232;
   padding: 10px 15px;
   position: relative; }
 
@@ -3342,13 +3342,13 @@ form.ProductAddToCart .AddToCart {
 .Success.FormNotification, .Success#OrderStatus {
   background-color: #f3f8eb;
   border-color: #88bb33;
-  color: #333232; }
+  color: #323232; }
 
 .Notification.Error, .GroupErrorMessage,
 .FormNotification, .Error#OrderStatus {
   background-color: #faeaed;
   border-color: #ce2d4f;
-  color: #333232; }
+  color: #323232; }
 
 .Notification > :last-child, .GroupErrorMessage > :last-child,
 .FormNotification > :last-child, #OrderStatus > :last-child {
@@ -3513,7 +3513,7 @@ form.ProductAddToCart .AddToCart {
   cursor: default; }
 
 .NavHighlight > a {
-  color: #BF98A0; }
+  color: #2a45a1; }
 
 .Banner {
   position: relative; }
@@ -3528,6 +3528,14 @@ form.ProductAddToCart .AddToCart {
   right: 0;
   top: 0;
   z-index: 1; }
+
+.BannerBackgroundCover {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5); }
 
 .BannerContent {
   position: relative; }
@@ -3564,7 +3572,7 @@ form.ProductAddToCart .AddToCart {
 
 .Banner-Body {
   background-color: #ffffff;
-  border: 1px solid #e9e8e8;
+  border: 1px solid #e5e5e8;
   border-radius: 3px;
   display: block; }
 
@@ -3576,10 +3584,10 @@ form.ProductAddToCart .AddToCart {
   text-align: center; }
 
 .Banner-Side {
-  background-color: #fdfcfc;
-  border: 1px solid #b58891;
+  background-color: #f9fafc;
+  border: 1px solid #253c8d;
   border-radius: 3px;
-  color: #333232;
+  color: #323232;
   display: inline-block;
   overflow: hidden;
   position: relative; }
@@ -3594,10 +3602,8 @@ form.ProductAddToCart .AddToCart {
 .Banner-Side .BannerContent {
   padding: 10px; }
 
-.LayoutMain > .Banners-Wide {
-  background-color: #ffffff; }
-
 .Banner-Wide {
+  background-color: #323232;
   position: relative;
   width: 100%; }
 
@@ -3622,7 +3628,12 @@ form.ProductAddToCart .AddToCart {
   transform: translateY(-50%);
   position: relative;
   top: 50%;
+  color: #fefefe;
   padding: 20px; }
+  .Banner-Wide .BannerContent a {
+    color: #fafafa; }
+  .Banner-Wide .BannerContent a:hover {
+    color: #92a0ce; }
 
 @media screen and (max-width: 1024px) {
   [class^=Col-] > .Banners-Wide {
@@ -3650,7 +3661,7 @@ form.ProductAddToCart .AddToCart {
 
 .Banner-UniHeight {
   background-color: #ffffff;
-  border: 1px solid #e9e8e8;
+  border: 1px solid #e5e5e8;
   border-radius: 3px;
   height: 450px;
   overflow: hidden; }
@@ -3686,7 +3697,7 @@ form.ProductAddToCart .AddToCart {
   padding: 15px; }
 
 .Banner-Block {
-  border: 1px solid #e9e8e8;
+  border: 1px solid #e5e5e8;
   border-radius: 3px;
   overflow: hidden; }
 
@@ -3758,15 +3769,15 @@ form.ProductAddToCart .AddToCart {
   display: none; }
 
 .Path {
-  background-color: #fdfcfc;
-  color: #333232;
+  background-color: #f9fafc;
+  color: #323232;
   font-size: 14px;
   padding-bottom: 20px;
   padding-top: 20px; }
   .Path a {
     color: #191919; }
   .Path a:hover {
-    color: #BF98A0; }
+    color: #2a45a1; }
 
 .Path a {
   text-decoration: none; }
@@ -3783,7 +3794,7 @@ form.ProductAddToCart .AddToCart {
 
 .Path .BackLink {
   background-color: #ffffff;
-  border: 1px solid #e9e8e8;
+  border: 1px solid #e5e5e8;
   border-radius: 3px;
   margin-right: 15px;
   padding: 5px 10px; }
@@ -3811,7 +3822,7 @@ a.BackLink[href='/'] {
   text-decoration: none; }
 
 .FullCartSection {
-  border-bottom: 1px solid #e9e8e8;
+  border-bottom: 1px solid #e5e5e8;
   padding: 24px 0; }
 
 .FullCartHeader {
@@ -3832,7 +3843,7 @@ a.BackLink[href='/'] {
   width: 100%; }
 
 .FullCartCol {
-  border-bottom: 1px solid #e9e8e8;
+  border-bottom: 1px solid #e5e5e8;
   display: table-cell;
   padding: 24px 10px;
   vertical-align: middle;
@@ -3870,7 +3881,7 @@ a.BackLink[href='/'] {
 
 .FullCartProduct .ProductImage, .FullCartProduct #ProductThumbnails .ProductThumbnail, #ProductThumbnails .FullCartProduct .ProductThumbnail {
   background-color: #ffffff;
-  border: 1px solid #e9e8e8;
+  border: 1px solid #e5e5e8;
   border-radius: 3px;
   display: block;
   height: 160px;
@@ -3901,7 +3912,7 @@ a.BackLink[href='/'] {
     white-space: normal;
     width: 100%; }
   .FullCartProduct {
-    border-bottom: 1px solid #e9e8e8;
+    border-bottom: 1px solid #e5e5e8;
     display: block;
     padding: 40px 0;
     position: relative; }
@@ -3920,11 +3931,11 @@ a.BackLink[href='/'] {
 .MiniCartHeader,
 .MiniCartTotal,
 .MiniCartActions {
-  border-bottom: 1px solid #e9e8e8;
+  border-bottom: 1px solid #e5e5e8;
   padding: 15px; }
 
 .MiniCartProduct {
-  border-bottom: 1px solid #e9e8e8;
+  border-bottom: 1px solid #e5e5e8;
   padding: 15px 45px 15px 75px;
   position: relative; }
 
@@ -3956,7 +3967,7 @@ a.BackLink[href='/'] {
 
 .MiniCartProduct .ProductRemove {
   bottom: 0;
-  border-left: 1px solid #e9e8e8;
+  border-left: 1px solid #e5e5e8;
   position: absolute;
   right: 0;
   top: 0; }
@@ -3987,7 +3998,7 @@ a.BackLink[href='/'] {
 
 .MiniCart-Checkout {
   background-color: #ffffff;
-  border: 1px solid #e9e8e8;
+  border: 1px solid #e5e5e8;
   border-radius: 3px;
   z-index: 1; }
 
@@ -4011,16 +4022,16 @@ a.BackLink[href='/'] {
 
 .CheckoutTransferToPayment [type='submit'] {
   background-color: #ffffff;
-  border-color: #e9e8e8;
-  color: #333232 !important;
+  border-color: #e5e5e8;
+  color: #323232 !important;
   display: block;
   height: 140px;
   width: 100%; }
 
 .CheckoutTransferToPayment [type='submit']:hover {
   background-color: #ffffff;
-  border-color: #BF98A0;
-  color: #333232 !important; }
+  border-color: #2a45a1;
+  color: #323232 !important; }
 
 @media screen and (max-width: 600px) {
   .CheckoutTransferToPaymentForm {
@@ -4029,7 +4040,7 @@ a.BackLink[href='/'] {
 
 #CheckoutMarketingPermissions .Checks label {
   background-color: #ffffff;
-  border: 1px solid #e9e8e8;
+  border: 1px solid #e5e5e8;
   border-radius: 3px;
   display: inline-block;
   padding: 10px 15px;
@@ -4052,13 +4063,13 @@ a.BackLink[href='/'] {
   margin: -12px; }
 
 #KlarnaCheckoutThanks {
-  border: 1px solid #e9e8e8;
+  border: 1px solid #e5e5e8;
   border-radius: 3px;
   padding: 20px; }
 
 .Drawer {
-  background-color: #fdfcfc;
-  color: #333232;
+  background-color: #f9fafc;
+  color: #323232;
   position: fixed;
   transition-duration: 0.3s; }
 
@@ -4081,7 +4092,7 @@ a.BackLink[href='/'] {
   -ms-transform: translateY(-100%);
   -webkit-transform: translateY(-100%);
   transform: translateY(-100%);
-  border-bottom: 1px solid #e9e8e8;
+  border-bottom: 1px solid #e5e5e8;
   top: 0; }
 
 .Drawer[data-drawer-side='bottom'] {
@@ -4089,7 +4100,7 @@ a.BackLink[href='/'] {
   -ms-transform: translateY(100%);
   -webkit-transform: translateY(100%);
   transform: translateY(100%);
-  border-top: 1px solid #e9e8e8;
+  border-top: 1px solid #e5e5e8;
   bottom: 0; }
 
 .Drawer[data-drawer-side='left'] {
@@ -4097,7 +4108,7 @@ a.BackLink[href='/'] {
   -ms-transform: translateX(-100%);
   -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
-  border-right: 1px solid #e9e8e8;
+  border-right: 1px solid #e5e5e8;
   left: 0; }
 
 .Drawer[data-drawer-side='right'] {
@@ -4105,7 +4116,7 @@ a.BackLink[href='/'] {
   -ms-transform: translateX(100%);
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
-  border-left: 1px solid #e9e8e8;
+  border-left: 1px solid #e5e5e8;
   right: 0; }
 
 .Drawer[data-drawer-side='top'].Open {
@@ -4175,10 +4186,10 @@ a.BackLink[href='/'] {
   padding: 24px 0; }
 
 .NewsletterSubscribe {
-  background-color: #fdfcfc;
-  border: 1px solid #BF98A0;
+  background-color: #f9fafc;
+  border: 1px solid #2a45a1;
   border-radius: 3px;
-  color: #BF98A0;
+  color: #2a45a1;
   max-width: 440px;
   padding: 12px 15px; }
 
@@ -4189,13 +4200,13 @@ a.BackLink[href='/'] {
   display: none; }
 
 .Footer #NewsletterSubscribeForm input {
-  border-color: #BF98A0;
+  border-color: #2a45a1;
   margin-right: -1px;
   width: 65%; }
 
 .Footer #NewsletterSubscribeForm button {
-  background-color: #BF98A0;
-  border-color: #BF98A0;
+  background-color: #2a45a1;
+  border-color: #2a45a1;
   color: #fefefe !important;
   width: 35%; }
 
@@ -4239,7 +4250,7 @@ a.BackLink[href='/'] {
   padding: 0 15px; }
 
 .LiveSearchSeparator {
-  border-top: 1px solid #e9e8e8;
+  border-top: 1px solid #e5e5e8;
   margin: 15px 0; }
 
 #LiveSearch.Initiated {
@@ -4282,7 +4293,7 @@ a.BackLink[href='/'] {
 
 .LiveSearchResults ul a:hover,
 .LiveSearchResults ul .Active > a {
-  background-color: #fcfafa;
+  background-color: #f4f6fa;
   display: block;
   padding: 5px 15px; }
 
@@ -4348,7 +4359,7 @@ a.BackLink[href='/'] {
   margin-left: 0; }
 
 .Badge {
-  background-color: #BF98A0;
+  background-color: #2a45a1;
   border-radius: 3px;
   color: #fefefe;
   display: block;
@@ -4394,7 +4405,7 @@ a.BackLink[href='/'] {
   -ms-flex: 1;
   -webkit-flex: 1;
   flex: 1;
-  background-color: #e9e8e8;
+  background-color: #e5e5e8;
   content: '\a0';
   flex-grow: 1;
   height: 1px;
@@ -4427,7 +4438,7 @@ a.BackLink[href='/'] {
   margin-top: 20px; }
 
 .mfp-ajax-content {
-  background-color: #fdfcfc;
+  background-color: #f9fafc;
   border-radius: 3px;
   margin: 0 auto;
   max-width: 640px;
@@ -4441,13 +4452,13 @@ a.BackLink[href='/'] {
   -ms-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.025);
   -webkit-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.025);
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.025);
-  background-color: #BF98A0;
+  background-color: #2a45a1;
   position: relative;
   z-index: 100; }
   .NavigationBar a {
     color: #fafafa; }
   .NavigationBar a:hover {
-    color: #ddc9cd; }
+    color: #92a0ce; }
 
 .NavigationBar .LogoLink > img {
   max-height: 40px; }
@@ -4457,7 +4468,7 @@ a.BackLink[href='/'] {
   font-size: 16px; }
 
 .NavigationBar [data-drawer-toggle="menu"] {
-  border-left: 1px solid #b58891;
+  border-left: 1px solid #253c8d;
   padding-left: 20px;
   padding-right: 15px; }
 
@@ -4623,10 +4634,10 @@ a.BackLink[href='/'] {
   margin-top: 0; }
 
 .SimpleNavigation .Current > a {
-  color: #BF98A0; }
+  color: #2a45a1; }
 
 .SiteFooter .SimpleNavigation .Current > a {
-  color: #ddc9cd; }
+  color: #92a0ce; }
 
 .DropNavigation a, .SimpleDropNavigation a, .MainNavigation a {
   overflow: hidden;
@@ -4649,8 +4660,8 @@ a.BackLink[href='/'] {
 
 .DropNavigation li ul, .SimpleDropNavigation li ul, .MainNavigation li ul {
   background-color: #ffffff;
-  border: 1px solid #e9e8e8;
-  color: #333232;
+  border: 1px solid #e5e5e8;
+  color: #323232;
   margin: 0;
   max-width: 300px;
   min-width: 200px;
@@ -4663,7 +4674,7 @@ a.BackLink[href='/'] {
   .DropNavigation li ul a, .SimpleDropNavigation li ul a, .MainNavigation li ul a {
     color: #191919; }
   .DropNavigation li ul a:hover, .SimpleDropNavigation li ul a:hover, .MainNavigation li ul a:hover {
-    color: #BF98A0; }
+    color: #2a45a1; }
 
 .DropNavigation li li, .SimpleDropNavigation li li, .MainNavigation li li {
   display: block; }
@@ -4705,7 +4716,7 @@ a.BackLink[href='/'] {
   min-width: 40px; }
 
 .SimpleDropNavigation li li a {
-  box-shadow: 0 1px 0 #e9e8e8;
+  box-shadow: 0 1px 0 #e5e5e8;
   padding: 5px 15px; }
 
 .SimpleDropNavigation li li:last-child a {
@@ -4725,10 +4736,10 @@ a.BackLink[href='/'] {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  background-color: #fdfcfc;
-  border: 1px solid #e9e8e8;
+  background-color: #f9fafc;
+  border: 1px solid #e5e5e8;
   border-radius: 3px 3px 0 0;
-  color: #333232;
+  color: #323232;
   display: block;
   font-weight: bold;
   margin-bottom: -1px;
@@ -4758,7 +4769,7 @@ a.BackLink[href='/'] {
 .TabsNavigation .Current > a {
   background-color: #ffffff;
   border-bottom-color: #ffffff;
-  color: #BF98A0; }
+  color: #2a45a1; }
 
 @media screen and (max-width: 600px) {
   .TabsNavigation li {
@@ -4766,7 +4777,7 @@ a.BackLink[href='/'] {
     width: 50%; } }
 
 .MainNavigation a {
-  border: 1px solid #e9e8e8;
+  border: 1px solid #e5e5e8;
   font-family: "Asap Condensed", sans-serif; }
 
 .MainNavigation > ul > li > a {
@@ -4779,7 +4790,7 @@ a.BackLink[href='/'] {
   border-width: 0; }
 
 .MainNavigation .Current > a {
-  color: #BF98A0; }
+  color: #2a45a1; }
 
 .MainNavigation .HasSubCategories > a:after {
   display: inline-block;
@@ -4802,14 +4813,14 @@ a.BackLink[href='/'] {
   margin-left: 0.5em; }
 
 .SideNavigation {
-  background-color: #fdfcfc;
-  border: 1px solid #e9e8e8; }
+  background-color: #f9fafc;
+  border: 1px solid #e5e5e8; }
 
 .SideNavigation-Left {
-  border-right: 1px solid #e9e8e8; }
+  border-right: 1px solid #e5e5e8; }
 
 .SideNavigation-Right {
-  border-left: 1px solid #e9e8e8; }
+  border-left: 1px solid #e5e5e8; }
 
 .SideNavigation a {
   display: block;
@@ -4831,7 +4842,7 @@ a.BackLink[href='/'] {
   border-width: 0; }
 
 .SideNavigation .Current > a {
-  color: #BF98A0; }
+  color: #2a45a1; }
 
 .DrawerNavigation {
   margin-top: -1px; }
@@ -4843,7 +4854,7 @@ a.BackLink[href='/'] {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  border: 1px solid #e9e8e8;
+  border: 1px solid #e5e5e8;
   border-width: 1px 0;
   display: block;
   padding: 10px 15px;
@@ -4891,10 +4902,10 @@ a.BackLink[href='/'] {
   color: #fafafa; }
 
 .MainCategories a:hover {
-  color: #ddc9cd; }
+  color: #92a0ce; }
 
 .MainCategories a {
-  border-color: #b58891;
+  border-color: #253c8d;
   font-family: "Asap Condensed", sans-serif;
   font-size: 14px;
   padding-bottom: 5px;
@@ -4907,7 +4918,7 @@ a.BackLink[href='/'] {
   box-shadow: inset 3px 0 0; }
 
 .MainCategories li ul {
-  background-color: #bc949c; }
+  background-color: #29449e; }
 
 .MainCategories > ul > li:first-child > a {
   border-top: 0; }
@@ -5040,8 +5051,8 @@ a.BackLink[href='/'] {
   margin-top: 40px; }
 
 .PaginationBar {
-  background-color: #fdfcfc;
-  border-bottom: 1px solid #e9e8e8;
+  background-color: #f9fafc;
+  border-bottom: 1px solid #e5e5e8;
   margin-bottom: 40px;
   margin-top: 20px; }
 
@@ -5069,7 +5080,7 @@ a.BackLink[href='/'] {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: #999898;
+  color: #989898;
   font-size: 14px;
   font-weight: normal;
   margin: 0 5px;
@@ -5077,7 +5088,7 @@ a.BackLink[href='/'] {
 
 .PaginationBar select,
 .PaginationBar input {
-  border-color: #e9e8e8;
+  border-color: #e5e5e8;
   border-radius: 3px 3px 0 0;
   margin-top: -1px;
   margin-bottom: -1px !important; }
@@ -5106,7 +5117,7 @@ a.BackLink[href='/'] {
     display: flex;
     padding: 0; }
   .PaginationBar label {
-    border: 1px solid #e9e8e8;
+    border: 1px solid #e5e5e8;
     height: 46px;
     margin-right: -1px;
     min-width: 50%;
@@ -5137,7 +5148,7 @@ a.BackLink[href='/'] {
 
 .Pagination li {
   background-color: #ffffff;
-  border: 1px solid #e9e8e8;
+  border: 1px solid #e5e5e8;
   float: left;
   margin-left: -1px;
   text-align: center;
@@ -5155,11 +5166,11 @@ a.BackLink[href='/'] {
 .Pagination .CurrentPage,
 .Pagination .DisabledPageLink,
 .Pagination .PagesBetween {
-  color: #999898;
+  color: #989898;
   padding: 10px; }
 
 .Pagination .CurrentPage {
-  color: #BF98A0; }
+  color: #2a45a1; }
 
 .Pagination .PreviousPageLink > a,
 .Pagination .PreviousPageLink.DisabledPageLink {
@@ -5193,7 +5204,7 @@ a.BackLink[href='/'] {
 
 .ProductImage, #ProductThumbnails .ProductThumbnail {
   background-color: #ffffff;
-  border: 1px solid #e9e8e8;
+  border: 1px solid #e5e5e8;
   border-radius: 3px;
   display: block;
   margin-bottom: 10px;
@@ -5238,7 +5249,7 @@ a.BackLink[href='/'] {
 .ProductSection .ContentSection + .ContentSection {
   margin-top: 10px;
   padding-top: 10px;
-  border-top: 1px solid #e9e8e8; }
+  border-top: 1px solid #e5e5e8; }
 
 .flickity-enabled .ListProduct:not(.ListProduct-Compact) .ProductName {
   overflow: hidden;
@@ -5247,7 +5258,7 @@ a.BackLink[href='/'] {
 
 .ListProduct {
   background-color: #ffffff;
-  border: 1px solid #e9e8e8;
+  border: 1px solid #e5e5e8;
   border-radius: 3px;
   padding-bottom: 100px;
   position: relative;
@@ -5255,7 +5266,7 @@ a.BackLink[href='/'] {
   .ListProduct a {
     color: #191919; }
   .ListProduct a:hover {
-    color: #BF98A0; }
+    color: #2a45a1; }
 
 .ListProduct .ProductImage, .ListProduct #ProductThumbnails .ProductThumbnail, #ProductThumbnails .ListProduct .ProductThumbnail {
   vertical-align: middle; }
@@ -5374,7 +5385,7 @@ a.BackLink[href='/'] {
   filter: none; }
 
 #ProductThumbnails .mz-thumb-selected {
-  border-color: #dddbdb; }
+  border-color: #d7d8dc; }
 
 @media screen and (max-width: 1024px) {
   #ProductThumbnails li {
@@ -5385,7 +5396,7 @@ a.BackLink[href='/'] {
     width: 25%; } }
 
 .ProductCategories {
-  color: #999898;
+  color: #989898;
   font-size: 14px;
   margin: 0; }
 
@@ -5421,8 +5432,8 @@ h1 + .ProductCategories,
   position: relative;
   display: none;
   margin: 10px 0 0 0;
-  background-color: #e9e8e8;
-  border: 1px solid #e9e8e8;
+  background-color: #e5e5e8;
+  border: 1px solid #e5e5e8;
   border-radius: 8px;
   display: block;
   padding: 5px 7px; }
@@ -5437,7 +5448,7 @@ h1 + .ProductCategories,
   margin-left: 20px;
   content: '';
   border: 8px solid transparent;
-  border-bottom: 8px solid #e9e8e8; }
+  border-bottom: 8px solid #e5e5e8; }
 
 .ProductAvailability .DeliveryTime {
   font-weight: bold; }
@@ -5449,7 +5460,7 @@ h1 + .ProductCategories,
 .ProductAvailability dt.StorageInfo + dd.StorageInfo {
   background-color: #ffffff;
   display: inline-block;
-  border: 1px solid #e9e8e8;
+  border: 1px solid #e5e5e8;
   padding: 0px 10px 2px;
   border-radius: 30px; }
 
@@ -5477,7 +5488,7 @@ h1 + .ProductCategories,
 
 .ProductShippingMethods {
   background-color: #ffffff;
-  border: 1px solid #e9e8e8;
+  border: 1px solid #e5e5e8;
   border-radius: 8px;
   padding: 10px; }
 
@@ -5490,7 +5501,7 @@ h1 + .ProductCategories,
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  border-bottom: 1px solid #e9e8e8;
+  border-bottom: 1px solid #e5e5e8;
   display: block;
   font-weight: normal;
   padding-right: 60px; }
@@ -5504,7 +5515,7 @@ h1 + .ProductCategories,
   display: none; }
 
 .SearchFilter {
-  border: 1px solid #e9e8e8;
+  border: 1px solid #e5e5e8;
   border-radius: 3px; }
 
 .SearchFilter a {
@@ -5517,7 +5528,7 @@ h1 + .ProductCategories,
   text-overflow: ellipsis;
   white-space: nowrap;
   background-color: #ffffff;
-  border: 1px solid #e9e8e8;
+  border: 1px solid #e5e5e8;
   border-width: 1px 0 0;
   display: block;
   margin: 0;
@@ -5547,7 +5558,7 @@ h1 + .ProductCategories,
   vertical-align: middle; }
 
 .FullSearchSuggestions a {
-  background-color: #BF98A0;
+  background-color: #2a45a1;
   border-radius: 3px;
   color: #fefefe;
   display: block;
@@ -5555,8 +5566,8 @@ h1 + .ProductCategories,
 
 .FullSearchSuggestions a:hover,
 .FullSearchSuggestions .Active a {
-  background-color: #d3b7bd;
-  color: #333232; }
+  background-color: #3556c9;
+  color: #fefefe; }
 
 .FullSearchSuggestionsTitle {
   display: inline-block;
@@ -5586,19 +5597,19 @@ h1 + .ProductCategories,
 .flickity-prev-next-button {
   border-radius: 50% !important;
   background: #ffffff;
-  border: 1px solid #e9e8e8;
+  border: 1px solid #e5e5e8;
   height: 40px;
   width: 40px;
   z-index: 2; }
 
 .flickity-prev-next-button:hover {
-  background: #fdfcfc; }
+  background: #f9fafc; }
 
 .flickity-prev-next-button .arrow {
-  fill: #333232; }
+  fill: #323232; }
 
 .flickity-prev-next-button.no-svg {
-  color: #333232; }
+  color: #323232; }
 
 .flickity-prev-next-button:disabled {
   display: none; }
@@ -5613,7 +5624,7 @@ h1 + .ProductCategories,
   border-radius: 0; }
 
 .Banners-Wide .flickity-page-dots .dot {
-  background-color: #fdfcfc; }
+  background-color: #f9fafc; }
 
 .Banners-Wide .flickity-page-dots {
   bottom: 20px; }
@@ -5683,7 +5694,7 @@ h1 + .ProductCategories,
   -webkit-flex-align: flex-start;
   -webkit-align-items: flex-start;
   align-items: flex-start;
-  background-color: #BF98A0; }
+  background-color: #2a45a1; }
 
 .LayoutAside, .LayoutMain {
   padding: 0 15px; }
@@ -5705,8 +5716,8 @@ h1 + .ProductCategories,
   -ms-flex: 1 1 100%;
   -webkit-flex: 1 1 100%;
   flex: 1 1 100%;
-  background-color: #BF98A0;
-  border-left: 1px solid #b58891; }
+  background-color: #2a45a1;
+  border-left: 1px solid #253c8d; }
 
 @media screen and (max-width: 1024px) {
   .LayoutAside,
@@ -5727,20 +5738,20 @@ h1 + .ProductCategories,
   .UtilityBar a {
     color: #fafafa; }
   .UtilityBar a:hover {
-    color: #ddc9cd; }
+    color: #92a0ce; }
 
 .SiteHeader {
   background-color: #ffffff;
-  border-bottom: 1px solid #e9e8e8;
+  border-bottom: 1px solid #e5e5e8;
   border-radius: 8px 8px 0 0;
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.025);
-  color: #333232;
+  color: #323232;
   padding: 15px 15px 30px;
   position: relative; }
   .SiteHeader a {
     color: #191919; }
   .SiteHeader a:hover {
-    color: #BF98A0; }
+    color: #2a45a1; }
   .SiteHeader a {
     text-decoration: none; }
 
@@ -5756,25 +5767,25 @@ h1 + .ProductCategories,
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.025); }
 
 .SiteBody {
-  background-color: #fdfcfc;
-  color: #333232; }
+  background-color: #f9fafc;
+  color: #323232; }
 
 .SiteContent {
-  background-color: #fdfcfc;
+  background-color: #f9fafc;
   border-radius: 0 0 8px 8px;
   padding: 40px 0; }
   .SiteContent a {
     color: #191919; }
   .SiteContent a:hover {
-    color: #BF98A0; }
+    color: #2a45a1; }
 
 .SiteFooter {
-  background-color: #BF98A0;
+  background-color: #2a45a1;
   color: #fefefe; }
   .SiteFooter a {
     color: #fafafa; }
   .SiteFooter a:hover {
-    color: #ddc9cd; }
+    color: #92a0ce; }
 
 @media screen and (max-width: 1024px) {
   .SiteHeader {
@@ -5791,7 +5802,7 @@ h1 + .ProductCategories,
 
 .Tabs {
   background-color: #ffffff;
-  border: 1px solid #e9e8e8;
+  border: 1px solid #e5e5e8;
   border-radius: 0 3px 3px 3px;
   padding: 20px; }
 
