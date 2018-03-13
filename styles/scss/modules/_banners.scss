@@ -19,6 +19,11 @@
 	@extend .Container;
 }
 
+.BannerBackgroundCover {
+	@include cover;
+	background: $black-50;
+}
+
 .BannerContent {
 	position: relative;
 }
@@ -101,13 +106,14 @@
 // Wide Banners
 //------------------------------------------------------------------------------
 
-.LayoutMain > .Banners-Wide {
-	background-color: $color-boxed-bg;
-}
-
 .Banner-Wide {
+	background-color: $color-text-dark;
 	position: relative;
 	width: 100%;
+}
+
+.Banners-Wide-Contained {
+	@extend .Container;
 }
 
 .Banner-Wide,
@@ -124,12 +130,10 @@
 }
 
 .Banner-Wide .BannerContent {
+	@include link-colors($color-text-dark);
 	@include valign;
+	color: $color-text-light;
 	padding: 20px;
-}
-
-.Banners-Wide-Contained {
-	@extend .Container;
 }
 
 @media screen and (max-width: $breakpoint-tablet) {
