@@ -33,16 +33,18 @@
 								{SubCategories(
 									helper: '{{
 										<section class="ContentSection">
-											<div class="CategoryHeader">
-												<h2 class="ContentTitle ContentTitle-Fancy">
-													<a href="{CategoryUrl}">{CategoryName}</a>
-												</h2>
-												<div class="ContentTitleSupport">
-													<a href="{CategoryUrl}">{%SeeAllCategoryProducts}</a>
+											<div class="Flex CategoryHeader">
+												<div class="FlexItem FlexItem-Grow">
+													<h2 class="ContentTitle ContentTitle-Fancy">
+														<a href="{CategoryUrl}">{CategoryName}</a>
+													</h2>
+												</div>
+												<div class="FlexItem">
+													<p class="ContentTitle ContentTitleSupport"><a href="{CategoryUrl}">{Text(code: 'SeeAll', or: '{%CheckoutOrderContent}')}</a></p>
 												</div>
 											</div>
 											<div class="List ProductList">
-												<div class="GridList GridList-Small CategoryPreview">
+												<div class="GridList GridList-Small CategoryPreview" data-flickity="list">
 													{CategoryProducts(
 														limit: '6',
 														classes: 'ListProduct-Compact',

@@ -2,6 +2,21 @@
 // Category Preview
 //------------------------------------------------------------------------------
 
-.CategoryPreview .ListItem:last-child {
-	
+.CategoryPreview .flickity-prev-next-button {
+	display: none;
+}
+
+.CategoryHeader a {
+	text-decoration: none;
+}
+
+.CategoryHeader .ContentTitleSupport a {
+	@include icon-after($fa-var-angle-right);
+	background-color: $color-boxed-bg;
+	border: 1px solid $color-boxed-border;
+	border-radius: 100px;
+	display: inline-block;
+	font-size: $font-size-small;
+	font-weight: bold;
+	padding: 0 15px;
 }

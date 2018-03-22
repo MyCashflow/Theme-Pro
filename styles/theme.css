@@ -2202,7 +2202,7 @@ hr {
   border: 0;
   display: block;
   height: 1px;
-  margin: 48px 0; }
+  margin: 40px 0; }
 
 body {
   color: #323232;
@@ -2230,7 +2230,7 @@ h1, .H1, h2, .LogoLink, .ProductCardPrices, .ProductSection .Badge.ProductDiscou
 h6, .H6 {
   font-family: "Asap Condensed", sans-serif;
   font-weight: normal;
-  margin: 48px 0 24px; }
+  margin: 40px 0 20px; }
   h1:first-child, .H1:first-child, h2:first-child, .LogoLink:first-child, .ProductCardPrices:first-child, .ProductSection .Badge.ProductDiscountPercent:first-child, .ListProduct .ProductPrices:first-child, .ProductDetailsTitle:first-child, .H2:first-child, h3:first-child, table caption:first-child, .ListProduct-Compact .ProductPrices:first-child, .H3:first-child, h4:first-child, .H4:first-child, h5:first-child, .LiveSearchTitle:first-child, #OrderProductsTable .ProductName:first-child, .SearchFilterTitle:first-child, .H5:first-child,
   h6:first-child, .H6:first-child {
     margin-top: 0; }
@@ -4008,6 +4008,30 @@ a.BackLink[href='/'] {
 .MiniCart-Checkout .OrderProducts,
 .MiniCart-Checkout .CartRemove {
   display: none !important; }
+
+.CategoryPreview .flickity-prev-next-button {
+  display: none; }
+
+.CategoryHeader a {
+  text-decoration: none; }
+
+.CategoryHeader .ContentTitleSupport a {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e8;
+  border-radius: 100px;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0 15px; }
+  .CategoryHeader .ContentTitleSupport a:after {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "";
+    margin-left: 0.5em; }
 
 .CheckoutTransferToPaymentForm {
   display: inline-block;
