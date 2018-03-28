@@ -6,8 +6,12 @@
 	@include link-colors($color-navbar-bg);
 	@include box-shadow(0 3px 4px rgba(0,0,0,.025));
 	background-color: $color-navbar-bg;
-	position: relative;
-	z-index: 100;
+	border-bottom: 1px solid darken($color-navbar-bg, 10%);
+	left: 0;
+	position: fixed;
+	right: 0;
+	width: 100%;
+	z-index: 1000;
 }
 
 .NavigationBar .LogoLink > img {

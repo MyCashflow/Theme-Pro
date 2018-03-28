@@ -4477,8 +4477,12 @@ a.BackLink[href='/'] {
   -webkit-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.025);
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.025);
   background-color: #2a45a1;
-  position: relative;
-  z-index: 100; }
+  border-bottom: 1px solid #1f3479;
+  left: 0;
+  position: fixed;
+  right: 0;
+  width: 100%;
+  z-index: 1000; }
   .NavigationBar a {
     color: #fafafa; }
   .NavigationBar a:hover {
@@ -5813,7 +5817,8 @@ h1 + .ProductCategories,
 
 @media screen and (max-width: 1024px) {
   .SiteHeader {
-    padding: 15px; } }
+    padding: 15px;
+    padding-top: 71px; } }
 
 .Tab {
   display: none; }
