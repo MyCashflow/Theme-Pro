@@ -141,6 +141,34 @@
 									</div>',
 								helper: 'helpers/list-product'
 							)}
+							{FeaturedCategories(
+								helper: '{{
+									<section class="ContentSection">
+										<div class="Flex CategoryHeader">
+											<div class="FlexItem FlexItem-Grow">
+												<h2 class="ContentTitle ContentTitle-Fancy">
+													<a href="{CategoryUrl}">{CategoryName}</a>
+												</h2>
+											</div>
+											<div class="FlexItem">
+												<p class="ContentTitle ContentTitleSupport"><a href="{CategoryUrl}">{Text(code: 'SeeAll', or: '{%CheckoutOrderContent}')}</a></p>
+											</div>
+										</div>
+										<div class="List ProductList">
+											<div class="GridList GridList-Small CategoryPreview" data-flickity="list">
+												{CategoryProducts(
+													limit: '6',
+													filters: 'available',
+													classes: 'ListProduct-Compact',
+													helper: 'helpers/list-product',
+													subcategories: 'true',
+													sort: 'sales_asc'
+												)}
+											</div>
+										</div>
+								</section>
+								}}'
+							)}
 							{TopSellers(
 								limit: '12',
 								type: 'normal',
