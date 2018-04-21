@@ -28,49 +28,8 @@
 }
 
 //------------------------------------------------------------------------------
-// Product Section
-//------------------------------------------------------------------------------
-
-.ProductSection .BuyForm input:not([type='radio']):not([type='checkbox']),
-.ProductSection .BuyForm select,
-.ProductSection table {
-	width: 100%;
-}
-
-.ProductSection table {
-	border: 0;
-}
-
-.ProductCardPrices {
-	@extend h2;
-	font-weight: bold;
-	margin: 0;
-}
-
-.ProductSection .Badge.ProductDiscountPercent {
-	@extend h2;
-	font-weight: bold;
-	transform: rotate(3deg);
-}
-
-.ProductDescription iframe {
-	@include box-shadow(0 4px 8px $black-25);
-	max-width: 100%;
-}
-
-.ProductSection .ContentSection + .ContentSection {
-	margin-top: 10px;
-	padding-top: 10px;
-	border-top: 1px solid $color-body-border;
-}
-
-//------------------------------------------------------------------------------
 // List Product
 //------------------------------------------------------------------------------
-
-.flickity-enabled .ListProduct:not(.ListProduct-Compact) .ProductName {
-	@include truncate;
-}
 
 .ListProduct {
 	@include link-colors($color-boxed-bg);
@@ -113,6 +72,10 @@
 	margin: 0;
 }
 
+.flickity-enabled .ListProduct:not(.ListProduct-Compact) .ProductName {
+	@include truncate;
+}
+
 .ListProduct .ProductName a {
 	text-decoration: none;
 }
@@ -140,7 +103,6 @@
 .ListProduct-Compact {
 	font-size: $font-size-small;
 	padding-bottom: 20px;
-	transition-duration: $transition-fast;
 }
 
 .ListProduct-Compact .ProductImage {
@@ -229,6 +191,49 @@
 	#ProductThumbnails li {
 		width: 25%;
 	}
+}
+
+//------------------------------------------------------------------------------
+// Product Card
+//------------------------------------------------------------------------------
+
+.ProductCard .BuyForm input:not([type='radio']):not([type='checkbox']),
+.ProductCard .BuyForm select {
+	width: 100%;
+}
+
+.ProductCardPrices {
+	@extend h2;
+	font-weight: bold;
+	margin: 0;
+}
+
+.ProductCard .Badge.ProductDiscountPercent {
+	@extend h2;
+	font-weight: bold;
+	transform: rotate(3deg);
+}
+
+.ProductInfoSection .ContentSection + .ContentSection {
+	margin-top: 10px;
+	padding-top: 10px;
+}
+
+.ContentSection + .ProductInfoSectionRow,
+.ProductInfoSectionRow + .ContentSection {
+	border-top: 1px solid $color-body-border;
+}
+
+.ProductDescription iframe {
+	@include box-shadow(0 4px 8px $black-25);
+	max-width: 100%;
+}
+
+.ProductAdditionalInfoSection {
+	background-color: $color-image-bg;
+	border: 1px solid $color-image-border;
+	border-radius: $border-radius;
+	padding: 10px 15px;
 }
 
 //------------------------------------------------------------------------------

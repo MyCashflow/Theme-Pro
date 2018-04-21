@@ -2084,7 +2084,7 @@
 .fa-percent:before {
   content: ""; }
 
-h1, h2, .LogoLink, .ProductCardPrices, .ProductSection .Badge.ProductDiscountPercent, .ListProduct .ProductPrices, .ProductDetailsTitle, h3, table caption, .ListProduct-Compact .ProductPrices, h4, h5, .LiveSearchTitle, #OrderProductsTable .ProductName, .SearchFilterTitle, h6, p, form, table,
+h1, h2, .LogoLink, .ListProduct .ProductPrices, .ProductCardPrices, .ProductCard .Badge.ProductDiscountPercent, .ProductDetailsTitle, h3, table caption, .ListProduct-Compact .ProductPrices, h4, h5, .LiveSearchTitle, #OrderProductsTable .ProductName, .SearchFilterTitle, h6, p, form, table,
 hr, dl, ol, ul, .GroupLabel, .FormItem, .Notification, .GroupErrorMessage,
 .FormNotification, #OrderStatus, .Banner-Body, .Banner-Side, .Banners-Blocks, .Breadcrumb, .MiniCart-Checkout, .SimpleNavigation, .SideNavigation, .MainCategories, #CurrentProductImage, .SearchFilter {
   margin: 0 0 20px; }
@@ -2221,17 +2221,17 @@ blockquote {
 strong {
   font-weight: bold; }
 
-.Button, form button, #OrderDocuments a, .Footer h2, .Footer .LogoLink, .Footer .ProductCardPrices, .Footer .ProductSection .Badge.ProductDiscountPercent, .ProductSection .Footer .Badge.ProductDiscountPercent, .Footer .ListProduct .ProductPrices, .ListProduct .Footer .ProductPrices, .Footer .ProductDetailsTitle, h1.ContentTitle, .ContentTitle-Fancy, .MainNavigation > ul > li > a, .MainCategories > ul > li > a, .Drawer .DrawerNavigation > ul > li > a {
+.Button, form button, #OrderDocuments a, .Footer h2, .Footer .LogoLink, .Footer .ListProduct .ProductPrices, .ListProduct .Footer .ProductPrices, .Footer .ProductCardPrices, .Footer .ProductCard .Badge.ProductDiscountPercent, .ProductCard .Footer .Badge.ProductDiscountPercent, .Footer .ProductDetailsTitle, h1.ContentTitle, .ContentTitle-Fancy, .MainNavigation > ul > li > a, .MainCategories > ul > li > a, .Drawer .DrawerNavigation > ul > li > a {
   font-family: "Asap Condensed", sans-serif;
   font-weight: bold;
   text-transform: uppercase; }
 
-h1, .H1, h2, .LogoLink, .ProductCardPrices, .ProductSection .Badge.ProductDiscountPercent, .ListProduct .ProductPrices, .ProductDetailsTitle, .H2, h3, table caption, .ListProduct-Compact .ProductPrices, .H3, h4, .H4, h5, .LiveSearchTitle, #OrderProductsTable .ProductName, .SearchFilterTitle, .H5,
+h1, .H1, h2, .LogoLink, .ListProduct .ProductPrices, .ProductCardPrices, .ProductCard .Badge.ProductDiscountPercent, .ProductDetailsTitle, .H2, h3, table caption, .ListProduct-Compact .ProductPrices, .H3, h4, .H4, h5, .LiveSearchTitle, #OrderProductsTable .ProductName, .SearchFilterTitle, .H5,
 h6, .H6 {
   font-family: "Asap Condensed", sans-serif;
   font-weight: normal;
   margin: 40px 0 20px; }
-  h1:first-child, .H1:first-child, h2:first-child, .LogoLink:first-child, .ProductCardPrices:first-child, .ProductSection .Badge.ProductDiscountPercent:first-child, .ListProduct .ProductPrices:first-child, .ProductDetailsTitle:first-child, .H2:first-child, h3:first-child, table caption:first-child, .ListProduct-Compact .ProductPrices:first-child, .H3:first-child, h4:first-child, .H4:first-child, h5:first-child, .LiveSearchTitle:first-child, #OrderProductsTable .ProductName:first-child, .SearchFilterTitle:first-child, .H5:first-child,
+  h1:first-child, .H1:first-child, h2:first-child, .LogoLink:first-child, .ListProduct .ProductPrices:first-child, .ProductCardPrices:first-child, .ProductCard .Badge.ProductDiscountPercent:first-child, .ProductDetailsTitle:first-child, .H2:first-child, h3:first-child, table caption:first-child, .ListProduct-Compact .ProductPrices:first-child, .H3:first-child, h4:first-child, .H4:first-child, h5:first-child, .LiveSearchTitle:first-child, #OrderProductsTable .ProductName:first-child, .SearchFilterTitle:first-child, .H5:first-child,
   h6:first-child, .H6:first-child {
     margin-top: 0; }
 
@@ -2239,7 +2239,7 @@ h1, .H1 {
   font-size: 32px;
   line-height: 48px; }
 
-h2, .LogoLink, .ProductCardPrices, .ProductSection .Badge.ProductDiscountPercent, .ListProduct .ProductPrices, .ProductDetailsTitle, .H2 {
+h2, .LogoLink, .ListProduct .ProductPrices, .ProductCardPrices, .ProductCard .Badge.ProductDiscountPercent, .ProductDetailsTitle, .H2 {
   font-size: 24px;
   line-height: 36px; }
 
@@ -3729,7 +3729,7 @@ form.ProductAddToCart .AddToCart {
   transform: scale(1.025); }
 
 @media screen and (max-width: 1024px) {
-  .Banner-Block .BannerContent h1, .Banner-Block .BannerContent h2, .Banner-Block .BannerContent .LogoLink, .Banner-Block .BannerContent .ProductCardPrices, .Banner-Block .BannerContent .ProductSection .Badge.ProductDiscountPercent, .ProductSection .Banner-Block .BannerContent .Badge.ProductDiscountPercent, .Banner-Block .BannerContent .ListProduct .ProductPrices, .ListProduct .Banner-Block .BannerContent .ProductPrices, .Banner-Block .BannerContent .ProductDetailsTitle, .Banner-Block .BannerContent h3, .Banner-Block .BannerContent table caption, table .Banner-Block .BannerContent caption, .Banner-Block .BannerContent .ListProduct-Compact .ProductPrices, .ListProduct-Compact .Banner-Block .BannerContent .ProductPrices, .Banner-Block .BannerContent h4 {
+  .Banner-Block .BannerContent h1, .Banner-Block .BannerContent h2, .Banner-Block .BannerContent .LogoLink, .Banner-Block .BannerContent .ListProduct .ProductPrices, .ListProduct .Banner-Block .BannerContent .ProductPrices, .Banner-Block .BannerContent .ProductCardPrices, .Banner-Block .BannerContent .ProductCard .Badge.ProductDiscountPercent, .ProductCard .Banner-Block .BannerContent .Badge.ProductDiscountPercent, .Banner-Block .BannerContent .ProductDetailsTitle, .Banner-Block .BannerContent h3, .Banner-Block .BannerContent table caption, table .Banner-Block .BannerContent caption, .Banner-Block .BannerContent .ListProduct-Compact .ProductPrices, .ListProduct-Compact .Banner-Block .BannerContent .ProductPrices, .Banner-Block .BannerContent h4 {
     font-size: 18px;
     margin-bottom: 0; }
   .Banner-Block .BannerContent > * {
@@ -4201,7 +4201,7 @@ a.BackLink[href='/'] {
 .Footer {
   padding: 40px 0 20px 0; }
 
-.Footer h2, .Footer .LogoLink, .Footer .ProductCardPrices, .Footer .ProductSection .Badge.ProductDiscountPercent, .ProductSection .Footer .Badge.ProductDiscountPercent, .Footer .ListProduct .ProductPrices, .ListProduct .Footer .ProductPrices, .Footer .ProductDetailsTitle {
+.Footer h2, .Footer .LogoLink, .Footer .ListProduct .ProductPrices, .ListProduct .Footer .ProductPrices, .Footer .ProductCardPrices, .Footer .ProductCard .Badge.ProductDiscountPercent, .ProductCard .Footer .Badge.ProductDiscountPercent, .Footer .ProductDetailsTitle {
   font-size: 16px; }
 
 .FooterCopy .Copyright {
@@ -4217,7 +4217,7 @@ a.BackLink[href='/'] {
   max-width: 440px;
   padding: 12px 15px; }
 
-.NewsletterSubscribe > h2, .NewsletterSubscribe > .LogoLink, .NewsletterSubscribe > .ProductCardPrices, .ProductSection .NewsletterSubscribe > .Badge.ProductDiscountPercent, .ListProduct .NewsletterSubscribe > .ProductPrices, .NewsletterSubscribe > .ProductDetailsTitle {
+.NewsletterSubscribe > h2, .NewsletterSubscribe > .LogoLink, .ListProduct .NewsletterSubscribe > .ProductPrices, .NewsletterSubscribe > .ProductCardPrices, .ProductCard .NewsletterSubscribe > .Badge.ProductDiscountPercent, .NewsletterSubscribe > .ProductDetailsTitle {
   text-align: center; }
 
 .Footer #NewsletterSubscribeForm label {
@@ -5251,39 +5251,6 @@ a.BackLink[href='/'] {
   text-decoration: line-through;
   font-size: .8em; }
 
-.ProductSection .BuyForm input,
-.ProductSection .BuyForm select,
-.ProductSection table {
-  width: 100%; }
-
-.ProductSection table {
-  border: 0; }
-
-.ProductCardPrices {
-  font-weight: bold;
-  margin: 0; }
-
-.ProductSection .Badge.ProductDiscountPercent {
-  font-weight: bold;
-  transform: rotate(3deg); }
-
-.ProductDescription iframe {
-  -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-  -ms-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-  max-width: 100%; }
-
-.ProductSection .ContentSection + .ContentSection {
-  margin-top: 10px;
-  padding-top: 10px;
-  border-top: 1px solid #e5e5e8; }
-
-.flickity-enabled .ListProduct:not(.ListProduct-Compact) .ProductName {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap; }
-
 .ListProduct {
   background-color: #ffffff;
   border: 1px solid #e5e5e8;
@@ -5328,6 +5295,11 @@ a.BackLink[href='/'] {
   display: block;
   margin: 0; }
 
+.flickity-enabled .ListProduct:not(.ListProduct-Compact) .ProductName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
 .ListProduct .ProductName a {
   text-decoration: none; }
 
@@ -5346,8 +5318,7 @@ a.BackLink[href='/'] {
 
 .ListProduct-Compact {
   font-size: 14px;
-  padding-bottom: 20px;
-  transition-duration: 0.15s; }
+  padding-bottom: 20px; }
 
 .ListProduct-Compact .ProductImage, .ListProduct-Compact #ProductThumbnails .ProductThumbnail, #ProductThumbnails .ListProduct-Compact .ProductThumbnail {
   padding: 5px; }
@@ -5422,6 +5393,39 @@ a.BackLink[href='/'] {
 @media screen and (max-width: 800px) {
   #ProductThumbnails li {
     width: 25%; } }
+
+.ProductCard .BuyForm input:not([type='radio']):not([type='checkbox']),
+.ProductCard .BuyForm select {
+  width: 100%; }
+
+.ProductCardPrices {
+  font-weight: bold;
+  margin: 0; }
+
+.ProductCard .Badge.ProductDiscountPercent {
+  font-weight: bold;
+  transform: rotate(3deg); }
+
+.ProductInfoSection .ContentSection + .ContentSection {
+  margin-top: 10px;
+  padding-top: 10px; }
+
+.ContentSection + .ProductInfoSectionRow,
+.ProductInfoSectionRow + .ContentSection {
+  border-top: 1px solid #e5e5e8; }
+
+.ProductDescription iframe {
+  -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  -ms-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  max-width: 100%; }
+
+.ProductAdditionalInfoSection {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e8;
+  border-radius: 3px;
+  padding: 10px 15px; }
 
 .ProductCategories {
   color: #989898;
