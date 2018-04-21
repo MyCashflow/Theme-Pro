@@ -186,6 +186,8 @@ $(document).ready(function () {
 	});
 
 	$('[data-flickity="banner"]').flickity({
+		draggable: '>1',
+		autoPlay: true,
 		cellAlign: 'left',
 		contain: true,
 		pageDots: true,
@@ -194,6 +196,7 @@ $(document).ready(function () {
 	});
 	
 	$('[data-flickity="list"]').flickity({
+		draggable: '>1',
 		cellAlign: 'left',
 		contain: true,
 		groupCells: '80%',
