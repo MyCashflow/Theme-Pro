@@ -1,46 +1,27 @@
 //------------------------------------------------------------------------------
-// Layout
+// Site Layout
 //------------------------------------------------------------------------------
 
 .Layout {
 	@include flexbox;
-	@include align-items(flex-start);
-	background-color: $color-sitecolumn-bg;
-}
-
-%Layout {
-	padding: 0 ($grid-gutter / 2);
+	@include align-items(stretch);
 }
 
 .LayoutAside {
-	@extend %Layout;
-	@include flex(1 0 $layout-column);
+	background-color: $color-sitecolumn-bg;
 	color: text-contrast($color-sitecolumn-bg);
-	padding-top: 50px;
-	width: $layout-column;
+	padding: 50px ($grid-gutter / 2);
 	z-index: 1;
+	width: $layout-column;
 }
 
 .LayoutMain {
-	@extend %Layout;
-	@include flex(1 1 100%);
-	background-color: $color-footer-bg;
-	border-left: 1px solid darken($color-footer-bg, 5%);
+	@include flex(1);
 }
 
 @media screen and (max-width: $breakpoint-tablet) {
-	.LayoutAside,
-	.LayoutMain {
-		padding: 0;
-		margin: 0;
-		border-radius: 0;
-	}
 	.Layout {
 		display: block;
-	}
-	.LayoutMain {
-		border: 0;
-		width: 100%;
 	}
 }
 
@@ -49,21 +30,22 @@
 //------------------------------------------------------------------------------
 
 .UtilityBar {
-	@include link-colors($color-sitecolumn-bg);
-	color: text-contrast($color-sitecolumn-bg);
+	@include link-colors($color-header-bg);
+	background-color: $color-header-bg;
+	border-bottom: 1px solid $color-body-border;
+	color: text-contrast($color-header-bg);
 	font-size: $font-size-small;
-	padding: 10px 0;
 }
 
 .SiteHeader {
 	@include link-colors($color-header-bg);
 	background-color: $color-header-bg;
 	border-bottom: 1px solid $color-body-border;
-	border-radius: $border-radius-large $border-radius-large 0 0;
 	box-shadow: 0 3px 4px rgba(0, 0, 0, 0.025);
 	color: text-contrast($color-header-bg);
 	padding: ($grid-gutter / 2) ($grid-gutter / 2) $grid-gutter;
 	position: relative;
+	
 	a {
 		text-decoration: none;
 	}
@@ -72,14 +54,15 @@
 .TopBar {
 	background-color: $color-header-bg;
 	margin: 0 (-($grid-gutter / 2));
-	padding-bottom: 5px;
-	padding-top: 5px;
 	position: relative;
+	transition: padding $transition-fast ease-out;
 	z-index: 100;
 }
 
 .sticky-active .TopBar {
-	box-shadow: 0 3px 4px rgba(0, 0, 0, 0.025);
+	box-shadow: 0 3px 4px $black-10;
+	padding-bottom: 5px;
+	padding-top: 5px;
 }
 
 .SiteBody {
@@ -90,12 +73,13 @@
 .SiteContent {
 	@include link-colors($color-body-bg);
 	background-color: $color-body-bg;
-	border-radius: 0 0 $border-radius-large $border-radius-large;
 	padding: 40px 0;
 }
 
 .SiteFooter {
 	@include link-colors($color-footer-bg);
+	border-top: 1px solid $color-body-border;
+	box-shadow: 0 -3px 4px rgba(0, 0, 0, 0.025);
 	background-color: $color-footer-bg;
 	color: text-contrast($color-footer-bg);
 }
