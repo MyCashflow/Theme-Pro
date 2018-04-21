@@ -31,7 +31,7 @@
 // Product Section
 //------------------------------------------------------------------------------
 
-.ProductSection .BuyForm input,
+.ProductSection .BuyForm input:not([type='radio']):not([type='checkbox']),
 .ProductSection .BuyForm select,
 .ProductSection table {
 	width: 100%;
