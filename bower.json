@@ -1,14 +1,14 @@
 {
-  "name": "barebones",
+  "name": "pro",
   "authors": [
     "Pulse247 <mail@pulse247.info>"
   ],
-  "description": "MyCashflow default theme",
+  "description": "MyCashflow theme",
   "main": "theme.xml",
   "moduleType": [],
   "keywords": [
     "mycashflow",
-    "default",
+    "webshop",
     "theme"
   ],
   "license": "MIT",
