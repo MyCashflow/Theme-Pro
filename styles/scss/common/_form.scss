@@ -406,7 +406,6 @@ form.ProductAddToCart .AddToCart {
 	@include icon-replace($fa-var-search);
 	background: transparent;
 	border: 0;
-	border-left: 1px solid $color-body-border;
 	color: mix($color-text-light, $color-text-dark, 50%) !important;
 	position: absolute;
 	right: 0;
