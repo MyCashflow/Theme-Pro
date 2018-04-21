@@ -316,12 +316,12 @@
 }
 
 .SimpleDropNavigation li li a {
-	box-shadow: 0 1px 0 $color-navbar-border;
+	border-top: 1px solid $color-body-border;
 	padding: 5px 15px;
 }
 
-.SimpleDropNavigation li li:last-child a {
-	box-shadow: none;
+.SimpleDropNavigation li li:first-child a {
+	border-top: 0;
 }
 
 .SimpleDropNavigation .HasSubCategories > a {
