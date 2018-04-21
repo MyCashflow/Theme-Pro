@@ -103,7 +103,7 @@ label {
 }
 
 .Button:hover {
-	background-color: lighten($color-button-bg, 2.5%);
+	background-color: darken($color-button-bg, 2.5%);
 	color: text-contrast($color-button-bg) !important;
 }
 
