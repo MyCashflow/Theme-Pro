@@ -5,6 +5,7 @@
 		<List width="520" height="520" />
 		<Normal width="520" height="520" />
 		<Big width="1200" height="1200" />
+		<Banner-Wide width="1920" />
 	</ImageSizes>
 	<Features>
 		<Checkout>
