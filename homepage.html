@@ -69,28 +69,24 @@
 							{CategoryImageURL(
 								imagesize: 'banner-wide',
 								before: '
-								<div class="ContentSection">
-									<div class="Banners">
-										<div class="Banner Banner-UniHeight">
-											{CategoryLink(
-												before: '<a class="BannerCoverLink" href="',
-												after: '"></a>'
-											)}
-											<h1 class="ContentTitle Hide">{PageTitle}</h1>
-											<div class="BannerBackgroundImage" style="background-image: url(',
-								after: '
-											)"></div>
-											{CategoryDescription(
-												before: '
-													<div class="Container">
-														<div class="BannerContent">',
-												after: '
-														</div>
-													</div>'
-											)}
+									<div class="ContentSection">
+										<div class="Banners">
+											<div class="Banner Banner-UniHeight">
+												{CategoryLink(
+													before: '<a class="BannerCoverLink" href="',
+													after: '"></a>'
+												)}
+												<div class="BannerBackgroundImage" style="background-image: url({CategoryImageURL(imagesize: 'banner-wide')})" data-src="',
+								after: '"></div>
+												<div class="Container">
+													<div class="BannerContent">
+														<h1 class="ContentTitle">{PageTitle}</h1>
+														{CategoryDescription}
+													</div>
+												</div>
+											</div>
 										</div>
-									</div>
-								</div>',
+									</div>',
 								or: '
 									<div class="ContentSection">
 										<h1 class="ContentTitle">{PageTitle}</h1>
