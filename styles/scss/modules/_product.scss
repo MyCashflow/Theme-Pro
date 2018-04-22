@@ -224,6 +224,15 @@
 	border-top: 1px solid $color-body-border;
 }
 
+.ProductDescription table {
+	border: 0;
+	width: 100%;
+}
+
+.ProductDescription table tr:last-child td {
+	border-bottom: 0;
+}
+
 .ProductDescription iframe {
 	@include box-shadow(0 4px 8px $black-25);
 	max-width: 100%;
