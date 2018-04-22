@@ -184,7 +184,7 @@ $(document).ready(function () {
 		textBtnPrev: MCF.Locales.get('previous'),
 		textBtnNext: MCF.Locales.get('next')
 	});
-	
+
 	MCF.Sliders.init({
 		'default': {
 			contain: true,
@@ -200,7 +200,7 @@ $(document).ready(function () {
 			pageDots: false
 		}
 	});
-	
+
 	//--------------------------------------------------------------------------
 	// Search
 	//--------------------------------------------------------------------------
@@ -229,11 +229,11 @@ $(document).ready(function () {
 				closeSearch();
 		}
 	});
-	
+
 	//--------------------------------------------------------------------------
 	// Add products to the cart via AJAX
 	//--------------------------------------------------------------------------
-	
+
 	/**
 	 * Add products to the cart via AJAX
 	 *
