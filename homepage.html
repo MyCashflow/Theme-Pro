@@ -7,7 +7,7 @@
 			{Helper(file: 'helpers/site-header')}
 			{Banners(
 				name: 'frontpage',
-				before: '<div class="Banners Banners-Wide"  data-flickity="banner">',
+				before: '<div class="Banners Banners-Wide"  data-slider="banner">',
 				after: '</div>',
 				helper: '{{
 					<div class="Banner Banner-Wide">
@@ -43,7 +43,7 @@
 									<div class="ContentSection">
 										<h2 class="ContentTitle ContentTitle-Fancy">{%ProductsConsidered}</h2>
 										<div class="List ProductList">
-											<div class="GridList GridList-Small" data-flickity="list">',
+											<div class="GridList GridList-Small" data-slider="list">',
 								after: '
 											</div>
 										</div>
@@ -58,7 +58,7 @@
 											<div class="ContentSection">
 												<h2 class="ContentTitle ContentTitle-Fancy">{%NewProducts}</h2>
 												<div class="List ProductList">
-													<div class="GridList GridList-Small" data-flickity="list">',
+													<div class="GridList GridList-Small" data-slider="list">',
 										after: '
 													</div>
 												</div>
@@ -134,7 +134,7 @@
 									<div class="ContentSection">
 										<h2 class="ContentTitle ContentTitle-Fancy">{%RecommendedProducts}</h2>
 										<div class="List ProductList">
-											<div class="GridList GridList-Wide" data-flickity="list">',
+											<div class="GridList GridList-Wide" data-slider="list">',
 								after: '
 											</div>
 										</div>
@@ -155,7 +155,7 @@
 											</div>
 										</div>
 										<div class="List ProductList">
-											<div class="GridList GridList-Small CategoryPreview" data-flickity="list">
+											<div class="GridList GridList-Small CategoryPreview" data-slider="list">
 												{CategoryProducts(
 													limit: '6',
 													filters: 'available',
@@ -177,7 +177,7 @@
 									<div class="ContentSection">
 										<h2 class="ContentTitle ContentTitle-Fancy">{%BestsellingProducts}</h2>
 										<div class="List ProductList">
-											<div class="GridList GridList-Small" data-flickity="list">',
+											<div class="GridList GridList-Small" data-slider="list">',
 								after: '
 											</div>
 										</div>

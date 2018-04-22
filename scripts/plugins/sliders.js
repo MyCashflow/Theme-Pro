@@ -16,7 +16,7 @@
 			$('[data-slider]').each($.proxy(function (index, elem) {
 				var config = this[$(elem).attr('data-slider')];
 				var defaults = this['default'] || {};
-				$(elem).slick(config ? $.extend({}, defaults, config) : defaults);
+				$(elem).flickity(config ? $.extend({}, defaults, config) : defaults);
 			}, this));
 		}
 	};

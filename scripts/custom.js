@@ -184,23 +184,21 @@ $(document).ready(function () {
 		textBtnPrev: MCF.Locales.get('previous'),
 		textBtnNext: MCF.Locales.get('next')
 	});
-
-	$('[data-flickity="banner"]').flickity({
-		draggable: '>1',
-		autoPlay: true,
-		cellAlign: 'left',
-		contain: true,
-		pageDots: true,
-		prevNextButtons: false,
-		wrapAround: true
-	});
 	
-	$('[data-flickity="list"]').flickity({
-		draggable: '>1',
-		cellAlign: 'left',
-		contain: true,
-		groupCells: '80%',
-		pageDots: false,
+	MCF.Sliders.init({
+		'default': {
+			contain: true,
+			cellAlign: 'left',
+		},
+		'banner': {
+			autoPlay: true,
+			prevNextButtons: false,
+			wrapAround: true
+		},
+		'list': {
+			groupCells: '80%',
+			pageDots: false
+		}
 	});
 	
 	//--------------------------------------------------------------------------
