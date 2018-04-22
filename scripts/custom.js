@@ -190,13 +190,13 @@ $(document).ready(function () {
 			contain: true,
 			cellAlign: 'left'
 		},
-		'banner-wide': {
-			bgLazyLoad: true,
+		'banner': {
 			autoPlay: true,
-			prevNextButtons: false,
+			pageDots: false,
 			wrapAround: true
 		},
-		'banner': {
+		'banner-wide': {
+			bgLazyLoad: true,
 			autoPlay: true,
 			prevNextButtons: false,
 			wrapAround: true

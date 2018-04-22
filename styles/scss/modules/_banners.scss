@@ -60,15 +60,13 @@
 
 .Banner-Body {
 	@extend %default-margin;
-	background-color: $color-boxed-bg;
-	border: 1px solid $color-body-border;
-	border-radius: $border-radius;
 	display: block;
+	width: 100%;
 }
 
 .Banner-Body img {
+	@extend %default-margin;
 	border-radius: $border-radius;
-	width: 100%;
 }
 
 //------------------------------------------------------------------------------

@@ -1,24 +1,18 @@
-{Banners(
-	name: 'category-{CategoryID}',
-	before: '<div class="Banners Banners-Wide" data-slider="banner-wide">',
+{Banner(
+	name: 'category-{CategoryId}',
+	before: '<div class="Banners">',
 	after: '</div>',
 	helper: '{{
-		<div class="Banner Banner-Wide">
-			<div class="AspectRatio">
-				{BannerUrl(
-					before: '<a class="BannerCoverLink" href="',
-					after: '" {BannerLinkData}></a>'
-				)}
-				<div class="BannerBackgroundImage" data-flickity-bg-lazyload="{BannerImageURL(imagesize: 'banner-wide')}"></div>
-				{BannerText(
-					before: '
-						<div class="Container">
-							<div class="BannerContent">',
-					after: '
-							</div>
-						</div>'
-				)}
-			</div>
+		<div class="Banner Banner-Body">
+			{BannerImage(imagesize: 'big')}
+			{BannerText(
+				before: '
+					<div class="BannerContent">
+						<div class="BannerText">',
+				after: '
+						</div>
+					</div>'
+			)}
 		</div>
 	}}'
 )}
