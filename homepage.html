@@ -7,7 +7,7 @@
 			{Helper(file: 'helpers/site-header')}
 			{Banners(
 				name: 'frontpage',
-				before: '<div class="Banners Banners-Wide"  data-slider="banner">',
+				before: '<div class="Banners Banners-Wide"  data-slider="banner-wide">',
 				after: '</div>',
 				helper: '{{
 					<div class="Banner Banner-Wide">
@@ -16,7 +16,7 @@
 								before: '<a class="BannerCoverLink" href="',
 								after: '" {BannerLinkData}></a>'
 							)}
-							<div class="BannerBackgroundImage" style="background-image: url({BannerImageURL(width: '1920')})"></div>
+							<div class="BannerBackgroundImage" data-flickity-bg-lazyload="{BannerImageURL(imagesize: 'banner-wide')}"></div>
 							{BannerText(
 								before: '
 									<div class="BannerBackgroundCover"></div>

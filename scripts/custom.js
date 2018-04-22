@@ -188,7 +188,13 @@ $(document).ready(function () {
 	MCF.Sliders.init({
 		'default': {
 			contain: true,
-			cellAlign: 'left',
+			cellAlign: 'left'
+		},
+		'banner-wide': {
+			bgLazyLoad: true,
+			autoPlay: true,
+			prevNextButtons: false,
+			wrapAround: true
 		},
 		'banner': {
 			autoPlay: true,

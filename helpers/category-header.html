@@ -1,6 +1,6 @@
 {Banners(
 	name: 'category-{CategoryID}',
-	before: '<div class="Banners Banners-Wide" data-slider="banner">',
+	before: '<div class="Banners Banners-Wide" data-slider="banner-wide">',
 	after: '</div>',
 	helper: '{{
 		<div class="Banner Banner-Wide">
@@ -9,7 +9,7 @@
 					before: '<a class="BannerCoverLink" href="',
 					after: '" {BannerLinkData}></a>'
 				)}
-				<div class="BannerBackgroundImage" style="background-image: url({BannerImageURL(imagesize: 'banner-wide')})"></div>
+				<div class="BannerBackgroundImage" data-flickity-bg-lazyload="{BannerImageURL(imagesize: 'banner-wide')}"></div>
 				{BannerText(
 					before: '
 						<div class="Container">
