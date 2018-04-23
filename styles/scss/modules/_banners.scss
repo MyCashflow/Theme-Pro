@@ -6,10 +6,6 @@
 	position: relative;
 }
 
-.Banner a {
-	text-decoration: none;
-}
-
 .BannerCoverLink {
 	@include cover;
 	z-index: 1;
