@@ -506,12 +506,13 @@
 }
 
 .DrawerNavigation .NavigationExpander {
-	@include valign;
 	cursor: pointer;
 	margin-left: 0;
+	padding: 10px;
 	position: absolute;
 	right: 0;
 	text-align: center;
+	top: 0;
 	width: 45px;
 }
 
@@ -550,6 +551,10 @@
 
 .MainCategories li.Current > a {
 	box-shadow: inset 3px 0 0;
+}
+
+.MainCategories li li a .NavigationExpander {
+	padding: 5px;
 }
 
 .MainCategories li ul {
