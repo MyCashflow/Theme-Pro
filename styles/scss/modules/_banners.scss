@@ -50,6 +50,14 @@
 	overflow: hidden;
 }
 
+.BannerBackgroundImage.LazyLoad {
+	opacity: 0;
+}
+
+.LazyLoad.flickity-bg-lazyloaded {
+	opacity: 1;
+}
+
 //------------------------------------------------------------------------------
 // Body Banners
 //------------------------------------------------------------------------------
