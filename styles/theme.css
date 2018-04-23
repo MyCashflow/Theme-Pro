@@ -2084,9 +2084,9 @@
 .fa-percent:before {
   content: ""; }
 
-h1, h2, .LogoLink, .ListProduct .ProductPrices, .ProductCardPrices, .ProductCard .Badge.ProductDiscountPercent, .ProductDetailsTitle, h3, table caption, .ListProduct-Compact .ProductPrices, h4, h5, .LiveSearchTitle, #OrderProductsTable .ProductName, .SearchFilterTitle, h6, p, form, table,
+h1, h2, .LogoLink, .ListProduct .ProductPrices, .ProductCardPrices, .ProductCard .Badge.ProductDiscountPercent, .ProductDetailsTitle, h3, table caption, .ListProduct-Compact .ProductPrices, h4, h5, #OrderProductsTable .ProductName, .SearchFilterTitle, h6, p, form, table,
 hr, dl, ol, ul, .GroupLabel, .FormItem, .Notification, .GroupErrorMessage,
-.FormNotification, #OrderStatus, .Banner-Body, .Banner-Side, .Banners-Blocks, .Breadcrumb, .MiniCart-Checkout, .SimpleNavigation, .SideNavigation, .MainCategories, #CurrentProductImage, .SearchFilter {
+.FormNotification, #OrderStatus, .Banner-Body, .Banner-Body img, .Banner-Side, .Banners-Blocks, .Breadcrumb, .MiniCart-Checkout, .SimpleNavigation, .SideNavigation, .MainCategories, #CurrentProductImage, .SearchFilter {
   margin: 0 0 20px; }
 
 html {
@@ -2193,10 +2193,6 @@ table th > :last-child,
 table td > :last-child {
   margin-bottom: 0; }
 
-table tbody th,
-table tbody td {
-  background-color: #f9fafc; }
-
 hr {
   background-color: #e5e5e8;
   border: 0;
@@ -2226,12 +2222,12 @@ strong {
   font-weight: bold;
   text-transform: uppercase; }
 
-h1, .H1, h2, .LogoLink, .ListProduct .ProductPrices, .ProductCardPrices, .ProductCard .Badge.ProductDiscountPercent, .ProductDetailsTitle, .H2, h3, table caption, .ListProduct-Compact .ProductPrices, .H3, h4, .H4, h5, .LiveSearchTitle, #OrderProductsTable .ProductName, .SearchFilterTitle, .H5,
+h1, .H1, h2, .LogoLink, .ListProduct .ProductPrices, .ProductCardPrices, .ProductCard .Badge.ProductDiscountPercent, .ProductDetailsTitle, .H2, h3, table caption, .ListProduct-Compact .ProductPrices, .H3, h4, .H4, h5, #OrderProductsTable .ProductName, .SearchFilterTitle, .H5,
 h6, .H6 {
   font-family: "Asap Condensed", sans-serif;
-  font-weight: normal;
+  font-weight: bold;
   margin: 40px 0 20px; }
-  h1:first-child, .H1:first-child, h2:first-child, .LogoLink:first-child, .ListProduct .ProductPrices:first-child, .ProductCardPrices:first-child, .ProductCard .Badge.ProductDiscountPercent:first-child, .ProductDetailsTitle:first-child, .H2:first-child, h3:first-child, table caption:first-child, .ListProduct-Compact .ProductPrices:first-child, .H3:first-child, h4:first-child, .H4:first-child, h5:first-child, .LiveSearchTitle:first-child, #OrderProductsTable .ProductName:first-child, .SearchFilterTitle:first-child, .H5:first-child,
+  h1:first-child, .H1:first-child, h2:first-child, .LogoLink:first-child, .ListProduct .ProductPrices:first-child, .ProductCardPrices:first-child, .ProductCard .Badge.ProductDiscountPercent:first-child, .ProductDetailsTitle:first-child, .H2:first-child, h3:first-child, table caption:first-child, .ListProduct-Compact .ProductPrices:first-child, .H3:first-child, h4:first-child, .H4:first-child, h5:first-child, #OrderProductsTable .ProductName:first-child, .SearchFilterTitle:first-child, .H5:first-child,
   h6:first-child, .H6:first-child {
     margin-top: 0; }
 
@@ -2251,7 +2247,7 @@ h4, .H4 {
   font-size: 16px;
   line-height: 24px; }
 
-h5, .LiveSearchTitle, #OrderProductsTable .ProductName, .SearchFilterTitle, .H5,
+h5, #OrderProductsTable .ProductName, .SearchFilterTitle, .H5,
 h6, .H6 {
   font-size: 14px;
   line-height: 24px; }
@@ -2305,6 +2301,11 @@ input, select, textarea {
   max-width: none;
   width: auto; }
 
+[type='checkbox'], [type='radio'] {
+  all: revert;
+  margin: 0 5px 0 0;
+  vertical-align: middle; }
+
 textarea {
   height: auto;
   resize: none; }
@@ -2346,7 +2347,7 @@ label {
 .Button, form button, #OrderDocuments a {
   background: #ffffff;
   border: 1px solid #d9d9d9;
-  border-radius: 5px;
+  border-radius: 3px;
   color: #323232 !important;
   cursor: pointer;
   display: inline-block;
@@ -2357,7 +2358,7 @@ label {
   vertical-align: middle; }
 
 .Button:hover, form button:hover, #OrderDocuments a:hover {
-  background-color: white;
+  background-color: #f9f9f9;
   color: #323232 !important; }
 
 .Button:active, form button:active, #OrderDocuments a:active,
@@ -2573,7 +2574,6 @@ form.ProductAddToCart .AddToCart {
   font-size: 0;
   background: transparent;
   border: 0;
-  border-left: 1px solid #e5e5e8;
   color: #989898 !important;
   position: absolute;
   right: 0;
@@ -3291,14 +3291,14 @@ form.ProductAddToCart .AddToCart {
   margin-left: -15px;
   margin-right: -15px; }
 
-.FlexItem {
+.FlexItem, .ProductBuySection > * {
   padding-left: 15px;
   padding-right: 15px; }
 
-.FlexItem > :first-child {
+.FlexItem > :first-child, .ProductBuySection > * > :first-child {
   margin-top: 0; }
 
-.FlexItem > :last-child {
+.FlexItem > :last-child, .ProductBuySection > * > :last-child {
   margin-bottom: 0; }
 
 .FlexItem-Grow {
@@ -3324,7 +3324,7 @@ form.ProductAddToCart .AddToCart {
   .Flex-Collapse .Button, .Flex-Collapse form button, form .Flex-Collapse button, .Flex-Collapse #OrderDocuments a, #OrderDocuments .Flex-Collapse a {
     display: block;
     width: 100%; }
-  .Flex-Collapse .FlexItem + .FlexItem {
+  .Flex-Collapse .FlexItem + .FlexItem, .Flex-Collapse .ProductBuySection > * + .FlexItem, .Flex-Collapse .ProductBuySection > .FlexItem + *, .Flex-Collapse .ProductBuySection > * + * {
     margin-top: 10px; }
   .Flex-Collapse .Button + .Button, .Flex-Collapse form button + .Button, form .Flex-Collapse button + .Button, .Flex-Collapse #OrderDocuments a + .Button, #OrderDocuments .Flex-Collapse a + .Button, .Flex-Collapse form .Button + button, form .Flex-Collapse .Button + button, .Flex-Collapse form button + button, form .Flex-Collapse button + button, .Flex-Collapse #OrderDocuments form a + button, form .Flex-Collapse #OrderDocuments a + button, #OrderDocuments .Flex-Collapse form a + button, form #OrderDocuments .Flex-Collapse a + button, .Flex-Collapse #OrderDocuments .Button + a, #OrderDocuments .Flex-Collapse .Button + a, .Flex-Collapse form #OrderDocuments button + a, #OrderDocuments .Flex-Collapse form button + a, form .Flex-Collapse #OrderDocuments button + a, #OrderDocuments form .Flex-Collapse button + a, .Flex-Collapse #OrderDocuments a + a, #OrderDocuments .Flex-Collapse a + a {
     margin-top: 10px; } }
@@ -3518,9 +3518,6 @@ form.ProductAddToCart .AddToCart {
 .Banner {
   position: relative; }
 
-.Banner a {
-  text-decoration: none; }
-
 .BannerCoverLink {
   bottom: 0;
   left: 0;
@@ -3570,15 +3567,18 @@ form.ProductAddToCart .AddToCart {
   background-size: cover;
   overflow: hidden; }
 
+.BannerBackgroundImage.LazyLoad {
+  opacity: 0; }
+
+.LazyLoad.flickity-bg-lazyloaded {
+  opacity: 1; }
+
 .Banner-Body {
-  background-color: #ffffff;
-  border: 1px solid #e5e5e8;
-  border-radius: 3px;
-  display: block; }
+  display: block;
+  width: 100%; }
 
 .Banner-Body img {
-  border-radius: 3px;
-  width: 100%; }
+  border-radius: 3px; }
 
 .Banners-Side {
   text-align: center; }
@@ -3813,7 +3813,7 @@ a.BackLink[href='/'] {
   display: none !important; }
 
 @media screen and (max-width: 800px) {
-  .Breadcrumb {
+  .Path .Breadcrumb {
     display: block; }
   .Path .BackLink {
     display: none; } }
@@ -4613,7 +4613,7 @@ a.BackLink[href='/'] {
   .InlineNavigation li + li:before {
     display: none; } }
 
-.VersionNavigation + .FlexItem {
+.VersionNavigation + .FlexItem, .ProductBuySection > .VersionNavigation + * {
   margin-left: -15px; }
 
 .VersionNavigation > * {
@@ -4665,7 +4665,7 @@ a.BackLink[href='/'] {
   color: #2a45a1; }
 
 .SiteFooter .SimpleNavigation .Current > a {
-  color: #92a0ce; }
+  color: #2a45a1; }
 
 .DropNavigation a, .SimpleDropNavigation a, .MainNavigation a {
   overflow: hidden;
@@ -4730,7 +4730,7 @@ a.BackLink[href='/'] {
 
 .SimpleDropNavigation a,
 .NavigationLabel {
-  padding: 4px; }
+  padding: 10px 5px; }
 
 .SimpleDropNavigation ul {
   list-style: none;
@@ -4744,11 +4744,11 @@ a.BackLink[href='/'] {
   min-width: 40px; }
 
 .SimpleDropNavigation li li a {
-  box-shadow: 0 1px 0 #e5e5e8;
+  border-top: 1px solid #e5e5e8;
   padding: 5px 15px; }
 
-.SimpleDropNavigation li li:last-child a {
-  box-shadow: none; }
+.SimpleDropNavigation li li:first-child a {
+  border-top: 0; }
 
 .SimpleDropNavigation .HasSubCategories > a:after {
   display: inline-block;
@@ -4904,24 +4904,20 @@ a.BackLink[href='/'] {
   padding-left: 45px; }
 
 .DrawerNavigation .NavigationExpander {
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  position: relative;
-  top: 50%;
   cursor: pointer;
   margin-left: 0;
+  padding: 10px;
   position: absolute;
   right: 0;
   text-align: center;
+  top: 0;
   width: 45px; }
 
 .DrawerNavigation .HasSubCategories > ul {
   display: none; }
 
 .DrawerNavigation .HasSubCategories > a {
-  padding-right: 60px; }
+  padding-right: 40px; }
 
 .DrawerNavigation .Open > ul {
   display: block; }
@@ -4944,6 +4940,9 @@ a.BackLink[href='/'] {
 
 .MainCategories li.Current > a {
   box-shadow: inset 3px 0 0; }
+
+.MainCategories li li a .NavigationExpander {
+  padding: 5px; }
 
 .MainCategories li ul {
   background-color: #29449e; }
@@ -5092,15 +5091,16 @@ a.BackLink[href='/'] {
   display: flex;
   border: 0; }
 
-.PaginationBar .FlexItem:first-child {
+.PaginationBar .FlexItem:first-child, .PaginationBar .ProductBuySection > :first-child {
   padding-left: 0;
   margin-left: -1px; }
 
-.PaginationBar .FlexItem:last-child {
+.PaginationBar .FlexItem:last-child, .PaginationBar .ProductBuySection > :last-child {
   padding-right: 0;
   margin-right: -1px; }
-  .PaginationBar .FlexItem:last-child input,
-  .PaginationBar .FlexItem:last-child select {
+  .PaginationBar .FlexItem:last-child input, .PaginationBar .ProductBuySection > :last-child input,
+  .PaginationBar .FlexItem:last-child select,
+  .PaginationBar .ProductBuySection > :last-child select {
     border-radius: 3px 3px 0 0; }
 
 .PaginationBar label,
@@ -5137,7 +5137,9 @@ a.BackLink[href='/'] {
     display: none; } }
 
 @media screen and (max-width: 800px) {
-  .PaginationBar .Flex .FlexItem {
+  .PaginationBar {
+    border: 0; }
+  .PaginationBar .Flex .FlexItem, .PaginationBar .Flex .ProductBuySection > * {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -5293,6 +5295,7 @@ a.BackLink[href='/'] {
 
 .ListProduct .ProductName {
   display: block;
+  font-weight: normal;
   margin: 0; }
 
 .flickity-enabled .ListProduct:not(.ListProduct-Compact) .ProductName {
@@ -5318,7 +5321,7 @@ a.BackLink[href='/'] {
 
 .ListProduct-Compact {
   font-size: 14px;
-  padding-bottom: 20px; }
+  padding-bottom: 10px; }
 
 .ListProduct-Compact .ProductImage, .ListProduct-Compact #ProductThumbnails .ProductThumbnail, #ProductThumbnails .ListProduct-Compact .ProductThumbnail {
   padding: 5px; }
@@ -5394,8 +5397,8 @@ a.BackLink[href='/'] {
   #ProductThumbnails li {
     width: 25%; } }
 
-.ProductCard .BuyForm input:not([type='radio']):not([type='checkbox']),
-.ProductCard .BuyForm select {
+.ProductInfoSection input:not([type='radio']):not([type='checkbox']),
+.ProductInfoSection select {
   width: 100%; }
 
 .ProductCardPrices {
@@ -5414,6 +5417,13 @@ a.BackLink[href='/'] {
 .ProductInfoSectionRow + .ContentSection {
   border-top: 1px solid #e5e5e8; }
 
+.ProductDescription table {
+  table-layout: fixed;
+  width: 100%; }
+
+.ProductDescription table tr:last-child td {
+  border-bottom: 0; }
+
 .ProductDescription iframe {
   -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
   -ms-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
@@ -5421,11 +5431,44 @@ a.BackLink[href='/'] {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
   max-width: 100%; }
 
-.ProductAdditionalInfoSection {
-  background-color: #ffffff;
-  border: 1px solid #e5e5e8;
-  border-radius: 3px;
-  padding: 10px 15px; }
+.ProductFullDescription > :last-child {
+  margin-bottom: 0; }
+
+@media screen and (max-width: 600px) {
+  .ProductDescription table {
+    display: block;
+    padding-bottom: 10px;
+    overflow-x: scroll; } }
+
+.ProductBuySection {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -moz-flex-align: flex-start;
+  -ms-flex-align: flex-start;
+  -webkit-flex-align: flex-start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px; }
+
+.ProductBuySection-Main {
+  -webkit-box-flex: 1 0 420px;
+  -moz-box-flex: 1 0 420px;
+  -ms-flex: 1 0 420px;
+  -webkit-flex: 1 0 420px;
+  flex: 1 0 420px; }
+
+.ProductBuySection-Aside {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  flex: 1; }
 
 .ProductCategories {
   color: #989898;
@@ -5466,7 +5509,7 @@ h1 + .ProductCategories,
   margin: 10px 0 0 0;
   background-color: #e5e5e8;
   border: 1px solid #e5e5e8;
-  border-radius: 8px;
+  border-radius: 5px;
   display: block;
   padding: 5px 7px; }
 
@@ -5493,16 +5536,15 @@ h1 + .ProductCategories,
   background-color: #ffffff;
   display: inline-block;
   border: 1px solid #e5e5e8;
-  padding: 0px 10px 2px;
+  padding: 2px 10px;
   border-radius: 30px; }
 
 .ProductAvailability dd.StorageInfo::before {
   display: inline-block;
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   margin-right: 5px;
   content: '';
-  vertical-align: middle;
   border-radius: 50%; }
 
 .Available dd.StorageInfo::before,
@@ -5514,14 +5556,15 @@ h1 + .ProductCategories,
   background-color: #88bb33;
   border: 0; }
 
-.AvailabilityOutOfStock dd.StorageInfo::before {
+.AvailabilityOutOfStock dd.StorageInfo::before,
+.Unavailable dd.StorageInfo::before {
   background-color: #ce2d4f;
   border: 0; }
 
 .ProductShippingMethods {
   background-color: #ffffff;
   border: 1px solid #e5e5e8;
-  border-radius: 8px;
+  border-radius: 5px;
   padding: 10px; }
 
 .ProductShippingMethods .ShippingCosts > * {
@@ -5618,24 +5661,16 @@ h1 + .ProductCategories,
 .flickity-prev-next-button.next {
   right: -15px; }
 
-.flickity-rtl .flickity-prev-next-button.previous {
-  left: auto;
-  right: -15px; }
-
-.flickity-rtl .flickity-prev-next-button.next {
-  right: auto;
-  left: -15px; }
-
 .flickity-prev-next-button {
   border-radius: 50% !important;
   background: #ffffff;
-  border: 1px solid #e5e5e8;
+  border: 1px solid #d9d9d9;
   height: 40px;
   width: 40px;
   z-index: 2; }
 
 .flickity-prev-next-button:hover {
-  background: #f9fafc; }
+  background: #f9f9f9; }
 
 .flickity-prev-next-button .arrow {
   fill: #323232; }
@@ -5644,22 +5679,29 @@ h1 + .ProductCategories,
   color: #323232; }
 
 .flickity-prev-next-button:disabled {
-  display: none; }
+  opacity: 0; }
 
 .flickity-page-dots {
   bottom: -22px; }
 
-.flickity-page-dots .dot {
+.flickity-page-dots li:only-child {
+  display: none; }
+
+.Banners-Wide .flickity-page-dots .dot {
   height: 4px;
-  width: 40px;
+  width: 10px;
   margin: 0;
   border-radius: 0; }
 
-.Banners-Wide .flickity-page-dots .dot {
-  background-color: #f9fafc; }
-
 .Banners-Wide .flickity-page-dots {
   bottom: 20px; }
+
+.Banners-Wide .flickity-page-dots .dot {
+  background-color: #ffffff; }
+
+@media screen and (max-width: 1200px) {
+  .flickity-prev-next-button {
+    display: none; } }
 
 .Spinner {
   display: table;
@@ -5721,61 +5763,42 @@ h1 + .ProductCategories,
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  -moz-flex-align: flex-start;
-  -ms-flex-align: flex-start;
-  -webkit-flex-align: flex-start;
-  -webkit-align-items: flex-start;
-  align-items: flex-start;
-  background-color: #2a45a1; }
-
-.LayoutAside, .LayoutMain {
-  padding: 0 15px; }
+  -moz-flex-align: stretch;
+  -ms-flex-align: stretch;
+  -webkit-flex-align: stretch;
+  -webkit-align-items: stretch;
+  align-items: stretch; }
 
 .LayoutAside {
-  -webkit-box-flex: 1 0 320px;
-  -moz-box-flex: 1 0 320px;
-  -ms-flex: 1 0 320px;
-  -webkit-flex: 1 0 320px;
-  flex: 1 0 320px;
+  background-color: #2a45a1;
   color: #fefefe;
-  padding-top: 50px;
-  width: 320px;
-  z-index: 1; }
+  padding: 50px 15px;
+  width: 320px; }
 
 .LayoutMain {
-  -webkit-box-flex: 1 1 100%;
-  -moz-box-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  -webkit-flex: 1 1 100%;
-  flex: 1 1 100%;
-  background-color: #2a45a1;
-  border-left: 1px solid #253c8d; }
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  flex: 1; }
 
 @media screen and (max-width: 1024px) {
-  .LayoutAside,
-  .LayoutMain {
-    padding: 0;
-    margin: 0;
-    border-radius: 0; }
   .Layout {
-    display: block; }
-  .LayoutMain {
-    border: 0;
-    width: 100%; } }
+    display: block; } }
 
 .UtilityBar {
-  color: #fefefe;
-  font-size: 14px;
-  padding: 10px 0; }
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e5e8;
+  color: #323232;
+  font-size: 14px; }
   .UtilityBar a {
-    color: #fafafa; }
+    color: #191919; }
   .UtilityBar a:hover {
-    color: #92a0ce; }
+    color: #2a45a1; }
 
 .SiteHeader {
   background-color: #ffffff;
   border-bottom: 1px solid #e5e5e8;
-  border-radius: 8px 8px 0 0;
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.025);
   color: #323232;
   padding: 15px 15px 30px;
@@ -5790,13 +5813,14 @@ h1 + .ProductCategories,
 .TopBar {
   background-color: #ffffff;
   margin: 0 -15px;
-  padding-bottom: 5px;
-  padding-top: 5px;
   position: relative;
+  transition: padding 0.15s ease-out;
   z-index: 100; }
 
 .sticky-active .TopBar {
-  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.025); }
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+  padding-bottom: 5px;
+  padding-top: 5px; }
 
 .SiteBody {
   background-color: #f9fafc;
@@ -5804,7 +5828,6 @@ h1 + .ProductCategories,
 
 .SiteContent {
   background-color: #f9fafc;
-  border-radius: 0 0 8px 8px;
   padding: 40px 0; }
   .SiteContent a {
     color: #191919; }
@@ -5812,12 +5835,14 @@ h1 + .ProductCategories,
     color: #2a45a1; }
 
 .SiteFooter {
-  background-color: #2a45a1;
-  color: #fefefe; }
+  border-top: 1px solid #e5e5e8;
+  box-shadow: 0 -3px 4px rgba(0, 0, 0, 0.025);
+  background-color: #ffffff;
+  color: #323232; }
   .SiteFooter a {
-    color: #fafafa; }
+    color: #191919; }
   .SiteFooter a:hover {
-    color: #92a0ce; }
+    color: #2a45a1; }
 
 @media screen and (max-width: 1024px) {
   .SiteHeader {
@@ -5841,6 +5866,6 @@ h1 + .ProductCategories,
 
 @media screen and (max-width: 1024px) {
   .Tabs {
-    border-width: 1px 0 0;
+    border-width: 1px 0;
     margin: 0 -15px;
-    padding: 20px 15px 0; } }
+    padding: 20px 15px; } }

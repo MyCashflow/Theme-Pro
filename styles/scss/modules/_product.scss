@@ -198,8 +198,8 @@
 // Product Card
 //------------------------------------------------------------------------------
 
-.ProductCard .BuyForm input:not([type='radio']):not([type='checkbox']),
-.ProductCard .BuyForm select {
+.ProductInfoSection input:not([type='radio']):not([type='checkbox']),
+.ProductInfoSection select {
 	width: 100%;
 }
 
@@ -226,7 +226,7 @@
 }
 
 .ProductDescription table {
-	border: 0;
+	table-layout: fixed;
 	width: 100%;
 }
 
@@ -239,11 +239,40 @@
 	max-width: 100%;
 }
 
-.ProductAdditionalInfoSection {
-	background-color: $color-image-bg;
-	border: 1px solid $color-image-border;
-	border-radius: $border-radius;
-	padding: 10px 15px;
+.ProductFullDescription > :last-child {
+	margin-bottom: 0;
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.ProductDescription table {
+		display: block;
+		padding-bottom: 10px;
+		overflow-x: scroll;
+	}
+}
+
+//------------------------------------------------------------------------------
+// Product Buy Section
+//------------------------------------------------------------------------------
+
+.ProductBuySection {
+	@include flexbox;
+	@include align-items(flex-start);
+	@include flex-wrap(wrap);
+	margin-left: -($grid-gutter / 2);
+	margin-right: -($grid-gutter / 2);
+}
+
+.ProductBuySection > * {
+	@extend .FlexItem;
+}
+
+.ProductBuySection-Main {
+	@include flex(1 0 420px);
+}
+
+.ProductBuySection-Aside {
+	@include flex(1);
 }
 
 //------------------------------------------------------------------------------
@@ -336,18 +365,17 @@ h1 + .ProductCategories,
 .ProductAvailability dt.StorageInfo + dd.StorageInfo {
 	background-color: $color-boxed-bg;
 	display: inline-block;
-	border: 1px solid $color-body-border;
-	padding: 0px 10px 2px;
+	border: 1px solid $color-boxed-border;
+	padding: 2px 10px;
 	border-radius: 30px;
 }
 
 .ProductAvailability dd.StorageInfo::before {
 	display: inline-block;
-	width: 12px;
-	height: 12px;
+	width: 10px;
+	height: 10px;
 	margin-right: 5px;
 	content: '';
-	vertical-align: middle;
 	border-radius: 50%;
 }
 
@@ -362,7 +390,8 @@ h1 + .ProductCategories,
 	border: 0;
 }
 
-.AvailabilityOutOfStock dd.StorageInfo::before {
+.AvailabilityOutOfStock dd.StorageInfo::before,
+.Unavailable dd.StorageInfo::before {
 	background-color: $color-error;
 	border: 0;
 }

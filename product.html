@@ -40,37 +40,37 @@
 									</div>
 									<div class="ContentSection ProductInfoSectionRow">
 										<div class="Flex Flex-NoMargin">
-										<p class="FlexItem ProductPrices ProductCardPrices">
-											{ProductComparePrice(
-												currencysymbol: 'true',
-												before: '
-													{ProductPrice(
-														currencysymbol: 'true',
-														before: '{%Price} <span class="ProductDiscountPrice">',
-														after: '</span>'
-													)}
-													<span class="ProductComparePrice">',
-												after: '</span>',
-												or: '
-													{ProductPrice(
-														currencysymbol: 'true',
-														before: '{%Price} <span class="ProductCurrentPrice">',
-														after: '</span>'
-													)}'
+											<p class="FlexItem ProductPrices ProductCardPrices">
+												{ProductComparePrice(
+													currencysymbol: 'true',
+													before: '
+														{ProductPrice(
+															currencysymbol: 'true',
+															before: '{%Price} <span class="ProductDiscountPrice">',
+															after: '</span>'
+														)}
+														<span class="ProductComparePrice">',
+													after: '</span>',
+													or: '
+														{ProductPrice(
+															currencysymbol: 'true',
+															before: '{%Price} <span class="ProductCurrentPrice">',
+															after: '</span>'
+														)}'
+												)}
+											</p>
+											<div class="FlexItem FlexSpacer"></div>
+											{ProductAvailability(
+												before:'<div class="FlexItem ProductAvailability">',
+												after:'</div>'
 											)}
-										</p>
-										<div class="FlexItem FlexSpacer"></div>
-										{ProductAvailability(
-											before:'<div class="FlexItem ProductAvailability">',
-											after:'</div>'
-										)}
 										</div>
 									</div>
 									<div class="ContentSection">
-										<div class="Grid">
-											<div class="Col Col-8-12 Col-Mobile-12-12">
+										<div class="ProductBuySection">
+											<div class="ProductBuySection-Main">
 												{ProductShortDesc(
-													before: '<div class="ContentSection ProductDescription ProductShortDesc">',
+													before: '<div class="ContentSection ProductDescription ProductShortDescription">',
 													after: '</div>'
 												)}
 												{ProductBundles(
@@ -92,7 +92,7 @@
 														</div>'
 												)}
 											</div>
-											<div class="Col Col-4-12 Col-Mobile-12-12">
+											<div class="ProductBuySection-Aside">
 												{ProductShippingMethods(
 													limit: '4',
 													sort: 'price',
@@ -101,7 +101,7 @@
 															<h2 class="ProductDetailsTitle">{%ShippingCosts}</h2>
 																<div class="ProductShippingMethods">',
 													after:'
-																<p class="ProductDetailsItem-Info ShippingInfo">{%CheckoutChooseShippingMethodIntro}</p>
+																<p class="ProductDetailsItem-Info ShippingInfo">{Text(code: 'ProductShippingInfo', or: '{%CheckoutChooseShippingMethodIntro}')}</p>
 															</div>
 														</div>'
 												)}
@@ -112,16 +112,32 @@
 							</div>
 						</div>
 						<div class="ContentSection ProductAdditionalInfoSection">
-							<div class="Grid">
-								<div class="Col Col-12-12">
-									{ProductFullDesc(
-										before: '<div class="ContentSection ProductDescription ProductFullDesc">',
-										after: '</div>'
-									)}
-									<div class="ContentSection ShareSection">
-										{ShareButtons}
-										<div class="fb-like" data-send="true" data-width="480" data-size="large" data-show-faces="true" data-font="arial"></div>
-									</div>
+							<div class="TabsNavigation">
+								<ul>
+									<li class="Current">
+										<a href="#ProductFullDesc"><span class="fa fa-info-circle"></span> {Text(code: 'ProductFullDescription', or: '{%CheckoutOrderComments}')}</a>
+									</li>
+								</ul>
+							</div>
+							<div class="Tabs">
+								{ProductFullDesc(
+									before: '
+										<div class="Tab Current" id="#ProductFullDesc">
+											<div class="ContentSection ProductDescription ProductFullDescription">',
+									after: '
+											</div>
+										</div>'
+								)}
+							</div>
+						</div>
+						<div class="ContentSection ShareSection">
+							<div class="Flex Flex-Collapse">
+								{ShareButtons(
+									before: '<div class="FlexItem FlexItem-Grow">',
+									after: '</div>'
+								)}
+								<div class="FlexItem">
+									<div class="fb-like" data-send="true" data-width="480" data-size="large" data-show-faces="true" data-font="arial"></div>
 								</div>
 							</div>
 						</div>
