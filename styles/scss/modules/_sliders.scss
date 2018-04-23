@@ -49,12 +49,12 @@
 	border-radius: 0;
 }
 
-.Banners-Wide .flickity-page-dots .dot {
-	background-color: $color-button-bg;
-}
-
 .Banners-Wide .flickity-page-dots {
 	bottom: 20px;
+}
+
+.Banners-Wide .flickity-page-dots .dot {
+	background-color: $color-button-bg;
 }
 
 @media screen and (max-width: $breakpoint-desktop) {
