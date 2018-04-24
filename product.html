@@ -11,7 +11,7 @@
 					<main class="ContentSection ProductCard {ProductClass}">
 						<div class="ContentSection ProductInfoSection">
 							<div class="Grid">
-								<div class="Col Col-4-12 Col-Tablet-12-12">
+								<div class="ProductInfoSection-Aside Col Col-4-12 Col-Tablet-12-12">
 									{ProductDiscountPercent(
 										before: '<span class="Badge ProductDiscountPercent">-',
 										after: '&#37;</span>'
@@ -20,7 +20,7 @@
 									{ProductImageCaption}
 									{ProductThumbnails}
 								</div>
-								<div class="Col Col-8-12 Col-Tablet-12-12">
+								<div class="ProductInfoSection-Main Col Col-8-12 Col-Tablet-12-12">
 									<div class="ContentSection">
 										<h1 class="ContentTitle">{PageTitle}</h1>
 										{ProductCategories(
@@ -59,7 +59,6 @@
 														)}'
 												)}
 											</p>
-											<div class="FlexItem FlexSpacer"></div>
 											{ProductAvailability(
 												before:'<div class="FlexItem ProductAvailability">',
 												after:'</div>'

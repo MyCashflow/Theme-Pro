@@ -195,6 +195,34 @@
 }
 
 //------------------------------------------------------------------------------
+// Product Template
+//------------------------------------------------------------------------------
+
+.ProductInfoSection > .Grid {
+	@include flexbox;
+	@include flex-wrap(wrap);
+}
+
+.ProductInfoSection-Aside {
+	@include flex(1);
+	min-width: $layout-main / 4;
+}
+
+.ProductInfoSection-Main {
+	@include flex(3);
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.ProductInfoSection > .Grid {
+		display: block;
+	}
+
+	.ProductInfoSection-Aside {
+		min-width: 0;
+	}
+}
+
+//------------------------------------------------------------------------------
 // Product Card
 //------------------------------------------------------------------------------
 
@@ -204,6 +232,7 @@
 }
 
 .ProductCardPrices {
+	@include flex(1);
 	@extend h2;
 	font-weight: bold;
 	margin: 0;
@@ -268,11 +297,69 @@
 }
 
 .ProductBuySection-Main {
-	@include flex(1 0 420px);
+	@include flex(2);
+	min-width: 420px;
 }
 
 .ProductBuySection-Aside {
 	@include flex(1);
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.ProductBuySection {
+		display: block;
+	}
+
+	.ProductBuySection-Main {
+		min-width: 0;
+	}
+}
+
+//------------------------------------------------------------------------------
+// Product Buy Form
+//------------------------------------------------------------------------------
+
+.ProductCard .BuyForm fieldset {
+	@extend .Flex;
+	@include flex-wrap(wrap);
+}
+
+.ProductCard .BuyForm .FormItem {
+	@extend .FlexItem;
+	@include flex(1 1 100%);
+	position: relative;
+}
+
+.ProductCard .BuyFormQuantity,
+.ProductCard .BuyForm .FormSubmit {
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+.ProductCard .BuyForm .BuyFormQuantity {
+	@include flex(0);
+}
+
+.ProductCard .BuyForm .FormSubmit {
+	@include flex(1);
+}
+
+.ProductCard .BuyFormQuantity > label {
+	bottom: 100%;
+	position: absolute;
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.ProductCard .BuyForm fieldset {
+		display: block;
+	}
+	.ProductCard .BuyForm fieldset .FormItem {
+		width: auto;
+	}
+	
+	.ProductCard .BuyFormQuantity > label {
+		display: initial;
+	}
 }
 
 //------------------------------------------------------------------------------
