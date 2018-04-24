@@ -8,6 +8,7 @@
 }
 
 .LayoutAside {
+	@include flex(0 0 320px);
 	background-color: $color-sitecolumn-bg;
 	color: text-contrast($color-sitecolumn-bg);
 	padding: 50px ($grid-gutter / 2);
