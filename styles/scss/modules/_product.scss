@@ -238,6 +238,11 @@
 	margin: 0;
 }
 
+.ProductAvailability {
+	@include flex(1);
+	text-align: right;
+}
+
 .ProductCard .Badge.ProductDiscountPercent {
 	@extend h2;
 	font-weight: bold;

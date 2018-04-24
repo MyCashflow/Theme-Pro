@@ -5433,6 +5433,14 @@ a.BackLink[href='/'] {
   font-weight: bold;
   margin: 0; }
 
+.ProductAvailability {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  text-align: right; }
+
 .ProductCard .Badge.ProductDiscountPercent {
   font-weight: bold;
   transform: rotate(3deg); }
