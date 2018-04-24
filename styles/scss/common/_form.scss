@@ -156,14 +156,9 @@ form [type='submit'] {
 	font-size: $font-size-large;
 }
 
-form.BuyForm .AddToCart {
-	display: block;
-	width: 100%;
-}
-
-form.ProductAddToCart .AddToCart {
-	display: block;
-	width: 100%;
+.BuyForm .AddToCart,
+.ProductAddToCart .AddToCart {
+	@extend .Button-Block;
 }
 
 //------------------------------------------------------------------------------
