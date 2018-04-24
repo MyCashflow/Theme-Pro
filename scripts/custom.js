@@ -175,6 +175,7 @@ $(document).ready(function () {
 	});
 
 	MCF.Images.init({
+		zoomMode: 'off',
 		zoomOn: 'click',
 		transitionEffect: false,
 		textClickZoomHint: MCF.Locales.get('expandImage'),
