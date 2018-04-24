@@ -3311,6 +3311,10 @@ form .Active[type='submit'],
 .Flex-NoMargin {
   margin-bottom: 0; }
 
+.Flex-Wrap {
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
 @media screen and (max-width: 800px) {
   .Flex-Collapse {
     display: block; }
@@ -5425,21 +5429,20 @@ a.BackLink[href='/'] {
   width: 100%; }
 
 .ProductCardPrices {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  -ms-flex: 1;
-  -webkit-flex: 1;
-  flex: 1;
+  -webkit-box-flex: 1 0 auto;
+  -moz-box-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  -webkit-flex: 1 0 auto;
+  flex: 1 0 auto;
   font-weight: bold;
   margin: 0; }
 
 .ProductAvailability {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  -ms-flex: 1;
-  -webkit-flex: 1;
-  flex: 1;
-  text-align: right; }
+  -webkit-box-flex: 0 auto;
+  -moz-box-flex: 0 auto;
+  -ms-flex: 0 auto;
+  -webkit-flex: 0 auto;
+  flex: 0 auto; }
 
 .ProductCard .Badge.ProductDiscountPercent {
   font-weight: bold;

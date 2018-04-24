@@ -232,15 +232,14 @@
 }
 
 .ProductCardPrices {
-	@include flex(1);
+	@include flex(1 0 auto);
 	@extend h2;
 	font-weight: bold;
 	margin: 0;
 }
 
 .ProductAvailability {
-	@include flex(1);
-	text-align: right;
+	@include flex(0 auto);
 }
 
 .ProductCard .Badge.ProductDiscountPercent {
