@@ -319,29 +319,22 @@
 // Product Buy Form
 //------------------------------------------------------------------------------
 
-.ProductCard .BuyForm fieldset {
-	@extend .Flex;
-	@include flex-wrap(wrap);
-}
-
-.ProductCard .BuyForm .FormItem {
-	@extend .FlexItem;
-	@include flex(1 1 100%);
+.ProductCard .BuyFormQuantity,
+.ProductCard .BuyForm .FormSubmit {
+	float: left;
+	margin-bottom: 20px;
+	margin-top: 20px;
 	position: relative;
 }
 
-.ProductCard .BuyFormQuantity,
-.ProductCard .BuyForm .FormSubmit {
-	margin-bottom: 20px;
-	margin-top: 20px;
-}
-
 .ProductCard .BuyForm .BuyFormQuantity {
-	@include flex(0);
+	margin-right: $grid-gutter;
+	width: 130px;
 }
 
 .ProductCard .BuyForm .FormSubmit {
-	@include flex(1);
+	width: auto;
+	width: calc(100% - 130px - #{$grid-gutter});
 }
 
 .ProductCard .BuyFormQuantity > label {
@@ -350,15 +343,14 @@
 }
 
 @media screen and (max-width: $breakpoint-mobile) {
-	.ProductCard .BuyForm fieldset {
-		display: block;
-	}
-	.ProductCard .BuyForm fieldset .FormItem {
+	.ProductCard .BuyFormQuantity,
+	.ProductCard .BuyForm .FormSubmit {
+		float: none;
 		width: auto;
 	}
-	
+
 	.ProductCard .BuyFormQuantity > label {
-		display: initial;
+		position: initial;
 	}
 }
 

@@ -3269,7 +3269,7 @@ form .Active[type='submit'],
     left: 50%;
     padding-left: 15px; } }
 
-.Flex, .ProductCard .BuyForm fieldset {
+.Flex {
   -moz-flex-align: center;
   -ms-flex-align: center;
   -webkit-flex-align: center;
@@ -3284,14 +3284,14 @@ form .Active[type='submit'],
   margin-left: -15px;
   margin-right: -15px; }
 
-.FlexItem, .ProductBuySection > *, .ProductCard .BuyForm .FormItem {
+.FlexItem, .ProductBuySection > * {
   padding-left: 15px;
   padding-right: 15px; }
 
-.FlexItem > :first-child, .ProductBuySection > * > :first-child, .ProductCard .BuyForm .FormItem > :first-child {
+.FlexItem > :first-child, .ProductBuySection > * > :first-child {
   margin-top: 0; }
 
-.FlexItem > :last-child, .ProductBuySection > * > :last-child, .ProductCard .BuyForm .FormItem > :last-child {
+.FlexItem > :last-child, .ProductBuySection > * > :last-child {
   margin-bottom: 0; }
 
 .FlexItem-Grow {
@@ -3317,7 +3317,7 @@ form .Active[type='submit'],
   .Flex-Collapse .Button, .Flex-Collapse form button, form .Flex-Collapse button, .Flex-Collapse #OrderDocuments a, #OrderDocuments .Flex-Collapse a {
     display: block;
     width: 100%; }
-  .Flex-Collapse .FlexItem + .FlexItem, .Flex-Collapse .ProductBuySection > * + .FlexItem, .Flex-Collapse .ProductCard .BuyForm .FormItem + .FlexItem, .ProductCard .BuyForm .Flex-Collapse .FormItem + .FlexItem, .Flex-Collapse .ProductBuySection > .FlexItem + *, .Flex-Collapse .ProductBuySection > * + *, .Flex-Collapse .ProductCard .BuyForm .ProductBuySection > .FormItem + *, .ProductCard .BuyForm .Flex-Collapse .ProductBuySection > .FormItem + *, .Flex-Collapse .ProductCard .BuyForm .FlexItem + .FormItem, .ProductCard .BuyForm .Flex-Collapse .FlexItem + .FormItem, .Flex-Collapse .ProductCard .BuyForm .ProductBuySection > * + .FormItem, .ProductCard .BuyForm .Flex-Collapse .ProductBuySection > * + .FormItem, .Flex-Collapse .ProductCard .BuyForm .FormItem + .FormItem, .ProductCard .BuyForm .Flex-Collapse .FormItem + .FormItem {
+  .Flex-Collapse .FlexItem + .FlexItem, .Flex-Collapse .ProductBuySection > * + .FlexItem, .Flex-Collapse .ProductBuySection > .FlexItem + *, .Flex-Collapse .ProductBuySection > * + * {
     margin-top: 10px; }
   .Flex-Collapse .Button + .Button, .Flex-Collapse form button + .Button, form .Flex-Collapse button + .Button, .Flex-Collapse #OrderDocuments a + .Button, #OrderDocuments .Flex-Collapse a + .Button, .Flex-Collapse form .Button + button, form .Flex-Collapse .Button + button, .Flex-Collapse form button + button, form .Flex-Collapse button + button, .Flex-Collapse #OrderDocuments form a + button, form .Flex-Collapse #OrderDocuments a + button, #OrderDocuments .Flex-Collapse form a + button, form #OrderDocuments .Flex-Collapse a + button, .Flex-Collapse #OrderDocuments .Button + a, #OrderDocuments .Flex-Collapse .Button + a, .Flex-Collapse form #OrderDocuments button + a, #OrderDocuments .Flex-Collapse form button + a, form .Flex-Collapse #OrderDocuments button + a, #OrderDocuments form .Flex-Collapse button + a, .Flex-Collapse #OrderDocuments a + a, #OrderDocuments .Flex-Collapse a + a {
     margin-top: 10px; } }
@@ -4606,7 +4606,7 @@ a.BackLink[href='/'] {
   .InlineNavigation li + li:before {
     display: none; } }
 
-.VersionNavigation + .FlexItem, .ProductBuySection > .VersionNavigation + *, .ProductCard .BuyForm .VersionNavigation + .FormItem {
+.VersionNavigation + .FlexItem, .ProductBuySection > .VersionNavigation + * {
   margin-left: -15px; }
 
 .VersionNavigation > * {
@@ -5084,18 +5084,16 @@ a.BackLink[href='/'] {
   display: flex;
   border: 0; }
 
-.PaginationBar .FlexItem:first-child, .PaginationBar .ProductBuySection > :first-child, .PaginationBar .ProductCard .BuyForm .FormItem:first-child, .ProductCard .BuyForm .PaginationBar .FormItem:first-child {
+.PaginationBar .FlexItem:first-child, .PaginationBar .ProductBuySection > :first-child {
   padding-left: 0;
   margin-left: -1px; }
 
-.PaginationBar .FlexItem:last-child, .PaginationBar .ProductBuySection > :last-child, .PaginationBar .ProductCard .BuyForm .FormItem:last-child, .ProductCard .BuyForm .PaginationBar .FormItem:last-child {
+.PaginationBar .FlexItem:last-child, .PaginationBar .ProductBuySection > :last-child {
   padding-right: 0;
   margin-right: -1px; }
-  .PaginationBar .FlexItem:last-child input, .PaginationBar .ProductBuySection > :last-child input, .PaginationBar .ProductCard .BuyForm .FormItem:last-child input, .ProductCard .BuyForm .PaginationBar .FormItem:last-child input,
+  .PaginationBar .FlexItem:last-child input, .PaginationBar .ProductBuySection > :last-child input,
   .PaginationBar .FlexItem:last-child select,
-  .PaginationBar .ProductBuySection > :last-child select,
-  .PaginationBar .ProductCard .BuyForm .FormItem:last-child select, .ProductCard .BuyForm
-  .PaginationBar .FormItem:last-child select {
+  .PaginationBar .ProductBuySection > :last-child select {
     border-radius: 3px 3px 0 0; }
 
 .PaginationBar label,
@@ -5134,7 +5132,7 @@ a.BackLink[href='/'] {
 @media screen and (max-width: 800px) {
   .PaginationBar {
     border: 0; }
-  .PaginationBar .Flex .FlexItem, .PaginationBar .ProductCard .BuyForm fieldset .FlexItem, .ProductCard .BuyForm .PaginationBar fieldset .FlexItem, .PaginationBar .Flex .ProductBuySection > *, .PaginationBar .ProductCard .BuyForm fieldset .ProductBuySection > *, .ProductCard .BuyForm .PaginationBar fieldset .ProductBuySection > *, .PaginationBar .Flex .ProductCard .BuyForm .FormItem, .ProductCard .BuyForm .PaginationBar .Flex .FormItem, .PaginationBar .ProductCard .BuyForm fieldset .FormItem, .ProductCard .BuyForm .PaginationBar fieldset .FormItem {
+  .PaginationBar .Flex .FlexItem, .PaginationBar .Flex .ProductBuySection > * {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -5507,48 +5505,32 @@ a.BackLink[href='/'] {
   .ProductBuySection-Main {
     min-width: 0; } }
 
-.ProductCard .BuyForm fieldset {
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap; }
-
-.ProductCard .BuyForm .FormItem {
-  -webkit-box-flex: 1 1 100%;
-  -moz-box-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  -webkit-flex: 1 1 100%;
-  flex: 1 1 100%;
-  position: relative; }
-
 .ProductCard .BuyFormQuantity,
 .ProductCard .BuyForm .FormSubmit {
+  float: left;
   margin-bottom: 20px;
-  margin-top: 20px; }
+  margin-top: 20px;
+  position: relative; }
 
 .ProductCard .BuyForm .BuyFormQuantity {
-  -webkit-box-flex: 0;
-  -moz-box-flex: 0;
-  -ms-flex: 0;
-  -webkit-flex: 0;
-  flex: 0; }
+  margin-right: 30px;
+  width: 130px; }
 
 .ProductCard .BuyForm .FormSubmit {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  -ms-flex: 1;
-  -webkit-flex: 1;
-  flex: 1; }
+  width: auto;
+  width: calc(100% - 130px - 30px); }
 
 .ProductCard .BuyFormQuantity > label {
   bottom: 100%;
   position: absolute; }
 
 @media screen and (max-width: 600px) {
-  .ProductCard .BuyForm fieldset {
-    display: block; }
-  .ProductCard .BuyForm fieldset .FormItem {
+  .ProductCard .BuyFormQuantity,
+  .ProductCard .BuyForm .FormSubmit {
+    float: none;
     width: auto; }
   .ProductCard .BuyFormQuantity > label {
-    display: initial; } }
+    position: initial; } }
 
 .ProductCategories {
   color: #989898;
