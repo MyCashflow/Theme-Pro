@@ -126,6 +126,10 @@
 	margin-bottom: 0;
 }
 
+.Flex-Wrap {
+	@include flex-wrap(wrap);
+}
+
 @media screen and (max-width: $breakpoint-mobile-wide) {
 	.Flex-Collapse {
 		display: block;
