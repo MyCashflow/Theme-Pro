@@ -110,25 +110,25 @@
 								</div>
 							</div>
 						</div>
-						<div class="ContentSection ProductAdditionalInfoSection">
-							<div class="TabsNavigation">
-								<ul>
-									<li class="Current">
-										<a href="#ProductFullDesc"><span class="fa fa-info-circle"></span> {Text(code: 'ProductFullDescription', or: '{%CheckoutOrderComments}')}</a>
-									</li>
-								</ul>
-							</div>
-							<div class="Tabs">
-								{ProductFullDesc(
-									before: '
-										<div class="Tab Current" id="#ProductFullDesc">
-											<div class="ContentSection ProductDescription ProductFullDescription">',
-									after: '
+						{ProductFullDesc(
+							before: '
+								<div class="ContentSection ProductAdditionalInfoSection">
+									<div class="TabsNavigation">
+										<ul>
+											<li class="Current">
+												<a href="#ProductFullDesc"><span class="fa fa-info-circle"></span> {Text(code: 'ProductFullDescription', or: '{%CheckoutOrderComments}')}</a>
+											</li>
+										</ul>
+									</div>
+									<div class="Tabs">
+									<div class="Tab Current" id="#ProductFullDesc">
+										<div class="ContentSection ProductDescription ProductFullDescription">',
+							after: '
 											</div>
-										</div>'
-								)}
-							</div>
-						</div>
+										</div>
+									</div>
+								</div>'
+						)}
 						<div class="ContentSection ShareSection">
 							<div class="Flex Flex-Collapse">
 								{ShareButtons(
