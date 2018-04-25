@@ -498,13 +498,14 @@ h1 + .ProductCategories,
 
 .ProductShippingMethods dt.ShippingMethodName {
 	@include truncate;
-	border-bottom: 1px solid $color-body-border;
 	display: block;
 	font-weight: normal;
+	max-width: 240px;
 	padding-right: 60px;
 }
 
 .ProductShippingMethods dd.ShippingMethodPrice {
+	border-bottom: 1px solid $color-body-border;
 	font-weight: bold;
 	margin-top: -35px;
 	text-align: right;
