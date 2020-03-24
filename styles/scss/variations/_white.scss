@@ -1,0 +1,18 @@
+//------------------------------------------------------------------------------
+// Colors
+//------------------------------------------------------------------------------
+
+$color-accent-1:              #444444 !default;
+$color-accent-2:              #949396 !default;
+
+$color-base-1:                #ffffff !default;
+
+$color-document-bg:           $color-base-1 !default;
+$color-sitecolumn-bg:         $color-base-1 !default;
+$color-navbar-bg:             $color-sitecolumn-bg !default;
+
+.LayoutAside {
+	box-shadow: 2px 0 20px rgba(0,0,0,.05);
+	position: relative;
+	z-index: 999;
+}
