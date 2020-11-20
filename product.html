@@ -72,14 +72,48 @@
 													before: '<div class="ContentSection ProductDescription ProductShortDescription">',
 													after: '</div>'
 												)}
-												{ProductBundles(
-													before: '<div class="ContentSection ProductBundles">',
-													after: '</div>'
-												)}
 												{ProductBuy(
 													variations: 'select',
 													before: '<div class="ContentSection">',
 													after: '</div>'
+												)}
+												{ProductBundles(
+													before: '
+													<div class="BuyColumnBundles">
+														<h3>{%ProductIncludesInBundles}</h3>',
+													after: '</div>',
+														helper: '{{
+															<div class="BuyColumnBundle">
+																<a class="CoverLink" href="{BundleUrl}"></a>
+																{BundleImage(link:'false')}
+																<div class="BuyColumnBundleInfo">
+																	{BundleName(link:'false',before:'<label for="BuyColumnBundleName">',after: '</label>')}
+																	{BundlePrice(before:'<div class="BuyColumnBundlePrice">',after: '</div>')}
+																</div>
+															</div>
+													}}'
+												)}
+												{ProductFeatures(
+													before:'
+													<div class="ProductFeatures">
+														<h3>{Text(code: 'ProductFeatures', or: 'Tuoteominaisuudet:')}</h3>',
+													after: '
+													</div>',
+													helper: '{{
+														<div class="ProductFeature">
+															<label class="ProductAttributeLabel">{ProductAttributeLabel}:</label>
+															<span class="ProductAttributeValues">{ProductAttributeValues}</span>
+														</div>
+													}}'
+												)}
+												{ProductQuantityDiscounts(
+													before:'
+													<div class="ProductQuantityDiscounts">
+														<h3>{Text(code: 'QuantityDiscounts', or: 'Tällä tuotteella on määräalennuksia:')}</h3>
+														<div class="ProductQuantityDiscountTable">',
+															after:'
+														</div>
+													</div>'
 												)}
 												{KlarnaPaymentMethodWidget}
 												{AvailabilityNotificationForm(

@@ -56,6 +56,21 @@
 									</section>
 									}}'
 								)}
+								{Bundles(
+									category: '{CategoryId}',
+									type: 'normal',
+									classes: 'ListProduct-Compact',
+									before: '
+									<div class="ContentSection">
+										<h2 class="ContentTitle ContentTitle-Fancy">{%ProductBundles}</h2>
+										<div class="List ProductList">
+											<div class="GridList GridList-Small" data-slider="list">',
+												after: '
+											</div>
+										</div>
+									</div>',
+									helper: 'helpers/list-bundle'
+								)}
 								{CategoryHotPicks(
 									subcategories: 'true',
 									limit: '14',
