@@ -1,0 +1,27 @@
+<div class="Drawer Filters" data-drawer="product-filters" data-drawer-side="bottom">
+	<div class="DrawerHeader">
+		<h3 class="DrawerTitle">{Text(code: 'ProductFiltersLabel', or: 'Suodata tuotteita')}</h3>
+	</div>
+	{ProductListFilters(
+		before: '
+			<div class="DrawerNavigation">
+				<ul class="Categories NavigationList">',
+		after: '
+				</ul> 
+			</div>',
+		helper: '{{
+			{FilterOptions(
+				before: '
+					<li class="HasSubCategories">
+						<a>{FilterName}</a>
+						<ul class="Categories NavigationList">',
+				after: '
+						</ul>
+					</li>',
+				helper: '{{
+					<li><a href="{FilterOptionSelectUrl}">{FilterOptionName} <span class="FilterResultCount">({FilterOptionResultCount})</span></a></li>
+				}}'
+			)}
+		}}'
+	)}
+</div>
