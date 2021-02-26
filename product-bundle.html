@@ -1,0 +1,116 @@
+{Helper(file: 'helpers/header')}
+	<div class="Layout">
+		<div class="LayoutAside Hide-Tablet">
+			{Helper(file: 'helpers/sidebar')}
+		</div>
+		<div class="LayoutMain">
+			{Helper(file: 'helpers/site-header')}
+			{Helper(file: 'helpers/path')}
+			<div class="SiteContent">
+				<div class="Container">
+					<main class="ContentSection ProductCard {BundleClass}">
+						<div class="ContentSection ProductInfoSection">
+							<div class="Grid">
+								<div class="ProductInfoSection-Aside Col Col-4-12 Col-Tablet-12-12">
+									{BundleImage}
+									{BundleImageCaption}
+									{BundleThumbnails}
+								</div>
+								<div class="ProductInfoSection-Main Col Col-8-12 Col-Tablet-12-12">
+									<div class="ContentSection">
+										<h1 class="ContentTitle">{BundleName}</h1>
+									</div>
+									<div class="ContentSection ProductInfoSectionRow">
+										<div class="Flex Flex-NoMargin Flex-Wrap">
+											<p class="FlexItem ProductPrices ProductCardPrices">
+												{BundleComparePrice(
+													currencysymbol: 'true',
+													before: '
+														{BundlePrice(
+															currencysymbol: 'true',
+															before: '{%Price} <span class="ProductDiscountPrice">',
+															after: '</span>'
+														)}
+														<span class="ProductComparePrice">',
+													after: '</span>',
+													or: '
+														{BundlePrice(
+															currencysymbol: 'true',
+															before: '{%Price} <span class="ProductCurrentPrice">',
+															after: '</span>'
+														)}'
+												)}
+											</p>
+											{BundleAvailability(
+												before:'<div class="FlexItem ProductAvailability">',
+												after:'</div>'
+											)}
+										</div>
+									</div>
+									<div class="ContentSection">
+										<div class="ProductBuySection">
+											<div class="ProductBuySection-Main">
+												{BundleProducts(
+													before: '<div class="ContentSection ProductBundles">',
+													after: '</div>'
+												)}
+												{BundleBuy(
+													variations: 'select',
+													before: '<div class="ContentSection">',
+													after: '</div>'
+												)}
+												{KlarnaPaymentMethodWidget}
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ContentSection ShareSection">
+							<div class="Flex Flex-Collapse">
+								{ShareButtons(
+									before: '<div class="FlexItem FlexItem-Grow">',
+									after: '</div>'
+								)}
+								<div class="FlexItem">
+									<div class="fb-like" data-send="true" data-width="480" data-size="large" data-show-faces="true" data-font="arial"></div>
+								</div>
+							</div>
+						</div>
+					</main>
+					{CrossSaleProducts(
+						limit: '14',
+						type: 'normal',
+						classes: 'ListProduct-Compact',
+						helper: 'helpers/list-product',
+						before: '
+							<aside class="ContentSection">
+								<h3 class="ContentTitle ContentTitle-Fancy">{%CrossSalesForProduct}</h3>
+								<div class="List ProductList">
+									<div class="GridList GridList-Small" data-slider="list">',
+						after: '
+									</div>
+								</div>
+							</aside>'
+					)}
+					{LastViewedProducts(
+						limit: '14',
+						type: 'normal',
+						classes: 'ListProduct-Compact',
+						helper: 'helpers/list-product',
+						before: '
+							<aside class="ContentSection">
+								<h3 class="ContentTitle ContentTitle-Fancy">{%PreviouslyBrowsedProducts}</h3>
+								<div class="List ProductList">
+									<div class="GridList GridList-Small" data-slider="list">',
+						after: '
+									</div>
+								</div>
+							</aside>'
+					)}
+				</div>
+			</div>
+			{Helper(file: 'helpers/site-footer')}
+		</div>
+	</div>
+{Helper(file: 'helpers/footer')}

@@ -31,6 +31,19 @@
 		{CartTotal(
 			before: '<div class="MiniCartTotal">{%Total}: &nbsp;',
 			after: '</div>'
+		)}
+		{CartGiftCards(
+			before: '<div class="MiniCartTotal">',
+			helper: '{{
+				{%CartPaidByGiftCard}: {GiftCardBalanceReserved}<br />
+			}}',
+			after: '
+					<a href="#" data-drawer-toggle="gift-cards" class="GiftCardDetails">{%CartGiftCardDetaild}</a>
+				</div>
+				{CartOpenTotal(
+					before: '<div class="MiniCartTotal">{%CartOpenTotal}:&nbsp;',
+					after: '</div>'
+				)}'
 		)}',
 	or: '
 		<div class="DrawerSection">

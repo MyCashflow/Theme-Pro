@@ -1,0 +1,203 @@
+//------------------------------------------------------------------------------
+// Category Filters
+//------------------------------------------------------------------------------
+
+@media (min-width: $breakpoint-tablet) {
+	.ProductListFilters {
+		@include flexbox;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	.ProductListFilters label {
+		margin-bottom: 0;
+		margin-right: 10px;
+	}
+}
+
+//------------------------------------------------------------------------------
+// Filters Pagination
+//------------------------------------------------------------------------------
+
+.FiltersPagination {
+	@include flexbox;
+	align-items: flex-end;
+	justify-content: space-between;
+	margin: 0 0 20px;
+	z-index: 3;
+}
+
+.FiltersPagination .Filters {
+	@include flexbox;
+}
+
+//------------------------------------------------------------------------------
+// Filter Group
+//------------------------------------------------------------------------------
+
+.FilterGroup {
+	margin: 0 -1px 0 15px;
+	position: relative;
+}
+
+.FilterGroup a {
+	text-decoration: none;
+}
+
+.FilterGroup a:hover {
+	color: $color-text-dark;
+}
+
+.FilterGroupName {
+	@extend select;
+	background-image: none;
+	border-radius: $border-radius;
+	box-shadow: none;
+	height: auto;
+	margin: 0;
+	position: relative;
+	transition: none;
+
+	&:after {
+		@include icon($fa-var-angle-down);
+		padding: 5px 12px;
+		position: absolute;
+		right: 0;
+	}
+}
+
+.FilterGroup.ActiveGroup .FilterGroupName {
+	border-bottom: 1px solid $color-accent-1;
+}
+
+.FilterGroup.ActiveGroup .FilterList {
+	border-color: $color-accent-1;
+}
+
+.FilterGroup.Navigable .FilterGroupName {
+	border-bottom: 0;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	box-shadow: none;
+	outline: 0;
+	z-index: 2;
+
+	&:after {
+		content: $fa-var-angle-up;
+	}
+}
+
+.FilterResultCount {
+	color: mix($color-text-dark, $color-text-light, 50%);
+	font-size: $font-size-small;
+}
+
+@media (max-width: $breakpoint-tablet) {
+	.FilterButton {
+		width: 100%;
+	}
+}
+
+//------------------------------------------------------------------------------
+// Filter Group List
+//------------------------------------------------------------------------------
+
+.FilterList {
+	background-color: $color-input-bg;
+	border-radius: 0 $border-radius $border-radius $border-radius;
+	box-shadow: 0 1px 2px $black-10;
+	display: none;
+	left: 0;
+	margin: 0;
+	max-height: 300px;
+	max-width: 300px;
+	min-width: 210px;
+	outline: 0;
+	overflow: auto;
+	position: absolute;
+	top: calc(100% + 1px);
+	z-index: 1;
+}
+
+.Navigable .FilterList {
+	display: block;
+}
+
+.FilterList ul {
+	margin: 0;
+}
+
+.FilterList li {
+	@include flexbox;
+	border-radius: $border-radius;
+	justify-content: space-between;
+	margin: 5px;
+	padding: 3px 10px;
+	position: relative;
+}
+
+.FilterList li:hover {
+	background-color: darken($color-boxed-bg, 5%);
+}
+
+.FilterList li.Selected {
+	box-shadow: inset 0 0 0 1px $color-accent-2;
+}
+
+.FilterList a:before {
+	@include cover;
+	content: '';
+	display: block;
+}
+
+.FilterList .RemoveFilter {
+	@include icon-after($fa-var-trash);
+	@include flexbox;
+	align-items: center;
+	border: none;
+	color: $color-text-dark;
+	font-size: 0;
+	justify-content: center;
+	margin-left: 5px;
+	min-width: 20px;
+	padding: 0;
+}
+
+.FilterList .RemoveFilter:after {
+	font-size: $font-size-small;
+	margin: 0;
+}
+
+.FilterList .RemoveFilter:before {
+	border-radius: $border-radius;
+	box-shadow: inset 0 0 0 1px $color-accent-2;
+	margin: 0;
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.FilterList {
+		max-width: none;
+		width: 100%;
+	}
+}
+
+//------------------------------------------------------------------------------
+// Filter Tags List
+//------------------------------------------------------------------------------
+
+.FilterTags {
+	@extend .TagsList;
+}
+
+.RemoveFilter {
+	@extend .Tag;
+	border: 1px solid $color-body-border;
+}
+
+.FilterTags .RemoveFilter:before {
+	content: $fa-var-remove;
+}
+
+.ClearAllFilters .RemoveFilter:before {
+	content: $fa-var-trash;
+}

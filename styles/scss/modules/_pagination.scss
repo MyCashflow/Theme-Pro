@@ -22,7 +22,7 @@
 .PaginationBar .FlexItem:last-child {
 	padding-right: 0;
 	margin-right: -1px;
-	
+
 	input,
 	select {
 		border-radius: $border-radius $border-radius 0 0;
@@ -70,6 +70,7 @@
 @media screen and (max-width: $breakpoint-mobile-wide) {
 	.PaginationBar {
 		border:  0;
+		width: 100%;
 	}
 
 	.PaginationBar .Flex .FlexItem {
