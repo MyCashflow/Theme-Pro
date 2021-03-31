@@ -80,7 +80,7 @@
 	border-bottom-right-radius: 0;
 	box-shadow: none;
 	outline: 0;
-	z-index: 2;
+	z-index: 4;
 
 	&:after {
 		content: $fa-var-angle-up;
@@ -116,7 +116,7 @@
 	overflow: auto;
 	position: absolute;
 	top: calc(100% + 1px);
-	z-index: 1;
+	z-index: 3;
 }
 
 .Navigable .FilterList {
