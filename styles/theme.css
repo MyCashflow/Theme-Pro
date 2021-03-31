@@ -5347,14 +5347,13 @@ a.BackLink[href='/'] {
 .PaginationBar .Pagination ul {
   display: block; }
 
-.PaginationBar .Pagination li {
-  border-bottom: 0; }
-
-.PaginationBar .Pagination li:first-child {
-  border-bottom-left-radius: 0; }
-
-.PaginationBar .Pagination li:last-child {
-  border-bottom-right-radius: 0; }
+@media screen and (min-width: 801px) {
+  .PaginationBar .Pagination li {
+    border-bottom: 0; }
+  .PaginationBar .Pagination li:first-child {
+    border-bottom-left-radius: 0; }
+  .PaginationBar .Pagination li:last-child {
+    border-bottom-right-radius: 0; } }
 
 @media screen and (max-width: 1200px) {
   .PaginationBar .PaginationStatus {
