@@ -4302,7 +4302,7 @@ a.BackLink[href='/'] {
   border-bottom-right-radius: 0;
   box-shadow: none;
   outline: 0;
-  z-index: 2; }
+  z-index: 4; }
   .FilterGroup.Navigable .FilterGroupName:after {
     content: ""; }
 
@@ -4328,7 +4328,7 @@ a.BackLink[href='/'] {
   overflow: auto;
   position: absolute;
   top: calc(100% + 1px);
-  z-index: 1; }
+  z-index: 3; }
 
 .Navigable .FilterList {
   display: block; }
@@ -5351,6 +5351,15 @@ a.BackLink[href='/'] {
 
 .PaginationBar .Pagination ul {
   display: block; }
+
+.PaginationBar .Pagination li {
+  border-bottom: 0; }
+
+.PaginationBar .Pagination li:first-child {
+  border-bottom-left-radius: 0; }
+
+.PaginationBar .Pagination li:last-child {
+  border-bottom-right-radius: 0; }
 
 @media screen and (max-width: 1200px) {
   .PaginationBar .PaginationStatus {

@@ -30,12 +30,9 @@
 								<h1 class="ContentTitle">{PageTitle}</h1>
 								{CampaignDescription}
 							</div>
-							{Helper(file: 'helpers/pagination-form')}
 							<div class="ContentSection">
-								{CampaignProducts(
-									sort: 'sales_desc|released_desc|price_asc|price_desc|name_asc',
-									pagination: 'true',
-									limit: '40|100',
+								{Helper(file: 'helpers/product-list-filters')}
+								{Products(
 									type: 'normal',
 									before: '
 										<div class="List ProductList">
