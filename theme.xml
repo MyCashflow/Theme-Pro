@@ -21,4 +21,18 @@
 	<Settings>
 		<Doctype standard="HTML5" />
 	</Settings>
+	<ThemeSettings>
+		<SettingGroup label="colors" description="colors_description">
+			<Setting type="select" name="color_theme" label="color_theme" default="theme-black">
+				<Option value="theme-black" label="Black" />
+				<Option value="theme" label="Blue" />
+				<Option value="theme-brown" label="Brown" />
+				<Option value="theme-green" label="Green" />
+				<Option value="theme-light-blue" label="Light Blue" />
+				<Option value="theme-red" label="Red" />
+				<Option value="theme-yellow" label="Yellow" />
+				<Option value="theme-white" label="White" />
+			</Setting>
+		</SettingGroup>
+	</ThemeSettings>
 </Theme>
