@@ -299,6 +299,10 @@ $(document).ready(function () {
 		top: 20,
 	});
 
+  $(document).on('click', '.MainCategories > ul > li > a', function () {
+    $('#StickyNavigation').hcSticky('refresh');
+  });
+
 	$('#StickyTopBar').hcSticky({
 		stickTo: document
 	});
