@@ -21,7 +21,7 @@
 	<Settings>
 		<Doctype standard="HTML5" />
 	</Settings>
-	<ThemeSettings
+	<ThemeSettings>
 		<Setting type="select" name="color_theme" label="color_theme" default="theme-black">
 			<Option value="theme-black" label="Black" />
 			<Option value="theme" label="Blue" />
